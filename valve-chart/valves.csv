@@ -1,0 +1,6 @@
+client,spec,type,size_min,size_max,rating,end_conn,notes,use,tag
+Client A,BS1,BALL,15,50,800#,SW,,NORMAL,V-724
+Client A,BS1,BALL,15,50,150#,RF,,NORMAL,V-729
+Client A,BS1,BALL,80,100,150#,RF,,NORMAL,V-730
+Client A,BS1,GATE,15,50,800#,SW,Full bore,NORMAL,V-101
+Client B,AS1,BALL,15,50,800#,SW,,NORMAL,V-724
