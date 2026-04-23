@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valve Selection Chart</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Manrope:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --font-heading: "Montserrat", sans-serif;
+    --font-body:    "Manrope", sans-serif;
+    --font-label:   "Roboto Mono", monospace;
+
+    --bg:           #f0f2f5;
+    --surface:      #ffffff;
+    --surface2:     #f7f8fa;
+    --border:       #e2e5ec;
+    --border-strong:#c9cdd8;
+
+    --accent:       #1a56db;
+    --accent-light: #eef3fd;
+    --accent-hover: #1344b8;
+
+    --text:         #111827;
+    --text-muted:   #6b7280;
+    --text-dim:     #374151;
+
+    --green:        #065f46;
+    --green-bg:     #ecfdf5;
+    --green-border: #a7f3d0;
+
+    --red:          #991b1b;
+    --red-bg:       #fef2f2;
+    --red-border:   #fecaca;
+
+    --yellow:       #78350f;
+    --yellow-bg:    #fffbeb;
+    --yellow-border:#fde68a;
+
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.07), 0 2px 6px rgba(0,0,0,0.04);
+    --shadow-lg: 0 12px 32px rgba(0,0,0,0.09), 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    min-height: 100vh;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  /* ── TOP BAR ─────────────────────────────────── */
+  .topbar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 32px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .topbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .brand-icon {
+    width: 30px; height: 30px;
+    background: var(--accent);
+    border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .brand-name {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.2px;
+  }
+  .brand-name span { color: var(--accent); }
+
+  .topbar-rev {
+    font-family: var(--font-label);
+    font-size: 10.5px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* ── PAGE ────────────────────────────────────── */
+  .page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 24px 72px;
+  }
+
+  /* ── PAGE HEADER ─────────────────────────────── */
+  .page-header { margin-bottom: 28px; }
+
+  .page-eyebrow {
+    font-family: var(--font-label);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .page-title {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.4px;
+    line-height: 1.2;
+  }
+
+  .page-sub {
+    margin-top: 5px;
+    font-size: 13.5px;
+    color: var(--text-muted);
+  }
+
+  /* ── CONTROLS CARD ───────────────────────────── */
+  .controls-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 24px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 24px;
+  }
+
+  .controls-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+    align-items: stretch;
+    grid-auto-flow: column;
+  }
+
+  
+
+  .field { display: flex; flex-direction: column; gap: 6px; }
+
+  .field-label {
+    font-family: var(--font-label);
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .select-wrap { position: relative; }
+  .select-wrap::after {
+    content: '';
+    position: absolute; right: 13px; top: 50%; transform: translateY(-50%);
+    width: 0; height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid var(--text-muted);
+    pointer-events: none;
+  }
+
+  select, input[type="number"] {
+    width: 100%;
+    background: var(--surface2);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 14px;
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+    appearance: none; -webkit-appearance: none;
+  }
+  select { padding-right: 34px; cursor: pointer; }
+  select:focus, input[type="number"]:focus {
+    border-color: var(--accent);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(26,86,219,0.1);
+  }
+  select option { background: #fff; }
+  input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+  .size-hint {
+    font-family: var(--font-label);
+    font-size: 10px;
+    color: var(--accent);
+    letter-spacing: 0.3px;
+    min-height: 14px;
+  }
+
+  .btn-search {
+    height: 42px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0 28px;
+    font-family: var(--font-heading);
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(26,86,219,0.22);
+  }
+  .btn-search:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 16px rgba(26,86,219,0.28);
+  }
+  .btn-search:active { transform: none; box-shadow: none; }
+
+  /* ── RESULTS BAR ─────────────────────────────── */
+  .results-bar {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 14px; min-height: 22px;
+  }
+
+  .results-label {
+    font-family: var(--font-label);
+    font-size: 11.5px;
+    color: var(--text-muted);
+  }
+  .results-label strong { color: var(--text-dim); font-weight: 500; }
+
+  .count-chip {
+    background: var(--accent-light);
+    color: var(--accent);
+    border: 1px solid #c3d6f8;
+    border-radius: 20px;
+    padding: 3px 11px;
+    font-family: var(--font-label);
+    font-size: 11px;
+    display: none;
+  }
+
+  /* ── EMPTY STATE ─────────────────────────────── */
+  .empty-state {
+    background: var(--surface);
+    border: 1.5px dashed var(--border-strong);
+    border-radius: 14px;
+    padding: 60px 24px;
+    text-align: center;
+  }
+
+  .empty-icon {
+    width: 52px; height: 52px;
+    background: var(--accent-light);
+    border-radius: 13px;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 14px;
+  }
+
+  .empty-title {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-dim);
+    margin-bottom: 5px;
+  }
+
+  .empty-sub {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  /* ── CARDS ───────────────────────────────────── */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+    gap: 14px;
+  }
+
+  .valve-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+    animation: fadeUp 0.28s ease both;
+    display: flex; flex-direction: column;
+  }
+
+  .valve-card.clickable { cursor: pointer; }
+
+  .valve-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    border-color: #bad1f8;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .card-head {
+    display: flex; align-items: flex-start;
+    justify-content: space-between; gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .card-tag {
+    font-family: var(--font-label);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+    line-height: 1;
+  }
+
+  .card-type-pill {
+    font-family: var(--font-heading);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 3px 8px;
+    white-space: nowrap;
+    margin-top: 3px;
+  }
+
+  .card-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 16px;
+    padding: 13px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 13px;
+  }
+
+  .spec-item { display: flex; flex-direction: column; gap: 2px; }
+
+  .spec-label {
+    font-family: var(--font-label);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .spec-value {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dim);
+  }
+
+  .card-footer {
+    display: flex; align-items: center;
+    justify-content: space-between; gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .use-badge {
+    font-family: var(--font-label);
+    font-size: 9.5px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 5px;
+    white-space: nowrap;
+  }
+  .use-normal   { background: var(--green-bg);  color: var(--green);  border: 1px solid var(--green-border);  }
+  .use-critical { background: var(--red-bg);    color: var(--red);    border: 1px solid var(--red-border);    }
+  .use-utility  { background: var(--yellow-bg); color: var(--yellow); border: 1px solid var(--yellow-border); }
+
+  .classes-pill {
+    font-family: var(--font-label);
+    font-size: 9.5px;
+    color: var(--text-muted);
+    text-align: right;
+    line-height: 1.6;
+  }
+
+  /* ── NO RESULTS ──────────────────────────────── */
+  .no-results {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 44px 24px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+  }
+  .no-results-sym { font-size: 28px; margin-bottom: 10px; opacity: 0.4; }
+
+  /* ── NOTES TRUNCATION ────────────────────────── */
+  .notes-short { display: inline; }
+  .notes-seemore {
+    display: inline;
+    color: var(--accent);
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-left: 2px;
+    font-family: var(--font-body);
+  }
+  .notes-seemore:hover { text-decoration: underline; }
+
+  /* ── SIDE PANEL ──────────────────────────────── */
+  .side-panel-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.25);
+    z-index: 200;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.22s;
+  }
+  .side-panel-overlay.open { opacity: 1; pointer-events: all; }
+
+  .side-panel {
+    position: fixed; top: 0; right: 0; bottom: 0;
+    width: 360px; max-width: 92vw;
+    background: var(--surface);
+    box-shadow: -6px 0 32px rgba(0,0,0,0.12);
+    z-index: 201;
+    display: flex; flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.26s cubic-bezier(.4,0,.2,1);
+    border-left: 1px solid var(--border);
+  }
+  .side-panel.open { transform: translateX(0); }
+
+  .side-panel-header {
+    padding: 20px 20px 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .side-panel-title {
+    font-family: var(--font-label);
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+  }
+
+  .side-panel-subtitle {
+    font-family: var(--font-heading);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+
+  .side-panel-close {
+    width: 30px; height: 30px;
+    border: 1.5px solid var(--border);
+    background: var(--surface2);
+    border-radius: 7px;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.13s, border-color 0.13s;
+    margin-top: 1px;
+  }
+  .side-panel-close:hover { background: var(--accent-light); border-color: var(--accent); }
+  .side-panel-close svg { pointer-events: none; }
+
+  .side-panel-body {
+    padding: 20px;
+    overflow-y: auto;
+    flex: 1;
+  }
+
+  .side-panel-section-label {
+    font-family: var(--font-label);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  .side-panel-notes {
+    font-family: var(--font-body);
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-dim);
+    line-height: 1.65;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .side-panel-divider {
+    border: none; border-top: 1px solid var(--border);
+    margin: 18px 0;
+  }
+
+  .side-panel-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 16px;
+  }
+
+  /* Card selected state */
+  .valve-card.selected {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(26,86,219,0.13), var(--shadow-md);
+  }
+
+  /* ── RESPONSIVE ──────────────────────────────── */
+  @media (max-width: 600px) {
+    .controls-row { grid-template-columns: 1fr; }
+    .topbar-rev   { display: none; }
+    .page         { padding: 24px 14px 48px; }
+    .side-panel   { width: 100vw; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-brand">
+    <div class="brand-icon">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <circle cx="8" cy="8" r="2.8" stroke="white" stroke-width="1.5"/>
+        <path d="M8 1.5v2M8 12.5v2M1.5 8h2M12.5 8h2" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M3.4 3.4l1.3 1.3M11.3 11.3l1.3 1.3M3.4 12.6l1.3-1.3M11.3 4.7l1.3-1.3" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <span class="brand-name">Valve <span>Selection</span> Chart</span>
+  </div>
+  <span class="topbar-rev">Piping Material Spec — Rev. B (CHECK DATE : 21 April 2026)</span>
+</div>
+
+<!-- ── SIDE PANEL ── -->
+<div class="side-panel-overlay" id="sidePanelOverlay" onclick="closeSidePanel()"></div>
+<div class="side-panel" id="sidePanel">
+  <div class="side-panel-header">
+    <div>
+      <div class="side-panel-title" id="sidePanelTag"></div>
+      <div class="side-panel-subtitle" id="sidePanelType"></div>
+    </div>
+    <button class="side-panel-close" onclick="closeSidePanel()" title="Close">
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="1" y1="1" x2="12" y2="12"/><line x1="12" y1="1" x2="1" y2="12"/>
+      </svg>
+    </button>
+  </div>
+  <div class="side-panel-body">
+    <div class="side-panel-section-label">Notes</div>
+    <div class="side-panel-notes" id="sidePanelNotes"></div>
+    <hr class="side-panel-divider">
+    <div class="side-panel-section-label" style="margin-bottom:10px">Specifications</div>
+    <div class="side-panel-specs" id="sidePanelSpecs"></div>
+  </div>
+</div>
+
+<div class="page">
+
+  <div class="page-header">
+    <div class="page-eyebrow">Engineer's Lookup Tool</div>
+    <h1 class="page-title">Valve Selector</h1>
+    <p class="page-sub">Select a pipe class and enter a nominal size to find all applicable valves.</p>
+  </div>
+
+  <div class="controls-card">
+    <div class="controls-row">
+      <div class="field">
+        <label class="field-label">Pipe Class</label>
+        <div class="select-wrap">
+          <select id="classSelect">
+            <option value="">— Select a class —</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field-label">Nominal Size (DN)</label>
+        <div class="select-wrap">
+          <select id="sizeInput">
+            <option value="">— Select size —</option>
+          </select>
+        </div>
+        <div class="size-hint" id="sizeHint"></div>
+      </div>
+
+      <div class="field">
+        <label class="field-label">Valve Type</label>
+        <div class="select-wrap">
+          <select id="typeSelect">
+            <option value="">— All types —</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="results-bar">
+    <span class="results-label" id="resultsLabel"></span>
+    <span class="count-chip" id="countChip"></span>
+  </div>
+
+  <div id="resultsArea">
+    <div class="empty-state">
+      <div class="empty-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a56db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+      </div>
+      <div class="empty-title">No search yet</div>
+      <p class="empty-sub">Choose a pipe class and enter a size above to get started.</p>
+    </div>
+  </div>
+
+</div>
+
+
+<script>
+const DN_SIZES = [6,8,10,15,20,25,32,40,50,65,80,100,125,150,200,250,300,350,400,450,500,600,700,800,900,1000];
+
+let VALVES     = {};
+let CLASS_TAGS = {};
+let CLIENTS    = {};
+
+// ── LOAD CSV ────────────────────────────────────────────────────────────────
+fetch('valves.csv')
+  .then(r => {
+    if (!r.ok) throw new Error('CSV not found');
+    return r.text();
+  })
+  .then(parseCSV)
+  .catch(() => showMsg(
+    document.getElementById('resultsArea'),
+    document.getElementById('resultsLabel'),
+    document.getElementById('countChip'),
+    'Could not load <b>valves.csv</b> — make sure it is in the same folder as this file.'
+  ));
+
+function parseCSV(text) {
+  const lines = text.trim().split('\n').filter(l => l.trim());
+  const headers = lines[0].split(',').map(h => h.trim().toLowerCase());
+
+  // Expected columns (case-insensitive):
+  // client, spec, type, size_min, size_max, rating, end_conn, notes, use, tag
+
+  lines.slice(1).forEach(line => {
+    const cols = line.split(',').map(c => c.trim());
+    const row  = {};
+    headers.forEach((h, i) => row[h] = cols[i] || '');
+
+    const tag     = row['tag'];
+    const cls     = row['spec'];
+    const client  = row['client'];
+    if (!tag || !cls || !client) return;
+
+    // Valve master (tag → specs) — first occurrence wins
+    if (!VALVES[tag]) {
+      VALVES[tag] = {
+        type:    row['type']     || '—',
+        sizeMin: parseInt(row['size_min']) || 0,
+        sizeMax: parseInt(row['size_max']) || 0,
+        rating:  row['rating']   || '—',
+        endConn: row['end_conn'] || '—',
+        notes:   row['notes']    || '—',
+        use:     (row['use']     || 'NORMAL').toUpperCase(),
+      };
+    }
+
+    // Class → tags mapping
+    if (!CLASS_TAGS[cls]) CLASS_TAGS[cls] = [];
+    if (!CLASS_TAGS[cls].includes(tag)) CLASS_TAGS[cls].push(tag);
+
+    // Client → classes mapping
+    if (!CLIENTS[client]) CLIENTS[client] = [];
+    if (!CLIENTS[client].includes(cls)) CLIENTS[client].push(cls);
+  });
+
+  buildClassDropdown();
+}
+
+// ── POPULATE CLASS DROPDOWN ─────────────────────────────────────────────────
+function buildClassDropdown() {
+  const sel = document.getElementById('classSelect');
+  sel.innerHTML = '<option value="">— Select a class —</option>';
+  Object.entries(CLIENTS).forEach(([client, classes]) => {
+    const grp = document.createElement('optgroup');
+    grp.label = client;
+    classes.sort().forEach(cls => {
+      const opt = document.createElement('option');
+      opt.value = cls; opt.textContent = cls;
+      grp.appendChild(opt);
+    });
+    sel.appendChild(grp);
+  });
+}
+
+// ── EVENT LISTENERS ─────────────────────────────────────────────────────────
+document.getElementById('classSelect').addEventListener('change', updateFilters);
+document.getElementById('sizeInput').addEventListener('change', displayResults);
+document.getElementById('typeSelect').addEventListener('change', displayResults);
+
+function updateFilters() {
+  const cls    = document.getElementById('classSelect').value;
+  const sizeEl = document.getElementById('sizeInput');
+  const typeEl = document.getElementById('typeSelect');
+  const hint   = document.getElementById('sizeHint');
+
+  sizeEl.innerHTML = '<option value="">— All sizes —</option>';
+  typeEl.innerHTML = '<option value="">— All types —</option>';
+  hint.textContent = '';
+
+  if (!cls) { clearResults(); return; }
+
+  const valves = (CLASS_TAGS[cls]||[]).map(t => VALVES[t]).filter(Boolean);
+  const mn = Math.min(...valves.map(v => v.sizeMin));
+  const mx = Math.max(...valves.map(v => v.sizeMax));
+
+  DN_SIZES.filter(dn => dn >= mn && dn <= mx).forEach(dn => {
+    const opt = document.createElement('option');
+    opt.value = dn; opt.textContent = `DN ${dn}`;
+    sizeEl.appendChild(opt);
+  });
+
+  hint.textContent = `Class range: DN ${mn} – DN ${mx}`;
+
+  const types = [...new Set(valves.map(v => v.type))].sort();
+  types.forEach(t => {
+    const opt = document.createElement('option');
+    opt.value = t; opt.textContent = t;
+    typeEl.appendChild(opt);
+  });
+
+  displayResults();
+}
+
+function displayResults() {
+  const cls  = document.getElementById('classSelect').value;
+  const size = parseInt(document.getElementById('sizeInput').value);
+  const type = document.getElementById('typeSelect').value;
+  const area  = document.getElementById('resultsArea');
+  const label = document.getElementById('resultsLabel');
+  const chip  = document.getElementById('countChip');
+
+  if (!cls) return clearResults();
+
+  let matches = (CLASS_TAGS[cls]||[]).map(tag => ({tag, ...VALVES[tag]}));
+
+  if (size && !isNaN(size)) matches = matches.filter(v => size >= v.sizeMin && size <= v.sizeMax);
+  if (type)                 matches = matches.filter(v => v.type === type);
+
+  const parts = [
+    `<strong>${cls}</strong>`,
+    size ? `DN <strong>${size}</strong>` : null,
+    type ? `type <strong>${type}</strong>` : null,
+  ].filter(Boolean).join(' · ');
+
+  label.innerHTML = `Showing valves for ${parts}`;
+  chip.textContent = `${matches.length} valve${matches.length !== 1 ? 's' : ''} found`;
+  chip.style.display = 'inline-block';
+
+  if (!matches.length) {
+    chip.style.display = 'none';
+    area.innerHTML = `<div class="no-results"><div class="no-results-sym">∅</div>No valves match the selected filters.</div>`;
+    return;
+  }
+
+  area.innerHTML = `<div class="cards-grid">${matches.map(renderCard).join('')}</div>`;
+}
+
+function clearResults() {
+  document.getElementById('resultsLabel').innerHTML = '';
+  document.getElementById('countChip').style.display = 'none';
+  document.getElementById('resultsArea').innerHTML = `<div class="empty-state">
+    <div class="empty-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a56db" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+    <div class="empty-title">No search yet</div>
+    <p class="empty-sub">Choose a pipe class to get started.</p>
+  </div>`;
+}
+
+const NOTES_LIMIT = 60;
+
+function truncateNotes(notes, tag) {
+  if (!notes || notes === '—' || notes.length <= NOTES_LIMIT) return escHtml(notes || '—');
+  const short = escHtml(notes.slice(0, NOTES_LIMIT).trimEnd());
+  return `<span class="notes-short">${short}…</span><span class="notes-seemore" onclick="event.stopPropagation();openSidePanel('${escAttr(tag)}')">&nbsp;see more</span>`;
+}
+
+function escHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+function escAttr(s) {
+  return s.replace(/'/g,"\\'");
+}
+
+function renderCard(v, i) {
+  const badgeCls = {NORMAL:'use-normal', CRITICAL:'use-critical', UTILITY:'use-utility'}[v.use]||'use-normal';
+  const allCls = Object.entries(CLASS_TAGS).filter(([,t])=>t.includes(v.tag)).map(([c])=>c).join(' · ');
+  const notesHtml = truncateNotes(v.notes, v.tag);
+  const hasLongNotes = v.notes && v.notes !== '—' && v.notes.length > NOTES_LIMIT;
+  return `
+  <div class="valve-card${hasLongNotes ? ' clickable' : ''}" style="animation-delay:${i*50}ms" ${hasLongNotes ? `onclick="openSidePanel('${escAttr(v.tag)}')"` : ''} data-tag="${escAttr(v.tag)}">
+    <div class="card-head">
+      <div class="card-tag">${escHtml(v.tag)}</div>
+      <div class="card-type-pill">${escHtml(v.type)}</div>
+    </div>
+    <div class="card-specs">
+      <div class="spec-item">
+        <span class="spec-label">Size Range</span>
+        <span class="spec-value">DN ${v.sizeMin} – DN ${v.sizeMax}</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-label">Rating</span>
+        <span class="spec-value">${escHtml(v.rating)}</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-label">End Connection</span>
+        <span class="spec-value">${escHtml(v.endConn)}</span>
+      </div>
+      <div class="spec-item">
+        <span class="spec-label">Notes</span>
+        <span class="spec-value">${notesHtml}</span>
+      </div>
+    </div>
+    <div class="card-footer">
+      <span class="use-badge ${badgeCls}">${v.use}</span>
+      <span class="classes-pill">${escHtml(allCls)}</span>
+    </div>
+  </div>`;
+}
+
+// ── SIDE PANEL ───────────────────────────────────────────────────────────────
+function openSidePanel(tag) {
+  const v = VALVES[tag];
+  if (!v) return;
+
+  // Update selected card state
+  document.querySelectorAll('.valve-card.selected').forEach(c => c.classList.remove('selected'));
+  const card = document.querySelector(`.valve-card[data-tag="${tag}"]`);
+  if (card) card.classList.add('selected');
+
+  document.getElementById('sidePanelTag').textContent = tag;
+  document.getElementById('sidePanelType').textContent = v.type;
+  document.getElementById('sidePanelNotes').textContent = v.notes || '—';
+
+  const allCls = Object.entries(CLASS_TAGS).filter(([,t])=>t.includes(tag)).map(([c])=>c).join(', ');
+  document.getElementById('sidePanelSpecs').innerHTML = `
+    <div class="spec-item">
+      <span class="spec-label">Size Range</span>
+      <span class="spec-value">DN ${v.sizeMin} – DN ${v.sizeMax}</span>
+    </div>
+    <div class="spec-item">
+      <span class="spec-label">Rating</span>
+      <span class="spec-value">${escHtml(v.rating)}</span>
+    </div>
+    <div class="spec-item">
+      <span class="spec-label">End Connection</span>
+      <span class="spec-value">${escHtml(v.endConn)}</span>
+    </div>
+    <div class="spec-item">
+      <span class="spec-label">Usage</span>
+      <span class="spec-value">${escHtml(v.use)}</span>
+    </div>
+    <div class="spec-item" style="grid-column:1/-1">
+      <span class="spec-label">Pipe Classes</span>
+      <span class="spec-value" style="font-size:12px">${escHtml(allCls)}</span>
+    </div>
+  `;
+
+  document.getElementById('sidePanel').classList.add('open');
+  document.getElementById('sidePanelOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeSidePanel() {
+  document.getElementById('sidePanel').classList.remove('open');
+  document.getElementById('sidePanelOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+  document.querySelectorAll('.valve-card.selected').forEach(c => c.classList.remove('selected'));
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSidePanel(); });
+
+function showMsg(area, label, chip, msg) {
+  label.innerHTML = ''; chip.style.display = 'none';
+  area.innerHTML = `<div class="no-results"><div class="no-results-sym">⚠</div>${msg}</div>`;
+}
+</script>
+
+</body>
+</html>
