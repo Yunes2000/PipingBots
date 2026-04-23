@@ -144,7 +144,7 @@
 
   .controls-row {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 18px;
     align-items: stretch;
     grid-auto-flow: column;
@@ -532,7 +532,7 @@
 
   /* ── RESPONSIVE ──────────────────────────────── */
   @media (max-width: 600px) {
-    .controls-row { grid-template-columns: 1fr; }
+    .controls-row { grid-template-columns: 1fr 1fr; }
     .topbar-rev   { display: none; }
     .page         { padding: 24px 14px 48px; }
     .side-panel   { width: 100vw; }
@@ -588,6 +588,16 @@
 
   <div class="controls-card">
     <div class="controls-row">
+
+      <div class="field">
+        <label class="field-label">Client</label>
+        <div class="select-wrap">
+          <select id="clientSelect">
+            <option value="">— All clients —</option>
+          </select>
+        </div>
+      </div>
+      
       <div class="field">
         <label class="field-label">Pipe Class</label>
         <div class="select-wrap">
@@ -646,7 +656,6 @@ let VALVES     = {};
 let CLASS_TAGS = {};
 let CLIENTS    = {};
 
-// ── LOAD CSV ────────────────────────────────────────────────────────────────
 fetch('valves.csv')
   .then(r => {
     if (!r.ok) throw new Error('CSV not found');
@@ -664,20 +673,16 @@ function parseCSV(text) {
   const lines = text.trim().split('\n').filter(l => l.trim());
   const headers = lines[0].split(',').map(h => h.trim().toLowerCase());
 
-  // Expected columns (case-insensitive):
-  // client, spec, type, size_min, size_max, rating, end_conn, notes, use, tag
-
   lines.slice(1).forEach(line => {
     const cols = line.split(',').map(c => c.trim());
     const row  = {};
     headers.forEach((h, i) => row[h] = cols[i] || '');
 
-    const tag     = row['tag'];
-    const cls     = row['spec'];
-    const client  = row['client'];
+    const tag    = row['tag'];
+    const cls    = row['spec'];
+    const client = row['client'];
     if (!tag || !cls || !client) return;
 
-    // Valve master (tag → specs) — first occurrence wins
     if (!VALVES[tag]) {
       VALVES[tag] = {
         type:    row['type']     || '—',
@@ -690,23 +695,37 @@ function parseCSV(text) {
       };
     }
 
-    // Class → tags mapping
     if (!CLASS_TAGS[cls]) CLASS_TAGS[cls] = [];
     if (!CLASS_TAGS[cls].includes(tag)) CLASS_TAGS[cls].push(tag);
 
-    // Client → classes mapping
     if (!CLIENTS[client]) CLIENTS[client] = [];
     if (!CLIENTS[client].includes(cls)) CLIENTS[client].push(cls);
   });
 
+  buildClientDropdown();
   buildClassDropdown();
 }
 
-// ── POPULATE CLASS DROPDOWN ─────────────────────────────────────────────────
-function buildClassDropdown() {
+// ── DROPDOWNS ────────────────────────────────────────────────────────────────
+function buildClientDropdown() {
+  const sel = document.getElementById('clientSelect');
+  sel.innerHTML = '<option value="">— All clients —</option>';
+  Object.keys(CLIENTS).sort().forEach(client => {
+    const opt = document.createElement('option');
+    opt.value = client; opt.textContent = client;
+    sel.appendChild(opt);
+  });
+}
+
+function buildClassDropdown(filterClient) {
   const sel = document.getElementById('classSelect');
   sel.innerHTML = '<option value="">— Select a class —</option>';
-  Object.entries(CLIENTS).forEach(([client, classes]) => {
+
+  const entries = filterClient
+    ? [[filterClient, CLIENTS[filterClient]]]
+    : Object.entries(CLIENTS);
+
+  entries.forEach(([client, classes]) => {
     const grp = document.createElement('optgroup');
     grp.label = client;
     classes.sort().forEach(cls => {
@@ -718,7 +737,16 @@ function buildClassDropdown() {
   });
 }
 
-// ── EVENT LISTENERS ─────────────────────────────────────────────────────────
+// ── EVENT LISTENERS ──────────────────────────────────────────────────────────
+document.getElementById('clientSelect').addEventListener('change', () => {
+  const client = document.getElementById('clientSelect').value;
+  buildClassDropdown(client || null);
+  document.getElementById('sizeInput').innerHTML = '<option value="">— All sizes —</option>';
+  document.getElementById('typeSelect').innerHTML = '<option value="">— All types —</option>';
+  document.getElementById('sizeHint').textContent = '';
+  clearResults();
+});
+
 document.getElementById('classSelect').addEventListener('change', updateFilters);
 document.getElementById('sizeInput').addEventListener('change', displayResults);
 document.getElementById('typeSelect').addEventListener('change', displayResults);
@@ -801,6 +829,7 @@ function clearResults() {
   </div>`;
 }
 
+// ── RENDER ───────────────────────────────────────────────────────────────────
 const NOTES_LIMIT = 60;
 
 function truncateNotes(notes, tag) {
@@ -857,7 +886,6 @@ function openSidePanel(tag) {
   const v = VALVES[tag];
   if (!v) return;
 
-  // Update selected card state
   document.querySelectorAll('.valve-card.selected').forEach(c => c.classList.remove('selected'));
   const card = document.querySelector(`.valve-card[data-tag="${tag}"]`);
   if (card) card.classList.add('selected');
