@@ -652,10 +652,14 @@
 <script>
 const DN_SIZES = [6,8,10,15,20,25,32,40,50,65,80,100,125,150,200,250,300,350,400,450,500,600,700,800,900,1000];
 
-let VALVES     = {};
-let CLASS_TAGS = {};
-let CLIENTS    = {};
+// VALVES   keyed by "TAG|CLASS" → each class has its own independent specs
+// VALVE_BY_TAG keyed by "TAG"   → fallback for side panel when no class context
+let VALVES       = {};
+let VALVE_BY_TAG = {};
+let CLASS_TAGS   = {};
+let CLIENTS      = {};
 
+// ── LOAD CSV ─────────────────────────────────────────────────────────────────
 fetch('valves.csv')
   .then(r => {
     if (!r.ok) throw new Error('CSV not found');
@@ -666,34 +670,39 @@ fetch('valves.csv')
     document.getElementById('resultsArea'),
     document.getElementById('resultsLabel'),
     document.getElementById('countChip'),
-    'Could not load <b>valves.csv</b> — make sure it is in the same folder as this file.'
+    'Could not load <b>valves.csv</b> — make sure it is in the repository root.'
   ));
 
+// ── PARSE ─────────────────────────────────────────────────────────────────────
 function parseCSV(text) {
-  const lines = text.trim().split('\n').filter(l => l.trim());
-  const headers = lines[0].split(',').map(h => h.trim().toLowerCase());
+  const lines = text.trim().split(/\r?\n/).filter(l => l.trim());
+  const headers = splitCSVLine(lines[0]).map(h => h.trim().toLowerCase());
 
   lines.slice(1).forEach(line => {
-    const cols = line.split(',').map(c => c.trim());
+    const cols = splitCSVLine(line);
     const row  = {};
-    headers.forEach((h, i) => row[h] = cols[i] || '');
+    headers.forEach((h, i) => row[h] = (cols[i] || '').trim());
 
     const tag    = row['tag'];
     const cls    = row['spec'];
     const client = row['client'];
     if (!tag || !cls || !client) return;
 
-    if (!VALVES[tag]) {
-      VALVES[tag] = {
-        type:    row['type']     || '—',
-        sizeMin: parseInt(row['size_min']) || 0,
-        sizeMax: parseInt(row['size_max']) || 0,
-        rating:  row['rating']   || '—',
-        endConn: row['end_conn'] || '—',
-        notes:   row['notes']    || '—',
-        use:     (row['use']     || 'NORMAL').toUpperCase(),
-      };
-    }
+    const specs = {
+      type:    row['type']     || '—',
+      sizeMin: parseInt(row['size_min']) || 0,
+      sizeMax: parseInt(row['size_max']) || 0,
+      rating:  row['rating']   || '—',
+      endConn: row['end_conn'] || '—',
+      notes:   row['notes']    || '—',
+      use:     (row['use']     || '—').toUpperCase(),
+    };
+
+    // Each tag+class combo stored independently — no "first wins" override
+    VALVES[`${tag}|${cls}`] = specs;
+
+    // Fallback: first-seen specs per tag (side panel when no class context)
+    if (!VALVE_BY_TAG[tag]) VALVE_BY_TAG[tag] = specs;
 
     if (!CLASS_TAGS[cls]) CLASS_TAGS[cls] = [];
     if (!CLASS_TAGS[cls].includes(tag)) CLASS_TAGS[cls].push(tag);
@@ -704,6 +713,20 @@ function parseCSV(text) {
 
   buildClientDropdown();
   buildClassDropdown();
+}
+
+// Handles quoted fields containing commas e.g. "Full bore, butt weld"
+function splitCSVLine(line) {
+  const result = [];
+  let cur = '', inQuote = false;
+  for (let i = 0; i < line.length; i++) {
+    const ch = line[i];
+    if (ch === '"') { inQuote = !inQuote; }
+    else if (ch === ',' && !inQuote) { result.push(cur); cur = ''; }
+    else { cur += ch; }
+  }
+  result.push(cur);
+  return result;
 }
 
 // ── DROPDOWNS ────────────────────────────────────────────────────────────────
@@ -763,7 +786,11 @@ function updateFilters() {
 
   if (!cls) { clearResults(); return; }
 
-  const valves = (CLASS_TAGS[cls]||[]).map(t => VALVES[t]).filter(Boolean);
+  // Resolve specs per class for each tag in this class
+  const valves = (CLASS_TAGS[cls]||[])
+    .map(tag => ({ tag, ...(VALVES[`${tag}|${cls}`] || VALVE_BY_TAG[tag]) }))
+    .filter(Boolean);
+
   const mn = Math.min(...valves.map(v => v.sizeMin));
   const mx = Math.max(...valves.map(v => v.sizeMax));
 
@@ -795,7 +822,12 @@ function displayResults() {
 
   if (!cls) return clearResults();
 
-  let matches = (CLASS_TAGS[cls]||[]).map(tag => ({tag, ...VALVES[tag]}));
+  // Use TAG|CLASS key so every class shows its own independent specs
+  let matches = (CLASS_TAGS[cls]||[]).map(tag => ({
+    tag,
+    cls,
+    ...(VALVES[`${tag}|${cls}`] || VALVE_BY_TAG[tag]),
+  }));
 
   if (size && !isNaN(size)) matches = matches.filter(v => size >= v.sizeMin && size <= v.sizeMax);
   if (type)                 matches = matches.filter(v => v.type === type);
@@ -832,26 +864,26 @@ function clearResults() {
 // ── RENDER ───────────────────────────────────────────────────────────────────
 const NOTES_LIMIT = 60;
 
-function truncateNotes(notes, tag) {
+function truncateNotes(notes, tag, cls) {
   if (!notes || notes === '—' || notes.length <= NOTES_LIMIT) return escHtml(notes || '—');
   const short = escHtml(notes.slice(0, NOTES_LIMIT).trimEnd());
-  return `<span class="notes-short">${short}…</span><span class="notes-seemore" onclick="event.stopPropagation();openSidePanel('${escAttr(tag)}')">&nbsp;see more</span>`;
+  return `<span class="notes-short">${short}…</span><span class="notes-seemore" onclick="event.stopPropagation();openSidePanel('${escAttr(tag)}','${escAttr(cls||'')}')">&nbsp;see more</span>`;
 }
 
 function escHtml(s) {
-  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
 function escAttr(s) {
-  return s.replace(/'/g,"\\'");
+  return String(s).replace(/'/g,"\\'");
 }
 
 function renderCard(v, i) {
   const badgeCls = {NORMAL:'use-normal', CRITICAL:'use-critical', UTILITY:'use-utility'}[v.use]||'use-normal';
   const allCls = Object.entries(CLASS_TAGS).filter(([,t])=>t.includes(v.tag)).map(([c])=>c).join(' · ');
-  const notesHtml = truncateNotes(v.notes, v.tag);
+  const notesHtml = truncateNotes(v.notes, v.tag, v.cls);
   const hasLongNotes = v.notes && v.notes !== '—' && v.notes.length > NOTES_LIMIT;
   return `
-  <div class="valve-card${hasLongNotes ? ' clickable' : ''}" style="animation-delay:${i*50}ms" ${hasLongNotes ? `onclick="openSidePanel('${escAttr(v.tag)}')"` : ''} data-tag="${escAttr(v.tag)}">
+  <div class="valve-card${hasLongNotes ? ' clickable' : ''}" style="animation-delay:${i*50}ms" ${hasLongNotes ? `onclick="openSidePanel('${escAttr(v.tag)}','${escAttr(v.cls||'')}')"` : ''} data-tag="${escAttr(v.tag)}">
     <div class="card-head">
       <div class="card-tag">${escHtml(v.tag)}</div>
       <div class="card-type-pill">${escHtml(v.type)}</div>
@@ -882,8 +914,9 @@ function renderCard(v, i) {
 }
 
 // ── SIDE PANEL ───────────────────────────────────────────────────────────────
-function openSidePanel(tag) {
-  const v = VALVES[tag];
+function openSidePanel(tag, cls) {
+  // Resolve class-specific specs, fall back to generic if not found
+  const v = (cls && VALVES[`${tag}|${cls}`]) || VALVE_BY_TAG[tag];
   if (!v) return;
 
   document.querySelectorAll('.valve-card.selected').forEach(c => c.classList.remove('selected'));
@@ -937,6 +970,7 @@ function showMsg(area, label, chip, msg) {
   area.innerHTML = `<div class="no-results"><div class="no-results-sym">⚠</div>${msg}</div>`;
 }
 </script>
+
 
 </body>
 </html>
