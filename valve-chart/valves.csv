@@ -1,543 +1,564 @@
-client,spec,type,size_min,size_max,rating,end_conn,notes,use,tag
-OCP,BA1,BALL,15,50,,,Valve shall be supplied with 100 mm long seamless pipe nipple (Pup Piece) on either ends. Sch of the nipple shall match to mating/connecting pipe. Valves shall be of fire safe design as per API 607/BS 6755 ( Part 2 ) ,NORMAL,V-703
-OCP,BA1,BALL,80,200,150#,RF,,NORMAL,V-702
-OCP,BA1,GATE,25,150,150#,RF,,NORMAL,V-401
-OCP,BA1,GATE,200,400,150#,RF,,NORMAL,V-402
-OCP,BA1,BallCHECK,15,50,,THREADED,,HORIZ/ VERT UP,V-616
-OCP,BA1,WAFER CHECK,80,400,150#,WAFER,,HORIZ/ VERT UP,V-617
-OCP,BA1,GLOBE,15,50,,THREADED,,THROTTLING,V-508
-OCP,BA1,BUTTERFLY,80,150,150#,LUG,,NORMAL,V-301
-OCP,BA1,BUTTERFLY,200,300,150#,LUG,,NORMAL,V-302
-OCP,BA1,BALL,15,50,,THREADED,Valve shall be supplied with 100 mm long seamless pipe nipple (Pup Piece) on either ends. Sch of the nipple shall match to mating/connecting pipe. Valves shall be of fire safe design as per API 607/BS 6755 ( Part 2 ) ,NORMAL,V-780
-OCP,BA1,BALL,80,200,150#,RF,,NORMAL,V-777
-OCP,BA1,CHECK,15,50,,THREADED,The type of resin- Protective Materials (e.g. Coatings- linings- liners) joining and sealing materials (e.g. solvent cements welding materials- gaskets) shall be suitable for potable water (drinking water) and certified as per NSF/ANSI 61 in conjunction with the design and performance requirements stated in the relevant JESA standards. All proposals will be subject to JESA/OCP approval. For Drinking Water / Potable Water . ,HORIZ/ VERT UP,V-691
-OCP,BA1,CHECK,80,200,150#,WAFER,The type of resin- Protective Materials (e.g. Coatings- linings- liners) joining and sealing materials (e.g. solvent cements welding materials- gaskets) shall be suitable for potable water (drinking water) and certified as per NSF/ANSI 61 in conjunction with the design and performance requirements stated in the relevant JESA standards. All proposals will be subject to JESA/OCP approval. For Drinking Water / Potable Water . ,HORIZ/ VERT UP,V-693
-OCP,BA2,GATE,15,50,,THROTTLING,,THROTTLING,V-492
-OCP,BA2,GATE,80,100,150#,NORMAL,,NORMAL,V-490
-OCP,BA2,GATE,150,300,150#,NORMAL,,NORMAL,V-491
-OCP,BA2,GLOBE,15,50,,THROTTLING,,THROTTLING,V-560
-OCP,BA2,CHECK,15,50,,NORMAL,,NORMAL,V-675
-OCP,BA2,CHECK,80,600,150#,NORMAL,,NORMAL,V-676
-OCP,BA2,BALL,15,50,,NORMAL,Valve shall be supplied with 100 mm long seamless pipe nipple (Pup Piece) on either ends. Sch of the nipple shall match to mating/connecting pipe. Valves shall be of fire safe design as per API 607/BS 6755 (Part 2 ) ,NORMAL,V-765
-OCP,BA2,BUTTERFLY,80,150,150#,NORMAL,,NORMAL,V-341
-OCP,BA2,BUTTERFLY,200,600,150#,NORMAL,,NORMAL,V-342
-OCP,BB1,BUTTERFLY,80,150,150#,NORMAL,Use Flat face connection when matching to Flat Face Cast Iron- FRP or Plastic flange,NORMAL,V-301
-OCP,BB1,BUTTERFLY,200,300,150#,NORMAL,Use Flat face connection when matching to Flat Face Cast Iron- FRP or Plastic flange,NORMAL,V-302
-OCP,BB1,BUTTERFLY,350,600,150#,NORMAL,Use Flat face connection when matching to Flat Face Cast Iron- FRP or Plastic flange,NORMAL,V-303
-OCP,BB1,BUTTERFLY,650,1300,150#,NORMAL,,NORMAL,V-304
-OCP,BB1,GATE,80,150,150#,NORMAL,,NORMAL,V-401
-OCP,BB1,GATE,50,50,150#,NORMAL,V-401 in 50 mm size shall be used against equipment nozzles only. ,NORMAL,V-401
-OCP,BB1,GATE,200,600,150#,NORMAL,,NORMAL,V-402
-OCP,BB1,GATE,650,900,150#,NORMAL,,NORMAL,V-403
-OCP,BB1,GATE,15,50,,NORMAL,,NORMAL,V-405
-OCP,BB1,GATE,15,50,,NORMAL,,NORMAL,V-412
-OCP,BB1,BallCHECK,15,50,,HORIZ/ VERT UP,,HORIZ/ VERT UP,V-616
-OCP,BB1,WAFER CHECK,80,600,,HORIZ/ VERT UP,,HORIZ/ VERT UP,V-617
-OCP,BB1,DOUBLE FLG. DUEL PLATE CHECK,650,1300,150#,HORIZ/ VERT UP,,HORIZ/ VERT UP,V-680
-OCP,BB1,BALL,15,50,,NORMAL,,NORMAL,V-703
-OCP,BB1,BALL,80,200,150#,,,,V-702
-OCP,BB1,GLOBE,80,200,150#,NORMAL,,NORMAL,V-502
-OCP,BB1,GLOBE,15,50,,THROTTLING,,THROTTLING,V-508
-OCP,BB1,GLOBE,250,350,150#,NORMAL,,NORMAL,V-532
-OCP,BB1,NEEDLE,15,50,,FIRE WATER,,FIRE WATER,V-801
-OCP,BB1,SWING CHECK,50,400,,HORIZ/ VERT UP,No need for Datasheet as procurement is part of Vendor Scope.,HORIZ/ VERT UP,V-692
-OCP,BB1,BUTTERFLY,50,200,,NORMAL,No need for Datasheet as procurement is part of Vendor Scope.,NORMAL,V-362
-OCP,BB1,BUTTERFLY,250,350,,NORMAL,No need for Datasheet as procurement is part of Vendor Scope.,NORMAL,V-363
-OCP,BB1,GATE,65,400,,NORMAL,No need for Datasheet as procurement is part of Vendor Scope.,NORMAL,V-498
-OCP,BB1,KNIFE GATE,50,150,150#,NORMAL,,NORMAL,V-439
-OCP,BB1,KNIFE GATE,200,600,150#,NORMAL,,NORMAL,V-440
-OCP,BB2,PLUG,50,80,150#,NORNAL,,NORNAL,V-108
-OCP,BB2,PISTON CHECK,50,150,150#,NORNAL,,NORNAL,V-628
-OCP,BB2,KNIFE GATE,50,150,150#,NORNAL,Use flat face when matching to flat face flanges. ,NORNAL,V-439
-OCP,BB2,KNIFE GATE,200,300,150#,NORNAL,Use flat face when matching to flat face flanges. ,NORNAL,V-440
-OCP,BB3,GATE,200,600,150#,NORMAL,,NORMAL,V-402
-OCP,BB3,GATE,700,900,150#,NORMAL,,NORMAL,V-403
-OCP,BB3,PLUG,25,80,150#,NORMAL,Applicable for Molten Sulfur lines using electrical tracing technology. ,NORMAL,V-138
-OCP,BB3,PLUG,100,300,150#,NORMAL,Applicable for Molten Sulfur lines using electrical tracing technology. ,NORMAL,V-139
-OCP,BB3,GLOBE,80,400,150#,NORMAL,,NORMAL,V-502
-OCP,BB3,BALL,15,50,,NORMAL,,NORMAL,V-701
-OCP,BB3,GATE,50,150,150#,NORMAL,,NORMAL,V-401
-OCP,BB3,GATE,15,50,,NORMAL,,NORMAL,V-405
-OCP,BB3,GATE,15,50,,V- DR- INSTR. CONNS.,,V- DR- INSTR. CONNS.,V-406
-OCP,BB3,BallCHECK,15,50,,HORIZ/ VERT UP,,HORIZ/ VERT UP,V-601
-OCP,BB3,SWING CHECK,80,400,150#,HORIZ/ VERT UP,,HORIZ/ VERT UP,V-603
-OCP,BB3,GLOBE,15,50,,NORMAL,,NORMAL,V-501
-OCP,BB3,BALL,80,200,150#,NORMAL,,NORMAL,V-702
-OCP,BB3,WAFER CHECK,450,600,150#,HORIZ/ VERT UP,,HORIZ/ VERT UP,V-637
-OCP,BB4,DIAPHRAGM,15,50,150#,NORMAL,,NORMAL,V-203
-OCP,BB4,KNIFE GATE,50,150,150#,NORMAL,,NORMAL,V-439
-OCP,BB4,KNIFE GATE,200,600,150#,NORMAL,,NORMAL,V-440
-OCP,BB4,CHECK (BALL),80,600,150#,NORMAL,,NORMAL,V-652
-OCP,BB5,GATE,50,400,150#,NORMAL,,NORMAL,V-428
-OCP,BB5,GLOBE,15,50,800#,NORMAL,For inline throttling and control valve by-passes.,NORMAL,V-514
-OCP,BB5,GLOBE,80,150,150#,NORMAL,For inline throttling and control valve by-passes.,NORMAL,V-516
-OCP,BB5,GLOBE,200,400,150#,NORMAL,For inline throttling and control valve by-passes.,NORMAL,V-564
-OCP,BB5,CHECK (PISTON),15,50,800#,HORIZONTAL,,HORIZONTAL,V-626
-OCP,BB5,CHECK (WAFER),80,400,150#,HORIZ/ VERT UP,,HORIZ/ VERT UP,V-627
-OCP,BB6,BUTTERFLY,80,150,150#,NORMAL,,NORMAL,V-352
-OCP,BB6,BUTTERFLY,200,200,150#,NORMAL,,NORMAL,V-354
-OCP,BB6,BUTTERFLY,300,350,150#,NORMAL,,NORMAL,V-353
-OCP,BB6,CHECK,25,300,150#,HORIZ/ VERT UP,,HORIZ/ VERT UP,V-689
-OCP,BB6,PLUG,350,600,150#,NORMAL,,NORMAL,V-132
-OCP,BB6,PLUG,25,150,150#,NORMAL,Use Flat face connection when matching to Flat face Cast Iron- FRP or Plastic flange,NORMAL,V-136
-OCP,BB6,PLUG,200,600,150#,NORMAL,Use Flat face connection when matching to Flat face Cast Iron- FRP or Plastic flange,NORMAL,V-105
-OCP,BB6,GLOBE,25,100,150#,NORMAL,,NORMAL,V-504
-OCP,BD1,PLUG,15,40,150#,NORMAL,For use in service: Sulfuric Acid (SA),NORMAL,V-103
-OCP,BD1,PLUG,15,40,150#,NORMAL,For use in service: Sulfuric Acid (SA),NORMAL,V-145
-OCP,BD1,DIAPHRAGM,50,100,150#,NORMAL,For use in service: Sulfuric Acid (SA),NORMAL,V-206
-OCP,BD1,BUTTURFLY,100,150,150#,NORMAL,Use Flat face connection when matching to Flat face Cast Iron- DI- FRP or Plastic flange,NORMAL,V-322
-OCP,BD1,BUTTURFLY,200,400,150#,NORMAL,Use Flat face connection when matching to Flat face Cast Iron- DI- FRP or Plastic flange,NORMAL,V-345
-OCP,BD1,DUEL PLATE CHECK,100,600,150#,NORMAL,,NORMAL,V-678
-OCP,BD1,SWING CHECK,25,50,10S,NORMAL,,NORMAL,V-681
-OCP,BD1,SWING CHECK,80,80,10S,NORMAL,,NORMAL,V-682
-OCP,BD1,SWING CHECK,25,50,10S,NORMAL,For use in service: Anti Scaling (AC)- Sodium Hydroxide (SH) AND Sodium Bisulphate (SB),NORMAL,V-650
-OCP,BD1,SWING CHECK,80,100,10S,NORMAL,For use in service: Anti Scaling (AC)- Sodium Hydroxide (SH) AND Sodium Bisulphate (SB),NORMAL,V-683
-OCP,BD1,BALL,15,50,10S,NORMAL,For use in service: Sodium Bisulphate (SB),NORMAL,V-728
-OCP,BD1,BALL,80,100,10S,NORMAL,For use in service: Sodium Bisulphate (SB),NORMAL,V-774
-OCP,BD1,BALL,25,50,10S,NORMAL,For use in service: Anti Scaling (AC) and Sodium Hydroxide (SH) AND use in other services,NORMAL,V-772
-OCP,BD1,BALL,80,80,10S,NORMAL,For use in service: Anti Scaling (AC) and Sodium Hydroxide (SH) AND use in other services,NORMAL,V-773
-OCP,BD1,NEEDLE,15,25,10S,V- Dr- INST.,,V- Dr- INST.,V-802
-OCP,BD1,GATE,15,50,10S,NORMAL,,NORMAL,V-402
-OCP,BD2,PLUG,15,50,,NORMAL,,NORMAL,V-102
-OCP,BD2,PLUG,15,80,150#,NORMAL,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,NORMAL,V-103
-OCP,BD2,PLUG,100,300,150#,NORMAL,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,NORMAL,V-104
-OCP,BD2,PLUG,25,80,150#,NORMAL,Use Flat face connection when matching to Flat face Cast Iron- FRP or Plastic flange. AND For use in Strong Phosphoric Acid (PA) or Weak Phosphoric Acid (PB) services only. ,NORMAL,V-106
-OCP,BD2,PLUG,100,300,150#,NORMAL,Use Flat face connection when matching to Flat face Cast Iron- FRP or Plastic flange. AND For use in Strong Phosphoric Acid (PA) or Weak Phosphoric Acid (PB) services only. ,NORMAL,V-107
-OCP,BD2,PLUG,350,600,150#,NORMAL,Use Flat face connection when matching to Flat face Cast Iron- FRP or Plastic flange. AND For use in Strong Phosphoric Acid (PA) or Weak Phosphoric Acid (PB) services only. ,NORMAL,V-132
-OCP,BD2,PLUG,350,500,150#,NORMAL,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,NORMAL,V-131
-OCP,BD2,PLUG,15,50,,NORMAL,,NORMAL,V-144
-OCP,BD2,PLUG,15,80,150#,NORMAL,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,NORMAL,V-145
-OCP,BD2,PLUG,100,300,150#,NORMAL,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,NORMAL,V-146
-OCP,BD2,SWING CHECK,15,50,,HORIZ/ VERT UP,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,HORIZ/ VERT UP,V-608
-OCP,BD2,WAFER CHECK,80,600,,HORIZ/ VERT UP,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,HORIZ/ VERT UP,V-614
-OCP,BD2,DUEL PLATE CHECK,200,600,150#,NORMAL,For sizes 650 mm to 900mm- - the schedule thicknesses has been considered based on ASME B36.10- as a reference ,NORMAL,V-630
-OCP,BD2,CHECK,25,300,150#,HORIZ/ VERT UP,,HORIZ/ VERT UP,V-689
-OCP,BD2,GLOBE,15,50,,NORMAL,,NORMAL,V-528
-OCP,BD2,GLOBE,80,250,150#,NORMAL,,NORMAL,V-531
-OCP,BD2,BUTTERFLY,80,100,150#,NORMAL,,NORMAL,V-306
-OCP,BD2,BUTTERFLY,150,600,150#,NORMAL,,NORMAL,V-307
-OCP,BD2,BUTTERFLY,650,700,150#,NORMAL,,NORMAL,V-346
-OCP,BD2,GATE,50,350,150#,NORMAL,,NORMAL,V-454
-OCP,BD2,GATE,400,600,150#,NORMAL,,NORMAL,V-408
-OCP,BD2,GATE,15,40,,NORMAL,,NORMAL,V-456
-OCP,BD2,BUTTERFLY,50,150,150#,NORMAL,For use in Strong Phosphoric Acid (PA) or Weak Phosphoric Acid (PB) services only.,NORMAL,V-308
-OCP,BD2,BUTTERFLY,200,450,150#,NORMAL,For use in Strong Phosphoric Acid (PA) or Weak Phosphoric Acid (PB) services only.,NORMAL,V-309
-OCP,BD2,BUTTERFLY,450,600,150#,NORMAL,,NORMAL,V-332
-OCP,BD2,BALL,15,50,,V- DR- INSTR CONS,,V- DR- INSTR CONS,V-719
-OCP,BD2,BALL,15,50,,NORMAL,,NORMAL,V-718
-OCP,BD2,BALL,80,100,150#,NORMAL,,NORMAL,V-720
-OCP,BD2,BALL,150,150,150#,NORMAL,,NORMAL,V-770
-OCP,BD2,BALL,200,250,150#,NORMAL,,NORMAL,V-771
-OCP,BD2,NEEDLE,15,25,,NORMAL,,NORMAL,V-802
-OCP,BG1,PLUG,15,80,150#,NORMAL,,NORMAL,V-106
-OCP,BG1,PLUG,100,300,150#,NORMAL,,NORMAL,V-107
-OCP,BG1,PLUG,350,600,150#,NORMAL,,NORMAL,V-132
-OCP,BG1,KNIFE GATE,100,150,150#,NORMAL,Knife Gate valve V-441 Pressure/Temperature limited to 7 Kg/cm2g @ 204 C (100 Psig @ 400 F). And shall be used only for Phosphoric Acid Rector Slurry (B) service only.,NORMAL,V-495
-OCP,BG1,KNIFE GATE,200,300,150#,NORMAL,Knife Gate valve V-441 Pressure/Temperature limited to 7 Kg/cm2g @ 204 C (100 Psig @ 400 F). And shall be used only for Phosphoric Acid Rector Slurry (B) service only.,NORMAL,V-441
-OCP,BG1,PISTON CHECK,15,150,150#,NORMAL,Check Valve V-628 Pressure/Temperature limited to 10.3 barg @ 177 C (150 Psig @ 350 F) ,NORMAL,V-628
-OCP,BG1,PISTON CHECK,15,150,150#,NORMAL,To be used only for Ammonium Phosphate Slurry (APS); Phosphoric Acid Reactor Slurry (ARS); Scrubber Liquor Slurry (LWA) ,NORMAL,V-698
-OCP,BG1,WAFER CHECK,200,600,150#,NORMAL,The Lug and wafer valve types should be suitable to be installed between RF Flanges Class 150 per ASME B16.5,NORMAL,V-630
-OCP,BG1,BALL,15,150,150#,NORMAL,Ball Valve V-713 Pressure/Temperature limited to 10.5 Kg/cm2g @ 204 C (150 Psig @ 300 F). Valve may be used at tank nozzles- clean-outs- rod-outs and drains. ,NORMAL,V-713
-OCP,BG1,BALL,200,200,150#,NORMAL,Ball Valve V-713 Pressure/Temperature limited to 10.5 Kg/cm2g @ 204 C (150 Psig @ 300 F). Valve may be used at tank nozzles- clean-outs- rod-outs and drains. ,NORMAL,V-704
-OCP,BG1,BALL,250,300,150#,NORMAL,Ball Valve V-713 Pressure/Temperature limited to 10.5 Kg/cm2g @ 204 C (150 Psig @ 300 F). Valve may be used at tank nozzles- clean-outs- rod-outs and drains. ,NORMAL,V-705
-OCP,BG1,BUTTERFLY,15,150,150#,NORMAL,The Lug and wafer valve types should be suitable to be installed between RF Flanges Class 150 per ASME B16.5,NORMAL,V-308
-OCP,BG1,BUTTERFLY,200,600,150#,NORMAL,The Lug and wafer valve types should be suitable to be installed between RF Flanges Class 150 per ASME B16.5,NORMAL,V-309
-OCP,BG2,PLUG,15,80,150#,NORMAL,,NORMAL,V-106
-OCP,BG2,PLUG,100,300,150#,NORMAL,,NORMAL,V-107
-OCP,BG2,PLUG,350,600,150#,NORMAL,,NORMAL,V-132
-OCP,BG2,PLUG,750,900,150#,NORMAL,,NORMAL,V-140
-OCP,BG2,KNIFE GATE,100,150,150#,NORMAL,Knife Gate valve V-441 & V-495 Pressure/Temperature limited to 6.8 Barg @ 204 C (100 Psig @ 400 F). And shall be used only for Phosphoric Acid Rector Slurry (B) service only ,NORMAL,V-495
-OCP,BG2,KNIFE GATE,200,300,150#,NORMAL,Knife Gate valve V-441 & V-495 Pressure/Temperature limited to 6.8 Barg @ 204 C (100 Psig @ 400 F). And shall be used only for Phosphoric Acid Rector Slurry (B) service only ,NORMAL,V-441
-OCP,BG2,PISTON CHECK,15,150,150#,NORMAL, For sizes 1600mm and above - the fitting dimensions of buttwelding has been considered based on AWWA C208- as a reference ,NORMAL,V-628
-OCP,BG2,WAFER CHECK,200,600,150#,NORMAL,The Lug and wafer valves types should be suitable to be installed between RF Flanges Class 150 per ASME B16.5 ,NORMAL,V-630
-OCP,BG2,PISTON CHECK,15,150,150#,NORMAL,To be used only for Ammonium Phosphate Slurry (APS); Phosphoric Acid Reactor Slurry (ARS); Scrubber Liquor Slurry (LWA) ,NORMAL,V-698
-OCP,BG2,BALL,15,150,150#,NORMAL,Ball Valve V-713 Pressure/Temperature limited to 10.3 Barg @ 204 C (150 Psig @ 400 F). AND Valve to be used at tank nozzles- clean-outs- rod-outs and drains. ,NORMAL,V-713
-OCP,BG2,BUTTERFLY,50,150,150#,NORMAL,The Lug and wafer valves types should be suitable to be installed between RF Flanges Class 150 per ASME B16.5 ,NORMAL,V-308
-OCP,BG2,BUTTERFLY,200,600,150#,NORMAL,The Lug and wafer valves types should be suitable to be installed between RF Flanges Class 150 per ASME B16.5 ,NORMAL,V-309
-OCP,CB1,Gate,15,50,800#,SW,All valves shall be tagged for Anhydrous Ammonia Service.,Normal ,V-435
-OCP,CB1,Gate,80,150,300#,RF,All valves shall be tagged for Anhydrous Ammonia Service.,Normal ,V-437
-OCP,CB1,Ball,15,100,300#,RF,All valves shall be tagged for Anhydrous Ammonia Service.,Normal ,V-706
-OCP,CB1,Ball,150,200,300#,RF,All valves shall be tagged for Anhydrous Ammonia Service.,Normal ,V-768
-OCP,CB1,Ball,250,300,300#,RF,All valves shall be tagged for Anhydrous Ammonia Service.,Normal ,V-769
-OCP,CB1,T-Globe,15,50,800#,SW,All valves shall be tagged for Anhydrous Ammonia Service.,Horiz/Vert Up ,V-501
-OCP,CB1,Swing Check,80,600,300#,RF,All valves shall be tagged for Anhydrous Ammonia Service.,Horiz/Vert Up ,V-635
-OCP,CB2,Ball,25,50,300#,SW,Use only where indicated on P&ID (Frequently operated valve).,Normal ,V-715
-OCP,CB2,Ball,20,100,300#,RF,Use only where indicated on P&ID (Frequently operated valve).,Normal ,V-716
-OCP,CB2,Ball,150,200,300#,RF,Use only where indicated on P&ID (Frequently operated valve).,Normal ,V-766
-OCP,CB2,Ball,250,400,300#,RF,Use only where indicated on P&ID (Frequently operated valve).,Normal ,V-767
-OCP,CB2,Gate,50,300,300#,RF,Use valve at equipment connection only,Normal,V-429
-OCP,CB2,Gate,350,400,300#,RF,Use valve at equipment connection only,Normal,V-419
-OCP,CB2,Gate,50,400,300#,BW,_,Normal,V-430
-OCP,CB2,Globe,15,50,800#,SW,For inline throttling and control valve by-passes.,Normal,V-514
-OCP,CB2,Globe,15,50,300#,RF,For inline throttling and control valve by-passes.,Normal,V-544
-OCP,CB2,Globe,80,150,300#,RF,For inline throttling and control valve by-passes.,Normal,V-565
-OCP,CB2,Globe,200,300,300#,RF,For inline throttling and control valve by-passes.,Normal,V-521
-OCP,CB2,Check (Piston),15,50,800#,SW,_,Horizontal ,V-626
-OCP,CB2,Check (Piston),15,50,300#,RF,_,Horizontal ,V-699
-OCP,CB2,Check ,80,400,300#,RF,_,Horiz/Vert Up,V-636
-OCP,CB3,Gate,15,50,800#,SW,_,Normal ,V-405
-OCP,CB3,Gate,40,40,800#,SW,Gate Valves with Extended Stem V-475- L=1700mm & V-474 L= 1200mm- use limited to service Steam 12 barg (SM).,Normal ,V-474
-OCP,CB3,Gate,15,50,800#,SW x SCR'D,, V- DR- Instr Conns ,V-406
-OCP,CB3,Gate,80,150,300#,RF,_,Normal ,V-437
-OCP,CB3,Gate,200,600,300#,RF,_,Normal ,V-438
-OCP,CB3,Gate,400,400,300#,RF,Gate Valves with Extended Stem V-475- L=1700mm & V-474 L= 1200mm- use limited to service Steam 12 barg (SM).,Normal ,V-475
-OCP,CB3,Gate,650,800,300#,RF,_,Normal ,V-411
-OCP,CB3,Piston Check,15,50,800#,SW,Through pipe size 250 mm pressure limited by full flange rating- 300mm   600mm pressure may be lower than full flange rating.,Normal,V-634
-OCP,CB3,Swing Check,80,600,300#,RF,_,Horiz/Vert Up,V-635
-OCP,CB3,Globe,15,50,800#,SW,Through pipe size 250 mm pressure limited by full flange rating- 300mm   600mm pressure may be lower than full flange rating.,Normal,V-519
-OCP,CB3,Globe,80,200,300#,RF,Through pipe size 250 mm pressure limited by full flange rating- 300mm   600mm pressure may be lower than full flange rating.,Normal,V-520
-OCP,CB3,Globe,250,450,300#,RF,Through pipe size 250 mm pressure limited by full flange rating- 300mm   600mm pressure may be lower than full flange rating.,Normal,V-569
-OCP,CB3,Ball,15,50,800#,SW,_,Normal ,V-701
-OCP,CD1,Swing Check,15,50,300#,RF,_,Horiz/Vert Up,V-622
-OCP,CD1,Ball,15,50,300#,RF,_,Normal ,V-710
-OCP,CD1,Gate,80,100,300#,RF,_,Normal ,V-455
-OCP,CD1,Globe,15,50,300#,RF,_,Normal ,V-571
-OCP,CD2,Plug,15,50,,SW,,Normal ,V-128
-OCP,CD2,Plug,15,80,300#,RF,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,Normal ,V-129
-OCP,CD2,Plug,100,300,300#,RF,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,Normal ,V-130
-OCP,CD2,Plug,350,450,300#,RF,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,Normal ,V-137
-OCP,CD2,BallCheck,15,50,300#,RF,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,Horiz/Vert Up,V-623
-OCP,CD2,Dual Plat Check,80,600,300#,WAFER,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,Horiz/Vert Up,V-605
-OCP,CD2,Swing Check,15,50,,SW,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,Horiz/Vert Up,V-673
-OCP,CD2,Wafer Check,80,650,300#,WAFER,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,Horiz/Vert Up,V-674
-OCP,CD2,Ball,15,50,,SW,_,Normal ,V-718
-OCP,CD2,Ball,80,250,300#,RF,_,Normal ,V-764
-OCP,CD2,Globe,15,50,,SW,_,Normal ,V-536
-OCP,CD2,Globe,80,250,300#,RF,_,Normal ,V-537
-OCP,CD2,Butterfly,80,100,300#,Lug Type,_,Normal ,V-340
-OCP,CD2,Butterfly,150,600,300#,Lug Type,,Normal ,V-339
-OCP,CD2,Butterfly,650,750,300#,Lug Type,_,Normal ,V-3XX
-OCP,CG1,Plug,25,80,300#,RF,_,Normal,V-116
-OCP,CG1,Plug,100,150,300#,RF,_,Normal,V-117
-OCP,CG1,Plug,200,400,300#,RF,_,Normal,V-119
-OCP,CG1,BallCheck,20,50,300#,RF,_,Normal,V-623
-OCP,CG1,Check,80,400,300#,RF,_,Normal,V-624
-OCP,CG2,Plug,25,80,300#,RF,_,Normal,V-116
-OCP,CG2,Plug,100,150,300#,RF,_,Normal,V-117
-OCP,CG2,Plug,200,600,300#,RF,_,Normal,V-119
-OCP,CG2,BallCheck,15,50,300#,RF,_,Normal,V-623
-OCP,CG2,Check (Swing) ,80,600,300#,RF,_,Normal,V-624
-OCP,CJ1,Gate,80,300,300#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Normal,V-449
-OCP,CJ1,Gate,350,350,300#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Normal,V-497
-OCP,CJ1,Gate,400,900,300#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Normal,V-450
-OCP,CJ1,Globe,80,200,300#,BW,1- End conn: All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used. 2- Use: For In-line throttling and control valve by-passes.,Normal,V-527
-OCP,CJ1,Globe,250,300,300#,BW,1- End conn: All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used. 2- Use: For In-line throttling and control valve by-passes.,Normal,V-562
-OCP,CJ1,Globe,350,350,300#,BW,1- End conn: All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used. 2- Use: For In-line throttling and control valve by-passes.,Normal,V-568
-OCP,CJ1,Globe,400,400,300#,BW,1- End conn: All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used. 2- Use: For In-line throttling and control valve by-passes.,Normal,V-563
-OCP,CJ1,Swing Check,80,350,300#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Horiz/Vert Up,V-646
-OCP,CJ1,Swing Check,400,600,300#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Horiz/Vert Up,V-677
-OCP,CJ1,Y-Globe,15,50,1690#,SW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Normal ,V-518
-OCP,CJ1,Lift Check,15,50,1500#,SW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Horiz / Cover Up ,V-632
-OCP,CK3,Butterfly,50,150,300#,Lug,_,Normal,V-334
-OCP,CK3,Butterfly,200,600,300#,Lug,_,Normal,V-366
-OCP,CK3,Ball,15,50,300#,FF,_,V- DR- Inst,V-729
-OCP,CP1,Plug ,25,80,300#,RF,_,Normal,V-120
-OCP,CP1,Plug ,100,300,300#,RF,_,Normal,V-121
-OCP,CP1,Swing Check,25,50,300#,RF,_,Horiz/Vert Up,V-640
-OCP,CP1,Swing Check,25,50,800#,SW,_,Horiz/Vert Up,V-638
-OCP,CP1,Swing Check,80,300,300#,RF,Valve V-641 & V-638 is a modified valve for jacketing per Jacketed Piping Fabrication Details Specification - Detail JKT52.,Horiz/Vert Up,V-641
-OCP,CS1,Ball,15,50,800#,SW,1. Valve shall be supplied with 100 mm long seamless pipe nipple (Pup Piece) on either ends. Sch of the nipple shall match to mating/connecting pipe. 2. Valves shall be of fire safe design as per API 607/BS 6755 ( Part 2 ) ,Normal,V-724
-OCP,CS1,Check Valve,15,50,800#,SW,_,Normal,V-655
-OCP,ES2,Plug,200,450,40S,BW,_,Normal,V-124
-OCP,ES2,Plug,500,600,80S,BW,_,Normal,V-141
-OCP,ES2,Plug,650,650,14.27mm,BW,_,Normal,V-142
-OCP,ES2,Plug,700,700,15.88mm,BW,_,Normal,V-143
-OCP,ES2,Check,50,600,600#,WAFER,_,Normal,V-647
-OCP,ES2,Needle,15,25,40S,BW,_,V- Dr- Inst,V-803
-OCP,ES2,Ball,15,50,40S,BW,_,Normal,V-778
-OCP,FB1,Gate,15,50,1500#,SW,_,Normal,V-442
-OCP,FB1,Gate,15,25,1500#,SW x SCR'D,Threaded joints are permitted only at outlets of vents and drains- hydrostatic testing connections- outlet of instrumentation isolation valves and to match equipment. Threaded hydrostatic testing connections shall be seal welded after testing.,V- DR,V-443
-OCP,FB1,Gate,80,80,900#,BW,_,Normal,V-444
-OCP,FB1,Gate,100,100,900#,BW,_,Normal,V-485
-OCP,FB1,Gate,150,400,900#,BW,_,Normal,V-445
-OCP,FB1,Gate,450,600,900#,BW,_,Normal,V-486
-OCP,FB1,Globe,15,50,1500#,SW,For In-line throttling and control valve by-passes.,Normal,V-523
-OCP,FB1,Globe,15,50,1500#,SW x SCR'D,Threaded joints are permitted only at outlets of vents and drains- hydrostatic testing connections- outlet of instrumentation isolation valves and to match equipment. Threaded hydrostatic testing connections shall be seal welded after testing.,V- DR- Inst. Cons,V-535
-OCP,FB1,Globe,80,250,900#,BW,_,Normal,V-522
-OCP,FB1,Swing Check,80,80,900#,BW,_,Horiz/Vert Up,V-642
-OCP,FB1,Swing Check,100,400,900#,BW,_,Horiz/Vert Up,V-685
-OCP,FB1,Swing Check,450,600,900#,BW,_,Horiz/Vert Up,V-604
-OCP,FB1,Piston Check,15,50,1500#,SW,_,Horiz/Vert Up,V-643
-OCP,FJ1,Gate,15,50,1500#,SW,_,Normal,V-432
-OCP,FJ1,Gate,80,100,900#,BW,All butt welds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Normal,V-433
-OCP,FJ1,Gate,150,150,900#,BW,All butt welds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Normal,V-434
-OCP,FJ1,Gate,200,400,900#,BW,All butt welds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Normal,V-496
-OCP,FJ1,Gate,450,700,900#,BW,All butt welds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Normal,V-487
-OCP,FJ1,Y-Globe,15,50,1690#,SW,_,Normal,V-518
-OCP,FJ1,Globe,80,100,900#,BW,1- End conn: All butt welds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used. 2- Use: For In-line throttling and control valve by-passes.,Normal,V-517
-OCP,FJ1,Globe,150,150,900#,BW,1- End conn: All butt welds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used. 2- Use: For In-line throttling and control valve by-passes.,Normal,V-566
-OCP,FJ1,Globe,200,400,900#,BW,1- End conn: All butt welds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used. 2- Use: For In-line throttling and control valve by-passes.,Normal,V-567
-OCP,FJ1,Lift Check,15,50,1500#,SW,_,Horiz/Vert Up,V-632
-OCP,FJ1,Tilting Disc Check,80,150,900#,BW,All butt welds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Horiz/Vert Up,V-633
-OCP,FJ1,Tilting Disc Check,200,600,900#,BW,All butt welds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Horiz/Vert Up,V-684
-OCP,GC1,Gate,150,600,1500#,BW,_,Normal,V-415
-OCP,GC1,Gate,15,50,1500#,SW,_,Normal,V-416
-OCP,GC1,Gate,15,50,1500#,SW x THRD,No threaded valves are acceptable except for normally Closed valves used for commissioning- hydrotest- drains- vents- with threaded plug applied downstream for V-417 to ensure the threaded end is not exposed to service conditions during normal operation.,,V-417
-OCP,GC1,Globe,15,50,,SW,For In-line throttling and control valve by-passes,Normal,V-570
-OCP,GC1,Piston Check,15,50,1500#,SW,_,Horiz/Vert Up,V-694
-OCP,GC1,Tilting Disc Check,80,600,1500#,BW,_,Horiz/Vert Up,V-695
-OCP,GD1,Gate,15,40,1500#,SW,_,Normal ,V-447
-OCP,GD1,Gate,15,40,1500#,SW x Threaded,_,V- DR- InstrConns,V-448
-OCP,GD1,Globe,15,40,1500#,SW,_,Normal ,V-526
-OCP,GD1,Lift Check,15,40,1500#,SW,These check valves shall be installed in a horizontal position with cover up,Horiz/Vert Up,V-644
-OCP,GD2,Gate,15,50,1500#,BW,All butt weld shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the backside purged and without the use of inserts. All pipe- fittings- flanged- and valve ends for both shop and field welds- shall be prepared in accordance with ASME / ANSI B 16.25- Figure 4 or 5- as applicable- no backing rings shall be used,Normal,V-451
-OCP,GD2,Gate,15,20,1500#,RTJ,_,Normal,V-493
-OCP,GD2,Gate,25,50,1500#,RTJ,These valves shall be used only for vent- drain- and instrument connections,,V-452
-OCP,GD2,Gate,80,200,1500#,RTJ,_,Normal,V-453
-OCP,GD2,Gate,15,50,1500#,BW,All butt weld shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the backside purged and without the use of inserts. All pipe- fittings- flanged- and valve ends for both shop and field welds- shall be prepared in accordance with ASME / ANSI B 16.25- Figure 4 or 5- as applicable- no backing rings shall be used,Normal,V-529
-OCP,GD2,Globe,80,200,1500#,RTJ,_,Normal,V-530
-OCP,GD2,Globe,50,80,1500#,RTJ,_,Normal,V-561
-OCP,GD2,Lift Check,15,50,1500#,BW,1-End conn: All butt weld shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the backside purged and without the use of inserts. All pipe- fittings- flanged- and valve ends for both shop and field welds- shall be prepared in accordance with ASME / ANSI B 16.25- Figure 4 or 5- as applicable- no backing rings shall be used 2-Use: These check valves shall be installed in a horizontal position with cover up,Horiz/Vert Up,V-648
-OCP,GD2,Check,80,200,1500#,RTJ,These check valves shall be installed in a horizontal position with cover up,Normal,V-649
-OCP,BS1,BALL,15,50,800#,SW,-,NORMAL,V-724
-OCP,BS1,BALL,15,50,150#,RF,-,NORMAL,V-709
-OCP,BS1,BALL,80,100,150#,RF,-,NORMAL,V-785
-OCP,BS1,BALL,15,50,150#,FF,-,NORMAL,V-708
-OCP,BS1,DIAPHRAGM,15,50,150#,FF,Only used for flushing hoses system & special requirements by process.,NORMAL,V-215
-OCP,BS1,BallCHECK,15,50,800#,SW,-,NORMAL,V-655
-OCP,BS1,CHECK,80,100,150#,RF,-,NORMAL,V-656
-OCP,BS1,BUTTERFLY,80,100,150#,LUG,-,NORMAL,V-317
-OCP,BS2,BALL,15,50,10S,BW,-,NORMAL,V-742
-OCP,BS2,CHECK,150,450,150#,LUG,-,NORMAL,V-664
-OCP,BS2,NEEDLE,15,25,10S,BW,-,V-Dr-Inst,V-805
-OCP,BS3,BALL,15,50,10S,BW,-,-,V-734
-OCP,BS3,NEEDLE,20,25,10S,BW,-,-,V-804
-OCP,BV1,KNIFE GATE,25,150,150#,FF,-,NORMAL,V-458
-OCP,BV1,KNIFE GATE,200,600,150#,FF,-,NORMAL,V-459
-OCP,BV1,PISTON CHECK,80,150,150#,FLANGED DUAL LAMINATE PP/FRP Lined,-,NORMAL,V-628
-OCP,BX1,BALL,15,100,-,SOCKET FUSION PN6,-,NORMAL,V-735
-OCP,BX1,BALL,125,150,150#,FF,-,NORMAL,V-732
-OCP,BX1,3-WAY BALL,80,80,-,THREADED x SOCKET FUSION x SOCKET FUSION,-,NORMAL,V-740
-OCP,BX1,CHECK,25,80,-,SOCKET FUSION PN6,-,NORMAL,V-658
-OCP,BX2,BALL,15,100,-,SOCKET FUSION PN10,-,NORMAL,V-736
-OCP,BX2,CHECK,25,80,-,THREADED,-,NORMAL,V-659
-OCP,BX2,BUTTERFLY,50,150,150#,WAFER,-,NORMAL,V-326
-OCP,BX3,BALL,15,100,-,SOCKET FUSION PN16,-,NORMAL,V-743
-OCP,BX3,CHECK,25,80,-,SOCKET FUSION PN16,-,NORMAL,V-665
-OCP,BY1,BALL,15,100,-,SOLVENT SOCKET PN10,-,NORMAL,V-737
-OCP,BY1,CHECK,15,100,-,SOLVENT SOCKET PN10,-,NORMAL,V-660
-OCP,BY1,CHECK,150,200,150#,WAFER,Final dimensions of piping component shall be provided by selected Contractor- who will be responsible for Detailed Design- Material procurement and Installation.,NORMAL,V-667
-OCP,BY1,BUTTERFLY,50,200,150#,WAFER,Final dimensions of piping component shall be provided by selected Contractor- who will be responsible for Detailed Design- Material procurement and Installation.,NORMAL,V-333
-OCP,BY3,BALL,15,100,-,SOCKET FUSION PN10,-,NORMAL,V-737
-OCP,BY3,CHECK,25,80,-,SOCKET FUSION PN10,-,NORMAL,V-660
-OCP,BZ1,BALL,15,50,-,SOCKET FUSION PN16,-,NORMAL,V-738
-OCP,BZ1,BALL,63,100,-,SOCKET FUSION PN10,-,NORMAL,V-739
-OCP,BZ1,CHECK,15,50,-,SOCKET FUSION PN16,-,NORMAL,V-661
-OCP,BZ1,CHECK,63,100,-,SOCKET FUSION PN10,-,NORMAL,V-662
-OCP,BH1,BALL,25,100,150#,RF,The facing of valve will be considered RF for Metallic specs (BD2) and BH1 and - For FRP specs FF Facing should be used and valve datasheets should be released with FF flange facing,NORMAL,V-720
-OCP,BH1,BALL,150,150,150#,RF,,NORMAL,V-770
-OCP,BH1,BALL,200,250,150#,RF,,NORMAL,V-771
-OCP,BH1,BALL,15,100,150#,RF, Lap joint flange itself is flat face flange but with Stub-end becomes RF.,NORMAL,V-775
-OCP,BH1,BALL,15,100,150#,RF,According to BCT valve specification. To be used only for H2SiF6 25-45%-wt with SIO2 -SIF4- HF (FSA2a/ FSA3)-Waste gas (containing HF- SiF4-H2O- Air) (GW1b).,NORMAL,V-776
-OCP,BH1,DIAPHRAGM,25,25,150#,RF,According to BCT valve specification. To be used only for Silica (SiO2) with > 70%-wt moisture (SiO1)- H2SiF6 5-45%-wt- with SiO2- traces of SIF4- HF (FSA1)- SiF4 gas with HF traces (SiF1a)- Waste gas (containing HF- SiF4-H2O- Air) (GW1a)- Waste water without solids (WW1)- Potassium hydroxide KOH (KOH).,NORMAL,V-204
-OCP,BH1,DIAPHRAGM,15,200,150#,RF,-,NORMAL,V-206
-OCP,BH1,WAFER CHECK,25,450,150#,WAFER,According to BCT valve specification. To be used only for Silica (SiO2) with > 70%-wt moisture (SiO1)- H2SiF6 5-45%-wt- with SiO2- traces of SIF4- HF (FSA1)- SiF4 gas with HF traces (SiF1a)- Waste gas (containing HF- SiF4-H2O- Air) (GW1a)- Waste water without solids (WW1)- Potassium hydroxide KOH (KOH). & Lug and wafer valve types should be suitable to be installed between RF Flanges Class 150 per ASME B16.5,NORMAL,V-690
-OCP,BH1,SWING CHECK,25,600,150#,RF,-,NORMAL,V-654
-OCP,BH1,BUTTERFLY,80,100,150#,LUG,Lug and wafer valve types should be suitable to be installed between RF Flanges Class 150 per ASME B16.5,NORMAL,V-306
-OCP,BH1,BUTTERFLY,150,600,150#,LUG,,NORMAL,V-307
-OCP,BH1,BUTTERFLY,150,150,150#,LUG,According to BCT valve specification. To be used only for H2SiF6 25-45%-wt with SIO2 -SIF4- HF (FSA2a/ FSA3)-Waste gas (containing HF- SiF4-H2O- Air) (GW1b). & Lug and wafer valve types should be suitable to be installed between RF Flanges Class 150 per ASME B16.5,NORMAL,V-351
-OCP,BH1,BUTTERFLY,250,450,150#,LUG,,NORMAL,V-356
-OCP,BH1,BUTTERFLY,150,200,150#,LUG,According to BCT valve specification. To be used only for Silica (SiO2) with > 70%-wt moisture (SiO1)- H2SiF6 5-45%-wt- with SiO2- traces of SIF4- HF (FSA1)- SiF4 gas with HF traces (SiF1a)- Waste gas (containing HF- SiF4-H2O- Air) (GW1a)- Waste water without solids (WW1)- Potassium hydroxide KOH (KOH). & Lug and wafer valve types should be suitable to be installed between RF Flanges Class 150 per ASME B16.5,NORMAL,V-357
-OCP,BH1,BUTTERFLY,300,450,150#,LUG,,NORMAL,V-358
-OCP,BH1,PLUG,15,80,150#,RF,-,NORMAL,V-108
-OCP,BH1,PLUG,100,300,150#,RF,-,NORMAL,V-109
-OCP,BH1,KNIFE GATE,50,150,150#,FF,Applicable valves for Gypsum Slurry (GS) only.,NORMAL,V-439
-OCP,BH1,KNIFE GATE,200,600,150#,FF,,NORMAL,V-440
-OCP,BH1,KNIFE GATE,650,900,150#,FF,,NORMAL,V-461
-OCP,BH2,GATE,63,63,-,PN 16 EN 1092-2 / ISO7005-2,Use restricted for Underground Drinking Water (WD) service only. & The type of resin- Protective Materials (e.g. Coatings etc) - joining and sealing materials (e.g. solvent cements- gaskets) shall be suitable for potable water (drinking water) and certified as per NSF/ANSI 61 in conjunction with the design and performance requirements stated in the relevant JESA standards. All proposals will be subject to JESA/OCP approval,DRINKING WATER (WD),V-499
-OCP,BH2,GATE,90,315,-,PN 16 EN 1092-2,Fire water valve shall be FM Approved & UL Listed.,FIRE WATER,V-483
-OCP,BH2,GATE,355,6350,-,PN 16 EN 1092-2,Fire water valve shall be FM Approved & UL Listed.,FIRE WATER,V-484
-OCP,BH2,PIV (GATE),110,315,-,PN 16 EN 1092-2 / ISO7005-2, The maximum allowable pipeline design temperature for HDPE pipe material shall be 30  C (86  F). & Gate Valve with Vertical Indicator Post assembly (PIV)- HDPE Pipes and Fittings for underground fire water line shall be UL / FM approved.,FIRE WATER,V-488
-OCP,BH2,PIV (GATE),355,630,-,PN 16 EN 1092-2 / ISO7005-2,,FIRE WATER,V-489
-OCP,BK1,BALL,20,200,150#,FF,-,NORMAL/V-DR-INSTR.,V-730
-OCP,BK1,BALL,250,300,150#,FF,-,NORMAL/V-DR-INSTR.,V-707
-OCP,BK1,WAFER CHECK,80,600,150#,WAFER,The Lug and wafer valves types should be suitable to be installed between FF& RF Flanges Class 150 per ASME B16.5,HORIZONTAL/VERTICAL UP,V-614
-OCP,BK1,WAFER CHECK,200,600,150#,WAFER,,NORMAL,V-630
-OCP,BK1,PISTON CHECK,25,150,150#,RF,-,NORMAL,V-628
-OCP,BK1,BallCHECK,25,300,150#,RF,-,NORMAL,V-645
-OCP,BK1,DUAL PLATE CHECK,650,1200,150#,DOUBLE FLANGED FF,-,NORMAL,V-686
-OCP,BK1,DUAL PLATE CHECK,700,900,150#,DOUBLE FLANGED FF,-,NORMAL,V-696
-OCP,BK1,SWING CHECK,250,600,150#,RF,To be used only for FSA services,NORMAL,V-697
-OCP,BK1,BUTTERFLY,50,150,150#,LUG,The Lug and wafer valves types should be suitable to be installed between FF& RF Flanges Class 150 per ASME B16.5,NORMAL,V-308
-OCP,BK1,BUTTERFLY,200,600,150#,LUG,,NORMAL,V-309
-OCP,BK1,BUTTERFLY,650,1200,150#,FF,-,NORMAL,V-323
-OCP,BK1,BUTTERFLY,1300,1500,150#,FF,-,NORMAL,V-313
-OCP,BK1,BUTTERFLY,1600,2000,150#,FF,-,NORMAL,V-347
-OCP,BK1,BUTTERFLY,100,250,150#,WAFER,To be used only for FSA services & The Lug and wafer valves types should be suitable to be installed between FF& RF Flanges Class 150 per ASME B16.5,NORMAL,V-352
-OCP,BK1,BUTTERFLY,300,600,150#,WAFER,,NORMAL,V-353
-OCP,BK1,BUTTERFLY,80,100,150#,WAFER,,NORMAL,V-306
-OCP,BK1,BUTTERFLY,150,600,150#,WAFER,,NORMAL,V-307
-OCP,BK1,PLUG,25,80,150#,FF,The Pressure limited to 150 psi (10.34 bar).,NORMAL,V-106
-OCP,BK1,PLUG,100,300,150#,FF,,NORMAL,V-107
-OCP,BK1,PLUG,15,80,150#,RF,-,NORMAL,V-134
-OCP,BK1,PLUG,25,80,150#,RF,To be used only for FSA services,NORMAL,V-108
-OCP,BK1,PLUG,100,300,150#,RF,,NORMAL,V-109
-OCP,BK1,PLUG,350,450,150#,FF,The Pressure limited to 150 psi (10.34 bar).,NORMAL,V-132
-OCP,BK1,KNIFE GATE,50,150,150#,FF,-,NORMAL,V-409
-OCP,BK1,KNIFE GATE,200,600,150#,FF,-,NORMAL,V-414
-OCP,BK1,KNIFE GATE,650,1200,150#,FF,-,NORMAL,V-410
-OCP,BK2,BALL,25,100,150#,RF,The facing of valve will be considered RF for Metallic specs (BD2) and BH1 and - For FRP specs FF Facing should be used and valve datasheets should be released with FF flange facing,NORMAL,V-720
-OCP,BK2,BALL,150,150,150#,RF,,NORMAL,V-770
-OCP,BK2,BALL,200,250,150#,RF,,NORMAL,V-771
-OCP,BK2,WAFER CHECK,80,600,150#,WAFER,The wafer valves should be suitable to be installed between FF and RF Flanges Class 150 per ASME B16.5,HORIZONTAL/VERTICAL UP,V-614
-OCP,BK2,WAFER CHECK,200,600,150#,WAFER,,NORMAL,V-630
-OCP,BK2,PISTON CHECK,25,150,150#,RF,Flanges should always be bolted to full flat faced flanges. Where full flat faced flanges are not used- proper spacers must be used to build-up the flange to a flat surface and prevent overstressing the flange. When existing equipment cannot be modified to produce full flat faced flange- Stub end Flange shall be used.,NORMAL,V-628
-OCP,BK2,DUAL PLATE CHECK,650,1200,150#,DOUBLE FLANGED FF,-,NORMAL,V-686
-OCP,BK2,PLUG,15,80,150#,-,The facing of valve will be considered RF for Metallic specs (BG1/BG2) and - for FRP specs (BK1/BK2/BK3) FF Facing should be used and valve datasheets should be released with FF flange facing.,NORMAL,V-106
-OCP,BK2,PLUG,100,300,150#,-,,NORMAL,V-107
-OCP,BK2,PLUG,25,80,150#,RF,Rated at : 10.3 Barg @ 149 C or 14.8 barg @90 C. & To be used only for FSA services,NORMAL,V-108
-OCP,BK2,PLUG,350,450,150#,FF,The facing of valve will be considered RF for Metallic specs (BG1/BG2) and - for FRP specs (BK1/BK2/BK3) FF Facing should be used and valve datasheets should be released with FF flange facing.,NORMAL,V-132
-OCP,BK2,PLUG,15,80,150#,RF,-,NORMAL,V-134
-OCP,BK3,BALL,15,150,150#,-,Valve may be used at tank nozzles- clean-outs- rod-outs and drains./To be used for Raw water Services only/Valve V-713 & V-704 Pressure/Temperature limited to 10.3 barg @ 204 C (150 Psig @ 300 F)./To be used for Cooling Water Return (WCR); Cooling Water Supply (WCS); Desalinated Water (WDS)- Water Vapor over phosphoric Acid (GPA) - Process Condensate (CPP) -Process Water (WPR); Cooling Water Return Closed loop (CWCR); Flocculant (FLT)/The facing of valve will be considered RF for Metallic specs (BG1/BG2) -for FRP spec (BK3) FF Facing should be used and valve datasheets should be released with FF flange facing.,-,V-713
-OCP,BK3,BALL,200,200,150#,-,,NORMAL/V-DR-INSTR.,V-704
-OCP,BK3,BALL,250,300,150#,FF,To be used for Raw water Services only & To be used for Cooling Water Return (WCR); Cooling Water Supply (WCS); Desalinated Water (WDS)- Water Vapor over phosphoric Acid (GPA) - Process Condensate (CPP) -Process Water (WPR); Cooling Water Return Closed loop (CWCR); Flocculant (FLT),NORMAL/V-DR-INSTR.,V-707
-OCP,BK3,BALL,15,150,150#,FF,For use in service: Chemical Cleaning (CC) & For use in service: Product Water (WW),V-DR-INSTR.,V-730
-OCP,BK3,BALL,15,150,150#,FF,For use in service: Demineralized Water (WDS)- Permeate Water(WP),V-DR-INSTR.,V-731
-OCP,BK3,BALL,15,150,150#,FF,For Use in service: Effluent Water(WE)- Calcium Hydroxide(CH),V-DR-INSTR.,V-732
-OCP,BK3,BALL,15,150,150#,FF,For use in service: Sea Water (WSS) and Brine (BSL),V-DR-INSTR.,V-781
-OCP,BK3,GATE,65,200,150#,FF,For Use in service: Effluent Water(WE)- Calcium Hydroxide(CH),NORMAL,V-457
-OCP,BK3,WAFER CHECK,200,600,150#,WAFER,To be used for Raw water Services only/The Lug and wafer valves types should be suitable to be installed between FF and RF Flanges Class 150 per ASME B16.5/To be used for Cooling Water Return (WCR); Cooling Water Supply (WCS); Desalinated Water (WDS)- Water Vapor over phosphoric Acid (GPA) - Process Condensate (CPP) -Process Water (WPR); Cooling Water Return Closed loop (CWCR); Flocculant (FLT),NORMAL,V-630
-OCP,BK3,PISTON CHECK,15,150,150#,RF,Flanges should always be bolted to full flat faced flanges. Where full flat faced flanges are not used- proper spacers must be used to build-up the flange to a flat surface and prevent overstressing the flange. When existing equipment cannot be modified to produce full flat faced flange- Stub end Flange shall be used./To be used for Raw water Services only/To be used for Cooling Water Return (WCR); Cooling Water Supply (WCS); Desalinated Water (WDS)- Water Vapor over phosphoric Acid (GPA) - Process Condensate (CPP) -Process Water (WPR); Cooling Water Return Closed loop (CWCR); Flocculant (FLT),NORMAL,V-628
-OCP,BK3,DUAL PLATE CHECK,50,600,150#,WAFER,The Lug and wafer valves types should be suitable to be installed between FF and RF Flanges Class 150 per ASME B16.5/For use in service: Sea Water (WSS) and Brine (BSL)/For use in service: Chemical Cleaning (CC),NORMAL,V-651
-OCP,BK3,DUAL PLATE CHECK,700,1100,150#,WAFER,The wafer valve type should be suitable to be installed between FF Flanges Class 150 per ASME B16.47 Series A/For use in service: Sea Water (WSS) and Brine (BSL)/For use in service: Chemical Cleaning (CC),NORMAL,V-653
-OCP,BK3,DUAL PLATE CHECK,100,600,150#,WAFER,The Lug and wafer valves types should be suitable to be installed between FF and RF Flanges Class 150 per ASME B16.5/For use in service: Demineralized Water (WDS)- Permeate Water(WP)/For Use in service: Effluent Water(WE)- Calcium Hydroxide(CH)/For use in service: Product Water (WW),NORMAL,V-657
-OCP,BK3,DUAL PLATE CHECK,700,1100,150#,WAFER,The wafer valve type should be suitable to be installed between FF Flanges Class 150 per ASME B16.47 Series A/For use in service: Demineralized Water (WDS)- Permeate Water(WP)/For Use in service: Effluent Water(WE)- Calcium Hydroxide(CH)/For use in service: Product Water (WW),NORMAL,V-679
-OCP,BK3,DUAL PLATE CHECK,750,1200,150#,DOUBLE FLANGED FF,To be used for Raw water Services only/To be used for Cooling Water Return (WCR); Cooling Water Supply (WCS); Desalinated Water (WDS)- Water Vapor over phosphoric Acid (GPA) - Process Condensate (CPP) -Process Water (WPR); Cooling Water Return Closed loop (CWCR); Flocculant (FLT),NORMAL,V-686
-OCP,BK3,DUAL PLATE CHECK,650,700,150#,WAFER,To be used for Raw water Services only/The wafer valve type should be suitable to be installed between FF Flanges Class 150 per ASME B16.47 Series A/To be used for Cooling Water Return (WCR); Cooling Water Supply (WCS); Desalinated Water (WDS)- Water Vapor over phosphoric Acid (GPA) - Process Condensate (CPP) -Process Water (WPR); Cooling Water Return Closed loop (CWCR); Flocculant (FLT),NORMAL,V-687
-OCP,BK3,BUTTERFLY,80,100,150#,LUG,To be used for Raw water Services only / The Lug and wafer valves types should be suitable to be installed between FF and RF Flanges Class 150 per ASME B16.5,NORMAL,V-306
-OCP,BK3,BUTTERFLY,150,600,150#,LUG,,NORMAL,V-307
-OCP,BK3,BUTTERFLY,50,150,150#,LUG,The Lug and wafer valves types should be suitable to be installed between FF and RF Flanges Class 150 per ASME B16.5 / To be used for Cooling Water Return (WCR); Cooling Water Supply (WCS); Desalinated Water (WDS)- Water Vapor over phosphoric Acid (GPA) - Process Condensate (CPP) -Process Water (WPR); Cooling Water Return Closed loop (CWCR); Flocculant (FLT),NORMAL,V-308
-OCP,BK3,BUTTERFLY,200,600,150#,LUG,,NORMAL,V-322
-OCP,BK3,BUTTERFLY,50,200,150#,LUG,The Lug and wafer valves types should be suitable to be installed between FF and RF Flanges Class 150 per ASME B16.5 / For use in service: Sea Water (WSS) and Brine (BSL) / For use in service: Chemical Cleaning (CC),NORMAL,V-324
-OCP,BK3,BUTTERFLY,50,600,150#,WAFER,The Lug and wafer valves types should be suitable to be installed between FF and RF Flanges Class 150 per ASME B16.5 / For use in service: Demineralized Water (WDS)- Permeate Water(WP) / For Use in service: Effluent Water(WE)- Calcium Hydroxide(CH) / For use in service: Product Water (WW),NORMAL,V-325
-OCP,BK3,BUTTERFLY,1550,1800,150#,FF,To be used for Raw water Services only / To be used for Cooling Water Return (WCR); Cooling Water Supply (WCS); Desalinated Water (WDS)- Water Vapor over phosphoric Acid (GPA) - Process Condensate (CPP) -Process Water (WPR); Cooling Water Return Closed loop (CWCR); Flocculant (FLT),NORMAL,V-347
-OCP,BK3,BUTTERFLY,1900,2000,150#,FF,,NORMAL,V-348
-OCP,BK3,BUTTERFLY,1600,2600,150#,FF,For use in service: Sea Water (WSS) and Brine (BSL) / For use in service: Chemical Cleaning (CC) / For use in service: Demineralized Water (WDS)- Permeate Water(WP) / For Use in service: Effluent Water(WE)- Calcium Hydroxide(CH) / For use in service: Product Water (WW),NORMAL,V-364
-OCP,BK3,BUTTERFLY,250,600,150#,FF,For use in service: Sea Water (WSS) and Brine (BSL) / For use in service: Chemical Cleaning (CC),NORMAL,V-365
-OCP,BK3,BUTTERFLY,650,1500,150#,FF,For use in service: Sea Water (WSS) and Brine (BSL) / For use in service: Chemical Cleaning (CC) / For use in service: Demineralized Water (WDS)- Permeate Water(WP) / For Use in service: Effluent Water(WE)- Calcium Hydroxide(CH),NORMAL,V-367
-OCP,BK3,PLUG,25,80,150#,-,The facing of valve will be considered RF for Metallic specs (BG1/BG2) -for FRP spec (BK3) FF Facing should be used and valve datasheets should be released with FF flange facing.,NORMAL,V-106
-OCP,BK3,PLUG,100,300,150#,-,,NORMAL,V-107
-OCP,BK3,PLUG,350,450,150#,RF,,NORMAL,V-132
-OCP,BK4,BALL,15,150,150#,FF,Valve may be used at tank nozzles- clean-outs- rod-outs and drains.,-,V-761
-OCP,BK4,WAFER CHECK,150,600,150#,WAFER,The Lug and wafer valves types should be suitable to be installed between FF Flanges Class 150 per ASME B16.5,NORMAL,V-671
-OCP,BK4,BallCHECK,15,100,150#,FF,-,HORIZONTAL/VERTICAL UP,V-670
-OCP,BK4,CHECK,650,1200,150#,FF (DOUBLE FLGD),-,NORMAL,V-672
-OCP,BK4,BUTTERFLY,50,150,150#,LUG,The Lug and wafer valves types should be suitable to be installed between FF Flanges Class 150 per ASME B16.5,NORMAL,V-335
-OCP,BK4,BUTTERFLY,200,600,150#,LUG,,NORMAL,V-336
-OCP,BK4,BUTTERFLY,650,1500,150#,FF,-,NORMAL,V-337
-OCP,BK4,BUTTERFLY,1550,1800,150#,FF,-,NORMAL,V-338
-OCP,BL5,DUAL PLATE CHECK,200,600,150#,RF,-,NORMAL,V-628
-OCP,BL5,DUAL PLATE CHECK,200,600,150#,FF,,NORMAL,V-630
-OCP,BL5,BallCHECK,25,600,150#,RF,Rated at: 10.5 kg/cm2g @ 149 C or 15.11 kg/cm2g @90 C,NORMAL,V-645
-OCP,BL5,DIAPHRAGM,15,250,150#,FF,-,NORMAL,V-203
-OCP,BL5,DIAPHRAGM,300,600,150#,FF,-,NORMAL,V-205
-OCP,BL5,BUTTERFLY,100,250,150#,LUG,Rated at : 10.5 kg/cm2g @ 149 C or 15.11 kg/cm2g @90 C,NORMAL,V-352
-OCP,BL5,BUTTERFLY,300,600,150#,LUG,,NORMAL,V-353
-OCP,BL5,PLUG,25,80,150#,RF,For Sizes 1700 mm & 2000 mm- D/T < 100- as per ASME B31.3 not meeting. (where D - Nominal Pipe Size & T - Nominal pipe wall thickness) Hence- the supporting span & branching requirements shall be decided accordingly.,NORMAL,V-108
-OCP,BL5,PLUG,100,300,150#,RF,,NORMAL,V-109
-OCP,BL5,KNIFE GATE,50,150,150#,FF,-,NORMAL,V-439
-OCP,BL5,KNIFE GATE,200,600,150#,FF,-,NORMAL,V-440
-OCP,BL5,KNIFE GATE,80,150,150#,FF,-,NORMAL,V-458
-OCP,BL5,KNIFE GATE,200,600,150#,FF,-,NORMAL,V-459
-OCP,BL5,KNIFE GATE,650,900,150#,FF,-,NORMAL,V-460
-OCP,BN1,DUAL PLATE CHECK,200,600,150#,RF,,NORMAL,V-628
-OCP,BN1,BallCHECK,25,600,150#,FF,Thickness of the liner according to the following table: ,NORMAL,V-645
-OCP,BN1,BUTTERFLY,100,250,150#,LUG,DN 25 40 50 80 100 150 200 250 300 ,NORMAL,V-352
-OCP,BN1,BUTTERFLY,300,600,150#,LUG,Thickness 3.5 3.8 4.2 4.8 5.5 6.5 8 8.5 9 ,NORMAL,V-353
-OCP,BN1,PLUG,25,80,150#,RF,Rated at: 10.29 bar g @ 149 or 14.8 barg@ 90 C.,NORMAL,V-108
-OCP,BN1,PLUG,100,300,150#,RF,,NORMAL,V-109
-OCP,BP1,PLUG,15,80,150#,RF,-,NORMAL,V-122
-OCP,BP1,PLUG,100,300,150#,RF,-,NORMAL,V-123
-OCP,BP1,SWING CHECK,25,50,800#,SW,-,HORIZONTAL/VERTICAL UP,V-638
-OCP,BP1,SWING CHECK,80,300,150#,RF,-,HORIZONTAL/VERTICAL UP,V-639
-OCP,BP1,BUTTERFLY,50,100,150#,WAFER,-,NORMAL,V-318
-OCP,BR1,BALL,15,300,-,SW,NOTE 14 NOT AVAILABLE,NORMAL,V-721
-OCP,BQ1,PLUG,-,-,150#,RF,KE40T (4 -12 ) VALVES ARE NOT TO BE USED ON TAPPED CONNECTIONS DUE TO POSSIBILITY OF VALVE FLANGE HAVING TAPPED HOLES AT BONNET AREA.,-,V-103
-OCP,BQ1,PLUG,-,-,150#,RF,,-,V-104
-OCP,BQ1,PLUG,-,-,150#,RF,,-,V-131
-OCP,BQ1,GLOBE,-,-,150#,RF,-,-,V-525
-OCP,BQ1,BUTTERFLY,80,200,150#,-,PIPE SPOOL MAY BE REQUIRED TO PREVENT INTERFERENCES BETWEEN DISC & OTHER SPECIALTY ITEMS UPON OPERATION OF VALVE.,-,V-312
-OCP,BQ1,BUTTERFLY,-,-,150#,-,,-,V-344
-OCP,BQ2,GATE,15,250,150#,RF,-,-,V-446
-OCP,BQ2,GATE,25,600,150#,RF,-,-,V-494
-OCP,BQ2,PLUG,-,-,150#,RF,KE40T (4 -6 ) VALVES ARE NOT TO BE USED ON TAPPED CONNECTIONS DUE TO POSSIBILITY OF VALVE FLANGE HAVING TAPPED HOLES AT BONNET AREA.,-,V-103
-OCP,BQ2,PLUG,-,-,150#,RF,,-,V-104
-OCP,BQ2,GLOBE,-,-,150#,RF,-,-,V-524
-OCP,BQ2,BUTTERFLY,80,500,150#,-,PIPE SPOOL MAY BE REQUIRED TO PREVENT INTERFERENCES BETWEEN DISC & OTHER SPECIALITY ITEMS UPON OPERATION OF VALVE.,-,V-311
-OCP,BQ2,BUTTERFLY,80,200,150#,-,,-,V-312
-OCP,BQ2,BUTTERFLY,-,-,150#,-,,-,V-344
-OCP,BQ2,BALL,-,-,150#,-,USE TFC44 (VERT: UP FLOW) WHERE CONDITIONS PERMIT.RADIOGRAPHY TEST SHALL BE 100% OF ALL BUTT WELDS,HOR. USE,V-645
-OCP,BQ3,GATE,15,50,150#,RF,-,-,V-446
-OCP,BQ3,PLUG,-,-,150#,RF,-,-,V-103
-OCP,BQ3,GLOBE,-,-,150#,RF,-,-,V-524
-MAADEN,CB1/BA41,Globe,15,50,,SW,_,Normal,V-501 / RGLZXO
-MAADEN,CB2/BA42,Ball,15,50,800#,SW,Use only where indicated on P&ID (Frequently operated valve).,Normal,V-715 / RBAZFL
-MAADEN,CB2/BA42,Ball,80,100,300#,RF,Use only where indicated on P&ID (Frequently operated valve).,Normal,V-716A / BBARFC
-MAADEN,CB2/BA42,Ball,150,400,300#,RF,Use only where indicated on P&ID (Frequently operated valve).,Normal,V-716B / BBAREG
-MAADEN,CB2/BA42,Gate,80,200,300#,BW,_,Normal,V-430B / BGAWFQ
-MAADEN,CB2/BA42,Gate,250,400,300#,BW,_,Normal,V-430A / BGAWEV
-MAADEN,CB2/BA42,Globe,15,50,800#,SW,For inline throttling and control valve by-passes.,Normal,V-514 / RGLZXM
-MAADEN,CB2/BA42,Globe,80,200,300#,RF,For inline throttling and control valve by-passes.,Normal,V-521 / BGLRXV
-MAADEN,CB2/BA42,Check,80,400,300#,RF,_,Horiz/Vert Up,V-636 / BCKRSH
-MAADEN,CB3/BA43,Plug,25,80,300#,RF,_,Normal,V-116 / BPLRXG
-MAADEN,CB3/BA43,Plug,100,150,300#,RF,_,Normal,V-117 / BPLRGE
-MAADEN,CB3/BA43,Gate,15,50,800#,SW,_,Normal,V-435 / RGAZXAD
-MAADEN,CB3/BA43,Gate,15,50,800#,SW x SCR'D,_,Vent- Drain- Instr Co,V-406 / RGAYXU
-MAADEN,CB3/BA43,Gate,15,25,,Integral male couplet   NPT (F),_,Normal,V-436 / RGASXG
-MAADEN,CB3/BA43,Gate,80,200,300#,RF,_,Normal,V-437 / BGARFB
-MAADEN,CB3/BA43,Gate,250,600,300#,RF,_,Normal,V-438 / BGAREB
-MAADEN,CB3/BA43,Piston Check,15,50,800#,SW,_,Horiz/Vert Up,V-634 / RCKZXT
-MAADEN,CB3/BA43,Swing Check,80,600,300#,RF,_,Horiz/Vert Up,V-635 / BCKRSG
-MAADEN,CB3/BA43,Ball,15,50,800#,SW,_,Normal,V-701 / RBAZFK
-MAADEN,CB3/BA43,Globe,15,50,800#,SW,_,Normal,V-519 / RGLZXN
-MAADEN,CB3/BA43,Globe,15,50,800#,SW,_,Normal,V-501 / RGLZXO
-MAADEN,CB3/BA43,Globe,80,200,300#,RF,Through pipe size 250 mm pressure limited by full flange rating- 300mm   600mm pressure may be lower than full flange rating.,Normal,V-520A / BGLRXA
-MAADEN,CB3/BA43,Globe,250,300,300#,RF,Through pipe size 250 mm pressure limited by full flange rating- 300mm   600mm pressure may be lower than full flange rating.,Normal,V-520B / BGLRGA
-MAADEN,CD1/BQ41,Swing Check,15,50,,SW,_,Horiz/Vert Up,V-622 / RCKZXS
-MAADEN,CD1/BQ41,Ball,15,50,300#,RF,_,Normal,V-710 / BBARRF
-MAADEN,CD2/BQ42,Plug,15,80,300#,RF,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,Normal,V-135 / BPLRXI
-MAADEN,CD2/BQ42,Plug,100,300,300#,RF,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,Normal,V-136 / BPLRGG
-MAADEN,CD2/BQ42,Wafer Check,80,300,300#,Wafer,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,Horiz/ Verti Up,V-611 / BCKRXE
-MAADEN,CD2/BQ42,Ball,80,100,300#,RF,Use only noted valves with Instrument / Equipment (up to 170 Deg. C) with BD2 Pipe class as per project requirement.,Normal / Instru.,V-785A / BBARFO
-MAADEN,CD2/BQ42,Ball,150,300,300#,RF,Use only noted valves with Instrument / Equipment (up to 170 Deg. C) with BD2 Pipe class as per project requirement.,Normal / Instru.,V-785B / BBAREH
-MAADEN,CD2/BQ42,Gate,50,150,300#,RF,_,Normal,V-431 / BGARXK
-MAADEN,CG1/BS41,Plug,25,80,300#,RF,For the following Services- this Class is limited to use at Process Connections: Ammonia Liquid (<-29 C) (AL); Ammonia Gas (?-29 C) (AG).,Normal,V-116 / BPLRXG
-MAADEN,CG1/BS41,Plug,100,150,300#,RF,For the following Services- this Class is limited to use at Process Connections: Ammonia Liquid (<-29 C) (AL); Ammonia Gas (?-29 C) (AG).,Normal,V-117 / BPLRGE
-MAADEN,CG1/BS41,Plug,15,80,300#,RF,Limited for use of Steam 10 barg (S10).,Normal,V-118 / BPLRXF
-MAADEN,CG1/BS41,Plug,100,300,300#,RF,Limited for use of Steam 10 barg (S10).,Normal,V-119 / BPLRGD
-MAADEN,CG1/BS41,Check,20,50,300#,RF,_,Normal,V-623 / BCKRXD
-MAADEN,CG1/BS41,Check,80,200,300#,RF,_,Normal,V-624 / BCKRWJ
-MAADEN,CK2/BG41,Plug,15,80,300#,RF,_,Normal,V-133 / BPLFXA
-MAADEN,CK2/BG41,Plug,100,300,300#,RF,_,Normal,V-134 / BPLFGA
-MAADEN,CK2/BG41,Dual Plate Wafer Check,50,150,300#,RF,_,Normal,V-610 / BCKFXA
-MAADEN,FB2/DA41,Gate,80,100,900#,BW,_,Normal,V-442 / DGAWXC
-MAADEN,FB2/DA41,Gate,150,150,900#,BW,_,Normal,V-443 / DGAWGD
-MAADEN,FB2/DA41,Gate,200,350,900#,BW,_,Normal,V-444 / DGAWEK
-MAADEN,FB2/DA41,Gate,15,50,1500#,SW,_,Normal,V-445 / EGAZXJ
-MAADEN,FB2/DA41,Gate,15,50,1500#,RTJ,1- Seal welding shall be done by qualified welders. 2- For use only for instruments connection with CL1500 RTJ flanged end.,Normal,V-446 / EGAJRE
-MAADEN,FB2/DA41,Globe,80,100,900#,BW,_,Normal,V-535 / DGLWXH
-MAADEN,FB2/DA41,Globe,150,150,900#,BW,_,Normal,V-536 / DGLWGF
-MAADEN,FB2/DA41,Globe,200,350,900#,BW,_,Normal,V-537 / DGLWGE
-MAADEN,FB2/DA41,Globe,15,50,1500#,SW,_,Throttling,V-538 / EGLZXE
-MAADEN,FB2/DA41,Lift Check,15,50,1500#,SW,_,Horiz/Vert Up,V-679 / ECKZXH
-MAADEN,FB2/DA41,Lift Check,80,100,900#,BW,_,Horiz/Vert Up,V-680 / DCKWXA
-MAADEN,FB2/DA41,Lift Check,150,150,900#,BW,_,Horiz/Vert Up,V-681 / DCKWXB
-MAADEN,FB2/DA41,Lift Check,200,300,900#,BW,_,Horiz/Vert Up,V-682 / DCKWXC
-MAADEN,FB2/DA41,Piston Check,15,50,1500#,SW,_,Inclined,V-694 / ECKZXI
-MAADEN,FJ1/DJ41,Gate,15,50,1500#,SW,_,Normal,V-464 / EGAZXK
-MAADEN,FJ1/DJ41,Gate,80,100,900#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Normal,V-433 / DGAWXD
-MAADEN,FJ1/DJ41,Gate,150,150,900#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Normal,V-434A / DGAWGE
-MAADEN,FJ1/DJ41,Gate,200,600,900#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Normal,V-434B / DGAWGF
-MAADEN,FJ1/DJ41,Globe,15,50,1500#,SW,_,Normal,V-518 / EGLZFA
-MAADEN,FJ1/DJ41,Globe,80,100,900#,BW,1- End conn: All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used. 2- Use: For In-line throttling and control valve by-passes.,Normal,V-517A / DGLWXG
-MAADEN,FJ1/DJ41,Globe,150,400,900#,BW,1- End conn: All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used. 2- Use: For In-line throttling and control valve by-passes.,Normal,V-517B / DGLWGH
-MAADEN,FJ1/DJ41,Piston Check,15,50,1500#,SW,_,Horiz/Vert Up,V-632 / ECKZXG
-MAADEN,FJ1/DJ41,Tilting Disc Check,80,150,900#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Horiz/Vert Up,V-633A / DCKWTF
-MAADEN,FJ1/DJ41,Tilting Disc Check,200,600,900#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Horiz/Vert Up,V-633B / DCKWTG
-MAADEN,GJ2/EJ41,Gate,15,80,1500#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Normal,V-465 / EGAWXE
-MAADEN,GJ2/EJ41,Gate,100,600,1500#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Normal,V-466 / EGAWGA
-MAADEN,GJ2/EJ41,Globe,15,80,1500#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Normal,V-544 / EGLWXH
-MAADEN,GJ2/EJ41,Globe,100,100,1500#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Normal,V-545 / EGLWXI
-MAADEN,GJ2/EJ41,Globe,150,400,1500#,BW,_,Normal,V-546 / EGLWGD
-MAADEN,GJ2/EJ41,Y-Globe,15,80,1500#,BW x SCR D,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe- fittings- flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25- Figure 4- 5- or 6 as applicable- no backing rings shall be used.,Normal,V-547 / EGLYXP
-MAADEN,BV1/AG44,Piston Check,80,150,150#,,_,Normal,V-628 / ACKRXL
+client,spec,type,subtype,size_min,size_max,rating,end_conn,notes,use,tag
+OCP,BA1,Ball,_,15,50,150#,THD,Fire safe design; supplied with 100 mm pup pieces,NORMAL,V-703
+OCP,BA1,Ball,_,80,200,150#,RF,_,NORMAL,V-702
+OCP,BA1,Ball,_,15,50,150#,THD,Fire safe; potable water materials certified NSF/ANSI 61,Limited Services,V-780
+OCP,BA1,Ball,_,80,200,150#,RF,Potable water materials certified NSF/ANSI 61,Limited Services,V-777
+OCP,BA2,Ball,_,15,50,150#,NPTF,Fire safe design; supplied with 100 mm pup pieces,NORMAL,V-765
+OCP,BB1,Ball,_,15,50,150#,THD,_,NORMAL,V-703
+OCP,BB1,Ball,_,80,200,150#,RF,_,NORMAL,V-702
+OCP,BB3,Ball,_,15,50,600#,SW,_,NORMAL,V-701
+OCP,BB3,Ball,_,80,200,150#,RF,_,NORMAL,V-702
+OCP,BD1,Ball,_,15,50,150#,BW,Sodium Bisulphate service,NORMAL,V-728
+OCP,BD1,Ball,_,80,100,150#,BW,Sodium Bisulphate service,NORMAL,V-774
+OCP,BD1,Ball,_,25,50,150#,BW,Anti Scaling; Sodium Hydroxide; other services,Limited Services,V-772
+OCP,BD1,Ball,_,80,80,150#,BW,Anti Scaling; Sodium Hydroxide; other services,Limited Services,V-773
+OCP,BD2,Ball,_,15,50,800#,SW   THD,_,Vent; Drain; Instru.,V-719
+OCP,BD2,Ball,_,15,50,800#,SW,_,NORMAL,V-718
+OCP,BD2,Ball,_,80,100,150#,RF,_,NORMAL,V-720
+OCP,BD2,Ball,_,150,150,150#,RF,_,NORMAL,V-770
+OCP,BD2,Ball,_,200,250,150#,RF,_,NORMAL,V-771
+OCP,BG1,Ball,_,15,150,150#,RF,Pressure/temperature limited; tank nozzles/drains use,NORMAL,V-713
+OCP,BG1,Ball,_,200,200,150#,RF,Pressure/temperature limited; tank nozzles/drains use,NORMAL,V-704
+OCP,BG1,Ball,_,250,300,150#,RF,Pressure/temperature limited; tank nozzles/drains use,NORMAL,V-705
+OCP,BG2,Ball,_,15,150,150#,RF,Pressure/temperature limited; Phosphoric Acid Reactor Slurry service only,NORMAL,V-713
+OCP,BH1,Ball,_,25,100,150#,RF/FF,RF facing metallic & BH1; FF facing FRP,NORMAL,V-720
+OCP,BH1,Ball,_,150,150,150#,RF/FF,RF facing metallic & BH1; FF facing FRP,NORMAL,V-770
+OCP,BH1,Ball,_,200,250,150#,RF/FF,RF facing metallic & BH1; FF facing FRP,NORMAL,V-771
+OCP,BH1,Ball,_,15,100,150#,RF,Lap joint with stub-end gives RF facing,NORMAL,V-775
+OCP,BH1,Ball,_,15,100,150#,RF,According to BCT valve specification. To be used only for H2SiF6 25-45%-wt with SIO2 ;SIF4; HF (FSA2a/FSA3);Waste gas (containing HF; SiF4;H2O; Air) (GW1b).,Limited Services,V-776
+OCP,BK1,Ball,_,20,200,150#,FF,_,NORMAL/Vent; Drain; Instru.R.,V-730
+OCP,BK1,Ball,_,250,300,150#,FF,_,NORMAL/Vent; Drain; Instru.R.,V-707
+OCP,BK2,Ball,_,25,100,150#,RF/FF,RF facing metallic & BH1; FF facing FRP,NORMAL,V-720
+OCP,BK2,Ball,_,150,150,150#,RF/FF,RF facing metallic & BH1; FF facing FRP,NORMAL,V-770
+OCP,BK2,Ball,_,200,250,150#,RF/FF,RF facing metallic & BH1; FF facing FRP,NORMAL,V-771
+OCP,BK3,Ball,_,15,150,150#,FF,"Valve may be used at tank nozzles; clean-outs; rod-outs and drains./To be used for Raw water Services only/Valve V-713 & V-704 Pressure/Temperature limited to 10.3 barg @ 204 C (150 Psig @ 300 F)./To be used for Cooling Water Return (WCR); Cooling Water Supply (WCS); Desalinated Water (WDS); Water Vapor over phosphoric Acid (GPA) ; Process Condensate (CPP) ;Process Water (WPR); Cooling Water Return Closed loop (CWCR); Flocculant (FLT)/The facing of valve will be considered RF for Metallic specs (BG1/BG2) ;for FRP spec (BK3) FF Facing should be used and valve datasheets 
+should be released with FF flange facing.",NORMAL,V-713
+OCP,BK3,Ball,_,200,200,150#,FF,"Valve may be used at tank nozzles; clean-outs; rod-outs and drains./To be used for Raw water Services only/Valve V-713 & V-704 Pressure/Temperature limited to 10.3 barg @ 204 C (150 Psig @ 300 F)./To be used for Cooling Water Return (WCR); Cooling Water Supply (WCS); Desalinated Water (WDS); Water Vapor over phosphoric Acid (GPA) ; Process Condensate (CPP) ;Process Water (WPR); Cooling Water Return Closed loop (CWCR); Flocculant (FLT)/The facing of valve will be considered RF for Metallic specs (BG1/BG2) ;for FRP spec (BK3) FF Facing should be used and valve datasheets 
+should be released with FF flange facing.",NORMAL/Vent; Drain; Instru.R.,V-704
+OCP,BK3,Ball,_,250,300,150#,FF,To be used for Raw water Services only & To be used for Cooling Water Return (WCR); Cooling Water Supply (WCS); Desalinated Water (WDS); Water Vapor over phosphoric Acid (GPA) ; Process Condensate (CPP) ;Process Water (WPR); Cooling Water Return Closed loop (CWCR); Flocculant (FLT),NORMAL/Vent; Drain; Instru.R.,V-707
+OCP,BK3,Ball,_,15,150,150#,FF,For use in service: Chemical Cleaning (CC) & For use in service: Product Water (WW),Vent; Drain; Instru.,V-730
+OCP,BK3,Ball,_,15,150,150#,FF,For use in service: Demineralized Water (WDS); Permeate Water(WP),Vent; Drain; Instru.,V-731
+OCP,BK3,Ball,_,15,150,150#,FF,For Use in service: Effluent Water(WE); Calcium Hydroxide(CH),Vent; Drain; Instru.,V-732
+OCP,BK3,Ball,_,15,150,150#,FF,For use in service: Sea Water (WSS) and Brine (BSL),Vent; Drain; Instru.,V-781
+OCP,BK4,Ball,_,15,150,150#,FF,Valve may be used at tank nozzles; clean-outs; rod-outs and drains.,NORMAL,V-761
+OCP,BR1,Ball,_,15,300,150#,SW,_,NORMAL,V-721
+OCP,BS1,Ball,_,15,50,800#,SW,_,NORMAL,V-724
+OCP,BS1,Ball,_,15,50,150#,FF,_,NORMAL,V-708
+OCP,BS1,Ball,_,15,50,150#,RF,_,NORMAL,V-709
+OCP,BS1,Ball,_,80,100,150#,RF,_,NORMAL,V-785
+OCP,BS2,Ball,_,15,50,10S,BW,_,NORMAL,V-742
+OCP,BS3,Ball,_,15,50,10S,BW,_,NORMAL,V-734
+OCP,BX1,Ball,_,15,100,150#,SF PN6,_,NORMAL,V-735
+OCP,BX1,Ball,_,125,150,150#,FF,_,NORMAL,V-732
+OCP,BX1,Ball,3-Way,80,80,150#,THD   SF   SF,_,NORMAL,V-740
+OCP,BX2,Ball,_,15,100,150#,SF PN10,_,NORMAL,V-736
+OCP,BX3,Ball,_,15,100,150#,SF PN16,_,NORMAL,V-743
+OCP,BY1,Ball,_,15,100,150#,SS PN10,_,NORMAL,V-737
+OCP,BY3,Ball,_,15,100,150#,SF PN10,_,NORMAL,V-737
+OCP,BZ1,Ball,_,15,50,150#,SF PN16,_,NORMAL,V-738
+OCP,BZ1,Ball,_,63,100,150#,SF PN10,_,NORMAL,V-739
+OCP,CB1,Ball,_,15,100,300#,RF,Tagged for Anhydrous Ammonia Service,NORMAL,V-706
+OCP,CB1,Ball,_,150,200,300#,RF,Tagged for Anhydrous Ammonia Service,NORMAL,V-768
+OCP,CB1,Ball,_,250,300,300#,RF,Tagged for Anhydrous Ammonia Service,NORMAL,V-769
+OCP,CB2,Ball,_,25,50,300#,SW,Use where indicated on P&ID (frequently operated),NORMAL,V-715
+OCP,CB2,Ball,_,20,100,300#,RF,Use where indicated on P&ID (frequently operated),NORMAL,V-716
+OCP,CB2,Ball,_,150,200,300#,RF,Use where indicated on P&ID (frequently operated),NORMAL,V-766
+OCP,CB2,Ball,_,250,400,300#,RF,Use where indicated on P&ID (frequently operated),NORMAL,V-767
+OCP,CB3,Ball,_,15,50,800#,SW,_,NORMAL,V-701
+OCP,CD1,Ball,_,15,50,300#,RF,_,NORMAL,V-710
+OCP,CD2,Ball,_,15,50,,SW,_,NORMAL,V-718
+OCP,CD2,Ball,_,80,250,300#,RF,_,NORMAL,V-764
+OCP,CK3,Ball,_,15,50,300#,FF,_,Vent; Drain; Instru.,V-729
+OCP,CS1,Ball,_,15,50,800#,SW,Fire safe design; supplied with 100 mm pup pieces,Normal,V-724
+OCP,ES2,Ball,_,15,50,40S,BW,_,Normal,V-778
+OCP,BA1,Butterfly,_,80,150,150#,LUG,_,NORMAL,V-301
+OCP,BA1,Butterfly,_,200,300,150#,LUG,_,NORMAL,V-302
+OCP,BA2,Butterfly,_,80,150,150#,FF,_,NORMAL,V-341
+OCP,BA2,Butterfly,_,200,600,150#,FF,_,NORMAL,V-342
+OCP,BB1,Butterfly,_,80,150,150#,LUG,Use flat face when matching to flat face flanges.,NORMAL,V-301
+OCP,BB1,Butterfly,_,200,300,150#,LUG,Use flat face when matching to flat face flanges.,NORMAL,V-302
+OCP,BB1,Butterfly,_,350,600,150#,LUG,Use flat face when matching to flat face flanges.,NORMAL,V-303
+OCP,BB1,Butterfly,_,650,1300,150#,RF,_,NORMAL,V-304
+OCP,BB1,Butterfly,_,50,200,150#,GRVD,_,NORMAL,V-362
+OCP,BB1,Butterfly,_,250,350,150#,GRVD,_,NORMAL,V-363
+OCP,BB6,Butterfly,_,80,150,150#,#N/A,_,NORMAL,V-352
+OCP,BB6,Butterfly,_,200,200,150#,LUG,_,NORMAL,V-354
+OCP,BB6,Butterfly,_,300,350,150#,LUG,_,NORMAL,V-353
+OCP,BD1,Butterfly,_,100,150,150#,LUG,Use flat face when matching to flat face flanges.,NORMAL,V-322
+OCP,BD1,Butterfly,_,200,400,150#,LUG,Use flat face when matching to flat face flanges.,NORMAL,V-345
+OCP,BD2,Butterfly,_,80,100,150#,LUG,_,NORMAL,V-306
+OCP,BD2,Butterfly,_,150,600,150#,LUG,_,NORMAL,V-307
+OCP,BD2,Butterfly,_,650,700,150#,RF,_,NORMAL,V-346
+OCP,BD2,Butterfly,_,50,150,150#,LUG,Strong/Weak Phosphoric Acid only,NORMAL,V-308
+OCP,BD2,Butterfly,_,200,450,150#,LUG,Strong/Weak Phosphoric Acid only,NORMAL,V-309
+OCP,BD2,Butterfly,_,450,600,150#,LUG,_,NORMAL,V-332
+OCP,BG1,Butterfly,_,15,150,150#,LUG,Suitable between RF flanges Class 150,NORMAL,V-308
+OCP,BG1,Butterfly,_,200,600,150#,LUG,Suitable between RF flanges Class 150,NORMAL,V-309
+OCP,BG2,Butterfly,_,50,150,150#,LUG,Suitable between RF flanges Class 150,NORMAL,V-308
+OCP,BG2,Butterfly,_,200,600,150#,LUG,Suitable between RF flanges Class 150,NORMAL,V-309
+OCP,BH1,Butterfly,_,80,100,150#,LUG,Suitable between RF flanges Class 150,NORMAL,V-306
+OCP,BH1,Butterfly,_,150,600,150#,LUG,Suitable between RF flanges Class 150,NORMAL,V-307
+OCP,BH1,Butterfly,_,150,150,150#,#N/A,According to BCT valve specification. To be used only for H2SiF6 25-45%-wt with SIO2 ;SIF4; HF (FSA2a/ FSA3);Waste gas (containing HF; SiF4;H2O; Air) (GW1b). & Lug and wafer valve types should be suitable to be installed between RF Flanges Class 150 per ASME B16.5,NORMAL,V-351
+OCP,BH1,Butterfly,_,250,450,150#,#N/A,According to BCT valve specification. To be used only for H2SiF6 25-45%-wt with SIO2 ;SIF4; HF (FSA2a/ FSA3);Waste gas (containing HF; SiF4;H2O; Air) (GW1b). & Lug and wafer valve types should be suitable to be installed between RF Flanges Class 150 per ASME B16.5,NORMAL,V-356
+OCP,BH1,Butterfly,_,150,200,150#,WAFER LUG,According to BCT valve specification. To be used only for Silica (SiO2) with > 70%-wt moisture (SiO1); H2SiF6 5-45%-wt; with SiO2; traces of SIF4; HF (FSA1); SiF4 gas with HF traces (SiF1a); Waste gas (containing HF; SiF4;H2O; Air) (GW1a); Waste water without solids (WW1); Potassium hydroxide KOH (KOH). & Lug and wafer valve types should be suitable to be installed between RF Flanges Class 150 per ASME B16.5,NORMAL,V-357
+OCP,BH1,Butterfly,_,300,450,150#,WAFER LUG,According to BCT valve specification. To be used only for Silica (SiO2) with > 70%-wt moisture (SiO1); H2SiF6 5-45%-wt; with SiO2; traces of SIF4; HF (FSA1); SiF4 gas with HF traces (SiF1a); Waste gas (containing HF; SiF4;H2O; Air) (GW1a); Waste water without solids (WW1); Potassium hydroxide KOH (KOH). & Lug and wafer valve types should be suitable to be installed between RF Flanges Class 150 per ASME B16.5,NORMAL,V-358
+OCP,BK1,Butterfly,_,50,150,150#,LUG,Suitable between FF & RF flanges Class 150,NORMAL,V-308
+OCP,BK1,Butterfly,_,200,600,150#,LUG,Suitable between FF & RF flanges Class 150,NORMAL,V-309
+OCP,BK1,Butterfly,_,650,1200,150#,LUG,_,NORMAL,V-323
+OCP,BK1,Butterfly,_,1300,1500,150#,LUG,_,NORMAL,V-313
+OCP,BK1,Butterfly,_,1600,2000,150#,LUG,_,NORMAL,V-347
+OCP,BK1,Butterfly,_,100,250,150#,#N/A,FSA services only; suitable between FF & RF flanges,NORMAL,V-352
+OCP,BK1,Butterfly,_,300,600,150#,LUG,FSA services only; suitable between FF & RF flanges,NORMAL,V-353
+OCP,BK1,Butterfly,_,80,100,150#,LUG,FSA services only; suitable between FF & RF flanges,NORMAL,V-306
+OCP,BK1,Butterfly,_,150,600,150#,LUG,FSA services only; suitable between FF & RF flanges,NORMAL,V-307
+OCP,BK3,Butterfly,_,80,100,150#,#N/A,To be used for Raw water Services only / The Lug and wafer valves types should be suitable to be installed between FF and RF Flanges Class 150 per ASME B16.5,NORMAL,V-306
+OCP,BK3,Butterfly,_,150,600,150#,#N/A,To be used for Raw water Services only / The Lug and wafer valves types should be suitable to be installed between FF and RF Flanges Class 150 per ASME B16.5,NORMAL,V-307
+OCP,BK3,Butterfly,_,50,150,150#,#N/A,"The Lug and wafer valves types should be suitable to be installed between FF and RF Flanges Class 150 per ASME B16.5 / To be used for Cooling Water Return (WCR); Cooling Water Supply (WCS); Desalinated Water (WDS); Water Vapor over phosphoric Acid 
+(GPA) ; Process Condensate (CPP) ;Process Water (WPR); Cooling Water Return Closed loop (CWCR); Flocculant (FLT)",NORMAL,V-308
+OCP,BK3,Butterfly,_,200,600,150#,#N/A,"The Lug and wafer valves types should be suitable to be installed between FF and RF Flanges Class 150 per ASME B16.5 / To be used for Cooling Water Return (WCR); Cooling Water Supply (WCS); Desalinated Water (WDS); Water Vapor over phosphoric Acid 
+(GPA) ; Process Condensate (CPP) ;Process Water (WPR); Cooling Water Return Closed loop (CWCR); Flocculant (FLT)",NORMAL,V-322
+OCP,BK3,Butterfly,_,50,200,150#,#N/A,The Lug and wafer valves types should be suitable to be installed between FF and RF Flanges Class 150 per ASME B16.5 / For use in service: Sea Water (WSS) and Brine (BSL) / For use in service: Chemical Cleaning (CC),NORMAL,V-324
+OCP,BK3,Butterfly,_,50,600,150#,#N/A,The Lug and wafer valves types should be suitable to be installed between FF and RF Flanges Class 150 per ASME B16.5 / For use in service: Demineralized Water (WDS); Permeate Water(WP) / For Use in service: Effluent Water(WE); Calcium Hydroxide(CH) / For use in service: Product Water (WW),NORMAL,V-325
+OCP,BK3,Butterfly,_,1550,1800,150#,#N/A,"To be used for Raw water Services only / To be used for Cooling Water Return (WCR); Cooling Water Supply (WCS); Desalinated Water (WDS); Water Vapor over phosphoric Acid 
+(GPA) ; Process Condensate (CPP) ;Process Water (WPR); Cooling Water Return Closed loop (CWCR); Flocculant (FLT)",NORMAL,V-347
+OCP,BK3,Butterfly,_,1900,2000,150#,#N/A,"To be used for Raw water Services only / To be used for Cooling Water Return (WCR); Cooling Water Supply (WCS); Desalinated Water (WDS); Water Vapor over phosphoric Acid 
+(GPA) ; Process Condensate (CPP) ;Process Water (WPR); Cooling Water Return Closed loop (CWCR); Flocculant (FLT)",NORMAL,V-348
+OCP,BK3,Butterfly,_,1600,2600,150#,#N/A,For use in service: Sea Water (WSS) and Brine (BSL) / For use in service: Chemical Cleaning (CC) / For use in service: Demineralized Water (WDS); Permeate Water(WP) / For Use in service: Effluent Water(WE); Calcium Hydroxide(CH) / For use in service: Product Water (WW),NORMAL,V-364
+OCP,BK3,Butterfly,_,250,600,150#,#N/A,For use in service: Sea Water (WSS) and Brine (BSL) / For use in service: Chemical Cleaning (CC),NORMAL,V-365
+OCP,BK3,Butterfly,_,650,1500,150#,#N/A,For use in service: Sea Water (WSS) and Brine (BSL) / For use in service: Chemical Cleaning (CC) / For use in service: Demineralized Water (WDS); Permeate Water(WP) / For Use in service: Effluent Water(WE); Calcium Hydroxide(CH),NORMAL,V-367
+OCP,BK4,Butterfly,_,50,150,150#,LUG,The Lug and wafer valves types should be suitable to be installed between FF Flanges Class 150 per ASME B16.5,NORMAL,V-335
+OCP,BK4,Butterfly,_,200,600,150#,LUG,The Lug and wafer valves types should be suitable to be installed between FF Flanges Class 150 per ASME B16.5,NORMAL,V-336
+OCP,BK4,Butterfly,_,650,1500,150#,FF,_,NORMAL,V-337
+OCP,BK4,Butterfly,_,1550,1800,150#,FF,_,NORMAL,V-338
+OCP,BL5,Butterfly,_,100,250,150#,#N/A,Rated at : 10.5 kg/cm2g @ 149 C or 15.11 kg/cm2g @90 C,NORMAL,V-352
+OCP,BL5,Butterfly,_,300,600,150#,LUG,Rated at : 10.5 kg/cm2g @ 149 C or 15.11 kg/cm2g @90 C,NORMAL,V-353
+OCP,BN1,Butterfly,_,100,250,150#,#N/A,Thickness of the liner according to the following table: DN 25 40 50 80 100 150 200 250 300; Thickness 3.5 3.8 4.2 4.8 5.5 6.5 8 8.5 9,NORMAL,V-352
+OCP,BN1,Butterfly,_,300,600,150#,LUG,Thickness of the liner according to the following table: DN 25 40 50 80 100 150 200 250 300; Thickness 3.5 3.8 4.2 4.8 5.5 6.5 8 8.5 9,NORMAL,V-353
+OCP,BP1,Butterfly,_,50,100,150#,#N/A,_,NORMAL,V-318
+OCP,BQ1,Butterfly,_,80,200,150#,LUG,Pipe spool may be required to avoid interference,NORMAL,V-312
+OCP,BQ1,Butterfly,_,-,-,150#,LUG,Pipe spool may be required to avoid interference,NORMAL,V-344
+OCP,BQ2,Butterfly,_,80,500,150#,#N/A,Pipe spool may be required to avoid interference,NORMAL,V-311
+OCP,BQ2,Butterfly,_,80,200,150#,#N/A,Pipe spool may be required to avoid interference,NORMAL,V-312
+OCP,BQ2,Butterfly,_,-,-,150#,#N/A,Pipe spool may be required to avoid interference,NORMAL,V-344
+OCP,BS1,Butterfly,_,80,100,150#,LUG,_,NORMAL,V-317
+OCP,BX2,Butterfly,_,50,150,150#,#N/A,_,NORMAL,V-326
+OCP,BY1,Butterfly,_,50,200,150#,#N/A,_,NORMAL,V-333
+OCP,CD2,Butterfly,_,80,100,300#,LUG,_,NORMAL,V-340
+OCP,CD2,Butterfly,_,150,600,300#,LUG,_,NORMAL,V-339
+OCP,CD2,Butterfly,_,650,750,300#,LUG,_,NORMAL,V-3XX
+OCP,CK3,Butterfly,_,50,150,300#,LUG,_,Normal,V-334
+OCP,CK3,Butterfly,_,200,600,300#,LUG,_,Normal,V-366
+OCP,BQ2,Check,Ball,25,300,150#,RF,Use TFC44 vertical up-flow where permitted,HOR. USE,V-645
+OCP,BA1,Check,Ball,15,50,800#,THD,_,HORIZ/ VERT UP,V-616
+OCP,BA1,Check,Dual Plate,80,400,150#,#N/A,_,HORIZ/ VERT UP,V-617
+OCP,BA1,Check,Ball,15,50,800#,THD,Potable water materials certified NSF/ANSI 61,HORIZ/ VERT UP,V-691
+OCP,BA1,Check,Dual Plate,80,200,150#,#N/A,Potable water materials certified NSF/ANSI 61,HORIZ/ VERT UP,V-693
+OCP,BA2,Check,Swing,15,50,800#,NPTF,_,NORMAL,V-675
+OCP,BA2,Check,Dual Plate,80,600,150#,#N/A,_,NORMAL,V-676
+OCP,BB1,Check,Ball,15,50,800#,THD,_,HORIZ/ VERT UP,V-616
+OCP,BB1,Check,_,80,600,150#,#N/A,_,HORIZ/ VERT UP,V-617
+OCP,BB1,Check,Dual Plate,650,1300,150#,RF,_,HORIZ/ VERT UP,V-680
+OCP,BB1,Check,Swing,50,400,150#,GRVD,_,HORIZ/ VERT UP,V-692
+OCP,BB2,Check,Piston,50,150,150#,RF,_,NORMAL,V-628
+OCP,BB3,Check,Ball,15,50,800#,SW,_,HORIZ/ VERT UP,V-601
+OCP,BB3,Check,Swing,80,400,150#,RF,_,HORIZ/ VERT UP,V-603
+OCP,BB3,Check,_,450,600,150#,#N/A,_,HORIZ/ VERT UP,V-637
+OCP,BB4,Check,Ball,80,600,150#,FF,_,NORMAL,V-652
+OCP,BB5,Check,Piston,15,50,800#,SW,_,HORIZONTAL,V-626
+OCP,BB5,Check,_,80,400,150#,#N/A,_,HORIZ/ VERT UP,V-627
+OCP,BB6,Check,_,25,300,150#,RF,_,HORIZ/ VERT UP,V-689
+OCP,BD1,Check,Dual Plate,100,600,150#,#N/A,_,NORMAL,V-678
+OCP,BD1,Check,Swing,25,50,150#,BW,_,NORMAL,V-681
+OCP,BD1,Check,Swing,80,80,150#,BW,_,NORMAL,V-682
+OCP,BD1,Check,Swing,25,50,150#,BW,Anti Scaling; Sodium Hydroxide; Sodium Bisulphate services,NORMAL,V-650
+OCP,BD1,Check,Swing,80,100,150#,BW,Anti Scaling; Sodium Hydroxide; Sodium Bisulphate services,NORMAL,V-683
+OCP,BD2,Check,Swing,15,50,150#,SW,Sulfuric Acid 97 99% service below 45 C,HORIZ/ VERT UP,V-608
+OCP,BD2,Check,Dual Plate,80,600,150#,#N/A,Sulfuric Acid 97 99% service below 45 C,HORIZ/ VERT UP,V-614
+OCP,BD2,Check,Dual Plate,200,600,150#,FF/RF,_,NORMAL,V-630
+OCP,BD2,Check,_,25,300,150#,RF,_,HORIZ/ VERT UP,V-689
+OCP,BG1,Check,Piston,15,150,150#,RF,Pressure/temperature limited,NORMAL,V-628
+OCP,BG1,Check,Piston,15,150,150#,RF,To be used only for Ammonium Phosphate Slurry (APS); Phosphoric Acid Reactor Slurry (ARS); Scrubber Liquor Slurry (LWA),NORMAL,V-698
+OCP,BG1,Check,_,200,600,150#,#N/A,Suitable between RF flanges Class 150,NORMAL,V-630
+OCP,BG2,Check,Piston,15,150,150#,RF,Pressure/temperature limited,NORMAL,V-628
+OCP,BG2,Check,_,200,600,150#,#N/A,Suitable between RF flanges Class 150,NORMAL,V-630
+OCP,BG2,Check,Piston,15,150,150#,RF,To be used only for Ammonium Phosphate Slurry (APS); Phosphoric Acid Reactor Slurry (ARS); Scrubber Liquor Slurry (LWA),NORMAL,V-698
+OCP,BH1,Check,_,25,450,150#,#N/A,According to BCT valve specification. To be used only for Silica (SiO2) with > 70%-wt moisture (SiO1); H2SiF6 5-45%-wt; with SiO2; traces of SIF4; HF (FSA1); SiF4 gas with HF traces (SiF1a); Waste gas (containing HF; SiF4;H2O; Air) (GW1a); Waste water without solids (WW1); Potassium hydroxide KOH (KOH). & Lug and wafer valve types should be suitable to be installed between RF Flanges Class 150 per ASME B16.5,NORMAL,V-690
+OCP,BH1,Check,Swing,25,600,150#,RF,_,NORMAL,V-654
+OCP,BK1,Check,_,80,600,150#,#N/A,Suitable between FF & RF flanges Class 150,HORIZONTAL/VERTICAL UP,V-614
+OCP,BK1,Check,_,200,600,150#,#N/A,Suitable between FF & RF flanges Class 150,NORMAL,V-630
+OCP,BK1,Check,Piston,25,150,150#,RF,_,NORMAL,V-628
+OCP,BK1,Check,Ball,25,300,150#,RF,_,NORMAL,V-645
+OCP,BK1,Check,Dual Plate,650,1200,150#,FF DBL FLG,_,NORMAL,V-686
+OCP,BK1,Check,Dual Plate,700,900,150#,FF DBL FLG,_,NORMAL,V-696
+OCP,BK1,Check,Swing,250,600,150#,RF,FSA services only,NORMAL,V-697
+OCP,BK2,Check,_,80,600,150#,#N/A,Suitable between FF & RF flanges Class 150,HORIZONTAL/VERTICAL UP,V-614
+OCP,BK2,Check,_,200,600,150#,#N/A,Suitable between FF & RF flanges Class 150,NORMAL,V-630
+OCP,BK2,Check,Piston,25,150,150#,FF,Use full flat face flanges or spacers; stub-end if needed,NORMAL,V-628
+OCP,BK2,Check,Dual Plate,650,1200,150#,FF DBL FLG,_,NORMAL,V-686
+OCP,BK3,Check,_,200,600,150#,#N/A,To be used for Raw water Services only/The Lug and wafer valves types should be suitable to be installed between FF and RF Flanges Class 150 per ASME B16.5/To be used for Cooling Water Return (WCR); Cooling Water Supply (WCS); Desalinated Water (WDS); Water Vapor over phosphoric Acid (GPA) ; Process Condensate (CPP) ;Process Water (WPR); Cooling Water Return Closed loop (CWCR); Flocculant (FLT),NORMAL,V-630
+OCP,BK3,Check,Piston,15,150,150#,RF,"Flanges should always be bolted to full flat faced flanges. Where full flat faced flanges are not used; proper spacers must be used to build-up 
+the flange to a flat surface and prevent overstressing the flange. When existing equipment cannot be modified to produce full flat faced flange; 
+Stub end Flange shall be used./To be used for Raw water Services only/To be used for Cooling Water Return (WCR); Cooling Water Supply (WCS); Desalinated Water (WDS); Water Vapor over phosphoric Acid (GPA) ; Process Condensate (CPP) ;Process Water (WPR); Cooling Water Return Closed loop (CWCR); Flocculant (FLT)",NORMAL,V-628
+OCP,BK3,Check,Dual Plate,50,600,150#,FF/RF,The Lug and wafer valves types should be suitable to be installed between FF and RF Flanges Class 150 per ASME B16.5/For use in service: Sea Water (WSS) and Brine (BSL)/For use in service: Chemical Cleaning (CC),NORMAL,V-651
+OCP,BK3,Check,Dual Plate,700,1100,150#,FF,The wafer valve type should be suitable to be installed between FF Flanges Class 150 per ASME B16.47 Series A/For use in service: Sea Water (WSS) and Brine (BSL)/For use in service: Chemical Cleaning (CC),NORMAL,V-653
+OCP,BK3,Check,Dual Plate,100,600,150#,FF/RF,The Lug and wafer valves types should be suitable to be installed between FF and RF Flanges Class 150 per ASME B16.5/For use in service: Demineralized Water (WDS); Permeate Water(WP)/For Use in service: Effluent Water(WE); Calcium Hydroxide(CH)/For use in service: Product Water (WW),NORMAL,V-657
+OCP,BK3,Check,Dual Plate,700,1100,150#,FF,The wafer valve type should be suitable to be installed between FF Flanges Class 150 per ASME B16.47 Series A/For use in service: Demineralized Water (WDS); Permeate Water(WP)/For Use in service: Effluent Water(WE); Calcium Hydroxide(CH)/For use in service: Product Water (WW),NORMAL,V-679
+OCP,BK3,Check,Dual Plate,750,1200,150#,FF DBL FLG,"To be used for Raw water Services only/To be used for Cooling Water Return (WCR); Cooling Water Supply (WCS); Desalinated Water (WDS); Water Vapor over phosphoric Acid 
+(GPA) ; Process Condensate (CPP) ;Process Water (WPR); Cooling Water Return Closed loop (CWCR); Flocculant (FLT)",NORMAL,V-686
+OCP,BK3,Check,Dual Plate,650,700,150#,FF,"To be used for Raw water Services only/The wafer valve type should be suitable to be installed between FF Flanges Class 150 per ASME B16.47 Series A/To be used for Cooling Water Return (WCR); Cooling Water Supply (WCS); Desalinated Water (WDS); Water Vapor over phosphoric Acid 
+(GPA) ; Process Condensate (CPP) ;Process Water (WPR); Cooling Water Return Closed loop (CWCR); Flocculant (FLT)",NORMAL,V-687
+OCP,BK4,Check,_,150,600,150#,#N/A,The Lug and wafer valves types should be suitable to be installed between FF Flanges Class 150 per ASME B16.5,NORMAL,V-671
+OCP,BK4,Check,Ball,15,100,150#,FF,_,HORIZONTAL/VERTICAL UP,V-670
+OCP,BK4,Check,_,650,1200,150#,FF DBL FLG,_,NORMAL,V-672
+OCP,BL5,Check,Dual Plate,200,600,150#,RF,_,NORMAL,V-628
+OCP,BL5,Check,Dual Plate,200,600,150#,FF,_,NORMAL,V-630
+OCP,BL5,Check,Ball,25,600,150#,FF,Rated at: 10.5 kg/cm2g @ 149 C or 15.11 kg/cm2g @90 C,NORMAL,V-645
+OCP,BN1,Check,Dual Plate,200,600,150#,RF,_,NORMAL,V-628
+OCP,BN1,Check,Ball,25,600,150#,FF,Thickness of the liner according to the following table: DN 25 40 50 80 100 150 200 250 300; Thickness 3.5 3.8 4.2 4.8 5.5 6.5 8 8.5 9,NORMAL,V-645
+OCP,BP1,Check,Swing,25,50,800#,SW,_,HORIZONTAL/VERTICAL UP,V-638
+OCP,BP1,Check,Swing,80,300,150#,RF,_,HORIZONTAL/VERTICAL UP,V-639
+OCP,BS1,Check,Ball,15,50,800#,SW,_,NORMAL,V-655
+OCP,BS1,Check,Swing,80,100,150#,RF,_,NORMAL,V-656
+OCP,BS2,Check,Ball,150,450,150#,RF,_,NORMAL,V-664
+OCP,BV1,Check,Piston,80,150,150#,FF DL PP/FRP,_,NORMAL,V-628
+OCP,BX1,Check,Ball,25,80,150#,SF PN6,_,NORMAL,V-658
+OCP,BX2,Check,_,25,80,150#,THD,_,NORMAL,V-659
+OCP,BX3,Check,Ball,25,80,150#,SF PN16,_,NORMAL,V-665
+OCP,BY1,Check,Ball,15,100,150#,SS PN10,_,NORMAL,V-660
+OCP,BY1,Check,_,150,200,150#,#N/A,_,NORMAL,V-667
+OCP,BY3,Check,Ball,25,80,150#,SF PN10,_,NORMAL,V-660
+OCP,BZ1,Check,Ball,15,50,150#,SF PN16,_,NORMAL,V-661
+OCP,BZ1,Check,Ball,63,100,150#,SF PN10,_,NORMAL,V-662
+OCP,CB1,Check,Swing,80,600,300#,RF,Tagged for Anhydrous Ammonia Service,Horiz/Vert Up,V-635
+OCP,CB2,Check,Piston,15,50,800#,SW,_,Horizontal,V-626
+OCP,CB2,Check,Piston,15,50,300#,RF,_,Horizontal,V-699
+OCP,CB2,Check,_,80,400,300#,RF,_,Horiz/Vert Up,V-636
+OCP,CB3,Check,Piston,15,50,800#,SW,_,Normal,V-634
+OCP,CB3,Check,Swing,80,600,300#,RF,_,Horiz/Vert Up,V-635
+OCP,CD1,Check,Swing,15,50,300#,RF,_,Horiz/Vert Up,V-622
+OCP,CD2,Check,Ball,15,50,300#,RF,Use only noted valves with Sulfuric Acid 97-99% <45C (ASC) service. These valves may be used for other services within this class.,Horiz/Vert Up,V-623
+OCP,CD2,Check,Dual Plate,80,600,300#,WAFER,Use only noted valves with Sulfuric Acid 97-99% <45C (ASC) service. These valves may be used for other services within this class.,Horiz/Vert Up,V-605
+OCP,CD2,Check,Swing,15,50,,SW,Use only noted valves with Sulfuric Acid 97-99% <45C (ASC) service. These valves may be used for other services within this class.,Horiz/Vert Up,V-673
+OCP,CD2,Check,_,80,650,300#,WAFER,Use only noted valves with Sulfuric Acid 97-99% <45C (ASC) service. These valves may be used for other services within this class.,Horiz/Vert Up,V-674
+OCP,CG1,Check,Ball,20,50,300#,RF,_,Normal,V-623
+OCP,CG1,Check,_,80,400,300#,RF,_,Normal,V-624
+OCP,CG2,Check,Ball,15,50,300#,RF,_,Normal,V-623
+OCP,CG2,Check,Swing,80,600,300#,RF,_,Normal,V-624
+OCP,CJ1,Check,Swing,80,350,300#,BW,_,Horiz/Vert Up,V-646
+OCP,CJ1,Check,Swing,400,600,300#,BW,_,Horiz/Vert Up,V-677
+OCP,CJ1,Check,Lift,15,50,1500#,SW,_,Horiz / Cover Up,V-632
+OCP,CP1,Check,Swing,25,50,300#,RF,_,Horiz/Vert Up,V-640
+OCP,CP1,Check,Swing,25,50,800#,SW,_,Horiz/Vert Up,V-638
+OCP,CP1,Check,Swing,80,300,300#,RF,Modified valve for jacketing,Horiz/Vert Up,V-641
+OCP,CS1,Check,_,15,50,800#,SW,_,Normal,V-655
+OCP,ES2,Check,_,50,600,600#,WAFER,_,Normal,V-647
+OCP,FB1,Check,Swing,80,80,900#,BW,_,Horiz/Vert Up,V-642
+OCP,FB1,Check,Swing,100,400,900#,BW,_,Horiz/Vert Up,V-685
+OCP,FB1,Check,Swing,450,600,900#,BW,_,Horiz/Vert Up,V-604
+OCP,FB1,Check,Piston,15,50,1500#,SW,_,Horiz/Vert Up,V-643
+OCP,FJ1,Check,Lift,15,50,1500#,SW,_,Horiz/Vert Up,V-632
+OCP,FJ1,Check,Tilting Disc,80,150,900#,BW,_,Horiz/Vert Up,V-633
+OCP,FJ1,Check,Tilting Disc,200,600,900#,BW,_,Horiz/Vert Up,V-684
+OCP,GC1,Check,Piston,15,50,1500#,SW,_,Horiz/Vert Up,V-694
+OCP,GC1,Check,Tilting Disc,80,600,1500#,BW,_,Horiz/Vert Up,V-695
+OCP,GD1,Check,Lift,15,40,1500#,SW,Install horizontally with cover up,Horiz/Vert Up,V-644
+OCP,GD2,Check,Lift,15,50,1500#,BW,Install horizontally with cover up,Horiz/Vert Up,V-648
+OCP,GD2,Check,_,80,200,1500#,RTJ,Install horizontally with cover up,Normal,V-649
+OCP,BB4,Diaphragm,_,15,50,150#,FF,_,NORMAL,V-203
+OCP,BD1,Diaphragm,_,50,100,150#,RF,Sulfuric Acid service,NORMAL,V-206
+OCP,BH1,Diaphragm,_,25,25,150#,RF,"According to BCT valve specification. To be used only for Silica (SiO2) with > 70%-wt moisture (SiO1); H2SiF6 
+5-45%-wt; with SiO2; traces of SIF4; HF (FSA1); SiF4 gas with HF traces (SiF1a); Waste gas (containing HF; 
+SiF4;H2O; Air) (GW1a); Waste water without solids (WW1); Potassium hydroxide KOH (KOH).",NORMAL,V-204
+OCP,BH1,Diaphragm,_,15,200,150#,RF,_,NORMAL,V-206
+OCP,BL5,Diaphragm,_,15,250,150#,FF,_,NORMAL,V-203
+OCP,BL5,Diaphragm,_,300,600,150#,FF,_,NORMAL,V-205
+OCP,BS1,Diaphragm,_,15,50,150#,FF,Only used for Flushing hose system / special process requirements,NORMAL,V-215
+OCP,BA1,Gate,_,25,150,150#,RF,_,NORMAL,V-401
+OCP,BA1,Gate,_,200,400,150#,RF,_,NORMAL,V-402
+OCP,BA2,Gate,_,15,50,150#,THD NPTF,_,THROTTLING,V-492
+OCP,BA2,Gate,_,80,100,150#,FF,_,NORMAL,V-490
+OCP,BA2,Gate,_,150,300,150#,FF,_,NORMAL,V-491
+OCP,BB1,Gate,_,80,150,150#,RF,_,NORMAL,V-401
+OCP,BB1,Gate,_,50,50,150#,RF,50 mm size at equipment nozzles only,NORMAL,V-401
+OCP,BB1,Gate,_,200,600,150#,RF,_,NORMAL,V-402
+OCP,BB1,Gate,_,650,900,150#,RF,_,NORMAL,V-403
+OCP,BB1,Gate,_,15,50,800#,SW,_,NORMAL,V-405
+OCP,BB1,Gate,_,15,50,800#,THD,_,NORMAL,V-412
+OCP,BB1,Gate,_,65,400,150#,GRVD,_,NORMAL,V-498
+OCP,BB1,Gate,Knife Gate,50,150,150#,RF,_,NORMAL,V-439
+OCP,BB1,Gate,Knife Gate,200,600,150#,RF,_,NORMAL,V-440
+OCP,BB2,Gate,Knife Gate,50,150,150#,FF,Use flat face when matching to flat face flanges.,NORMAL,V-439
+OCP,BB2,Gate,Knife Gate,200,300,150#,FF,Use flat face when matching to flat face flanges.,NORMAL,V-440
+OCP,BB3,Gate,_,200,600,150#,RF,_,NORMAL,V-402
+OCP,BB3,Gate,_,700,900,150#,RF,_,NORMAL,V-403
+OCP,BB3,Gate,_,50,150,150#,RF,_,NORMAL,V-401
+OCP,BB3,Gate,_,15,50,800#,SW,_,NORMAL,V-405
+OCP,BB3,Gate,_,15,50,800#,SW   THD,_,Vent; Drain; Instru.,V-406
+OCP,BB4,Gate,Knife Gate,50,150,150#,FF,_,NORMAL,V-439
+OCP,BB4,Gate,Knife Gate,200,600,150#,FF,_,NORMAL,V-440
+OCP,BB5,Gate,_,50,400,150#,BW,_,NORMAL,V-428
+OCP,BD1,Gate,_,15,50,150#,BW,_,NORMAL,V-402
+OCP,BD2,Gate,_,50,350,150#,RF,_,NORMAL,V-454
+OCP,BD2,Gate,_,400,600,150#,RF,_,NORMAL,V-408
+OCP,BD2,Gate,_,15,40,800#,THD,_,NORMAL,V-456
+OCP,BG1,Gate,Knife Gate,100,150,150#,FF,Pressure/temperature limited; Phosphoric Acid Reactor Slurry service only,NORMAL,V-495
+OCP,BG1,Gate,Knife Gate,200,300,150#,FF,Pressure/temperature limited; Phosphoric Acid Reactor Slurry service only,NORMAL,V-441
+OCP,BG2,Gate,Knife Gate,100,150,150#,FF,shall be used only for Phosphoric Acid Rector Slurry (B) service only,NORMAL,V-495
+OCP,BG2,Gate,Knife Gate,200,300,150#,FF,shall be used only for Phosphoric Acid Rector Slurry (B) service only,NORMAL,V-441
+OCP,BH1,Gate,Knife Gate,50,150,150#,FF,Gypsum Slurry service only,NORMAL,V-439
+OCP,BH1,Gate,Knife Gate,200,600,150#,FF,Gypsum Slurry service only,NORMAL,V-440
+OCP,BH1,Gate,Knife Gate,650,900,150#,FF,Gypsum Slurry service only,NORMAL,V-461
+OCP,BH2,Gate,_,63,63,150#,RF PN16 EN1092,Underground Drinking Water only; NSF/ANSI 61 certified,DRINKING WATER (WD),V-499
+OCP,BH2,Gate,_,90,315,150#,RF PN16 EN1092,Fire water valve shall be FM Approved & UL Listed.,FIRE WATER,V-483
+OCP,BH2,Gate,_,355,6350,150#,RF PN16 EN1092,Fire water valve shall be FM Approved & UL Listed.,FIRE WATER,V-484
+OCP,BH2,Gate,Post Indicator Valve,110,315,150#,RF PN16 EN1092,The maximum allowable pipeline design temperature for HDPE pipe material shall be 30  C (86  F). & Gate Valve with Vertical Indicator Post assembly (PIV); HDPE Pipes and Fittings for underground fire water line shall be UL / FM approved.,FIRE WATER,V-488
+OCP,BH2,Gate,Post Indicator Valve,355,630,150#,RF PN16 EN1092,The maximum allowable pipeline design temperature for HDPE pipe material shall be 30  C (86  F). & Gate Valve with Vertical Indicator Post assembly (PIV); HDPE Pipes and Fittings for underground fire water line shall be UL / FM approved.,FIRE WATER,V-489
+OCP,BK1,Gate,Knife Gate,50,150,150#,FF,_,NORMAL,V-409
+OCP,BK1,Gate,Knife Gate,200,600,150#,FF,_,NORMAL,V-414
+OCP,BK1,Gate,Knife Gate,650,1200,150#,FF,_,NORMAL,V-410
+OCP,BK3,Gate,_,65,200,150#,FF,For Use in service: Effluent Water(WE); Calcium Hydroxide(CH),NORMAL,V-457
+OCP,BL5,Gate,Knife Gate,50,150,150#,FF,_,NORMAL,V-439
+OCP,BL5,Gate,Knife Gate,200,600,150#,FF,_,NORMAL,V-440
+OCP,BL5,Gate,Knife Gate,80,150,150#,FF,_,NORMAL,V-458
+OCP,BL5,Gate,Knife Gate,200,600,150#,FF,_,NORMAL,V-459
+OCP,BL5,Gate,Knife Gate,650,900,150#,FF,_,NORMAL,V-460
+OCP,BQ2,Gate,_,15,250,150#,RF,_,NORMAL,V-446
+OCP,BQ2,Gate,_,25,600,150#,RF,_,NORMAL,V-494
+OCP,BQ3,Gate,_,15,50,150#,RF,_,NORMAL,V-446
+OCP,BV1,Gate,Knife Gate,25,150,150#,FF,_,NORMAL,V-458
+OCP,BV1,Gate,Knife Gate,200,600,150#,FF,_,NORMAL,V-459
+OCP,CB1,Gate,_,15,50,800#,SW,Tagged for Anhydrous Ammonia Service,NORMAL,V-435
+OCP,CB1,Gate,_,80,150,300#,RF,Tagged for Anhydrous Ammonia Service,NORMAL,V-437
+OCP,CB2,Gate,_,50,300,300#,RF,Use at equipment connection only,Normal,V-429
+OCP,CB2,Gate,_,350,400,300#,RF,Use at equipment connection only,Normal,V-419
+OCP,CB2,Gate,_,50,400,300#,BW,_,Normal,V-430
+OCP,CB3,Gate,_,15,50,800#,SW,_,NORMAL,V-405
+OCP,CB3,Gate,_,40,40,800#,SW,Gate Valves with Extended Stem V-475; L=1700mm & V-474 L=1200mm - use limited to service Steam 12 barg (SM).,NORMAL,V-474
+OCP,CB3,Gate,_,15,50,800#,SW   THD,_,Vent; Drain; Instru.,V-406
+OCP,CB3,Gate,_,80,150,300#,RF,_,NORMAL,V-437
+OCP,CB3,Gate,_,200,600,300#,RF,_,NORMAL,V-438
+OCP,CB3,Gate,_,400,400,300#,RF,Gate Valves with Extended Stem V-475; L=1700mm & V-474 L=1200mm - use limited to service Steam 12 barg (SM).,NORMAL,V-475
+OCP,CB3,Gate,_,650,800,300#,RF,_,NORMAL,V-411
+OCP,CD1,Gate,_,80,100,300#,RF,_,NORMAL,V-455
+OCP,CJ1,Gate,_,80,300,300#,BW,_,Normal,V-449
+OCP,CJ1,Gate,_,350,350,300#,BW,_,Normal,V-497
+OCP,CJ1,Gate,_,400,900,300#,BW,_,Normal,V-450
+OCP,FB1,Gate,_,15,50,1500#,SW,_,Normal,V-442
+OCP,FB1,Gate,_,15,25,1500#,SW   THD,Threaded joints are permitted only at outlets of vents and drains; hydrostatic testing connections; outlet of instrumentation isolation valves and to match equipment. Threaded hydrostatic testing connections shall be seal welded after testing.,Vent; Drain,V-443
+OCP,FB1,Gate,_,80,80,900#,BW,_,Normal,V-444
+OCP,FB1,Gate,_,100,100,900#,BW,_,Normal,V-485
+OCP,FB1,Gate,_,150,400,900#,BW,_,Normal,V-445
+OCP,FB1,Gate,_,450,600,900#,BW,_,Normal,V-486
+OCP,FJ1,Gate,_,15,50,1500#,SW,_,Normal,V-432
+OCP,FJ1,Gate,_,80,100,900#,BW,_,Normal,V-433
+OCP,FJ1,Gate,_,150,150,900#,BW,_,Normal,V-434
+OCP,FJ1,Gate,_,200,400,900#,BW,_,Normal,V-496
+OCP,FJ1,Gate,_,450,700,900#,BW,_,Normal,V-487
+OCP,GC1,Gate,_,150,600,1500#,BW,_,Normal,V-415
+OCP,GC1,Gate,_,15,50,1500#,SW,_,Normal,V-416
+OCP,GC1,Gate,_,15,50,1500#,SW   THD,No threaded valves are acceptable except for normally Closed valves used for commissioning; hydrotest; drains; vents; with threaded plug applied downstream for V-417 to ensure the threaded end is not exposed to service conditions during normal operation.,,V-417
+OCP,GD1,Gate,_,15,40,1500#,SW,_,NORMAL,V-447
+OCP,GD1,Gate,_,15,40,1500#,SW   THD,_,Vent; Drain; Instru.,V-448
+OCP,GD2,Gate,_,15,50,1500#,BW,_,Normal,V-451
+OCP,GD2,Gate,_,15,20,1500#,RTJ,_,Normal,V-493
+OCP,GD2,Gate,_,25,50,1500#,RTJ,Vent; drain; and instrument connections only,,V-452
+OCP,GD2,Gate,_,80,200,1500#,RTJ,_,Normal,V-453
+OCP,GD2,Gate,_,15,50,1500#,BW,_,Normal,V-529
+OCP,BA1,Globe,_,15,50,800#,THD,_,THROTTLING,V-508
+OCP,BA2,Globe,_,15,50,800#,THD NPTF,_,THROTTLING,V-560
+OCP,BB1,Globe,_,80,200,150#,RF,_,NORMAL,V-502
+OCP,BB1,Globe,_,15,50,800#,THD,_,THROTTLING,V-508
+OCP,BB1,Globe,_,250,350,150#,RF,_,NORMAL,V-532
+OCP,BB3,Globe,_,80,400,150#,RF,_,NORMAL,V-502
+OCP,BB3,Globe,_,15,50,800#,SW,_,NORMAL,V-501
+OCP,BB5,Globe,_,15,50,800#,SW,Inline throttling and control valve bypasses,NORMAL,V-514
+OCP,BB5,Globe,_,80,150,150#,RF,Inline throttling and control valve bypasses,NORMAL,V-516
+OCP,BB5,Globe,_,200,400,150#,RF,Inline throttling and control valve bypasses,NORMAL,V-564
+OCP,BB6,Globe,_,25,100,150#,RF,_,NORMAL,V-504
+OCP,BD2,Globe,_,15,50,800#,SW,_,NORMAL,V-528
+OCP,BD2,Globe,_,80,250,150#,RF,_,NORMAL,V-531
+OCP,BQ1,Globe,_,-,-,150#,RF,_,NORMAL,V-525
+OCP,BQ2,Globe,_,-,-,150#,RF,_,NORMAL,V-524
+OCP,BQ3,Globe,_,-,-,150#,RF,_,NORMAL,V-524
+OCP,CB1,Globe,T-Pattern,15,50,800#,SW,Tagged for Anhydrous Ammonia Service,Horiz/Vert Up,V-501
+OCP,CB2,Globe,_,15,50,800#,SW,Inline throttling and control valve bypasses,Normal,V-514
+OCP,CB2,Globe,_,15,50,300#,RF,Inline throttling and control valve bypasses,Normal,V-544
+OCP,CB2,Globe,_,80,150,300#,RF,Inline throttling and control valve bypasses,Normal,V-565
+OCP,CB2,Globe,_,200,300,300#,RF,Inline throttling and control valve bypasses,Normal,V-521
+OCP,CB3,Globe,_,15,50,800#,SW,_,Normal,V-519
+OCP,CB3,Globe,_,80,200,300#,RF,_,Normal,V-520
+OCP,CB3,Globe,_,250,450,300#,RF,_,Normal,V-569
+OCP,CD1,Globe,_,15,50,300#,RF,_,NORMAL,V-571
+OCP,CD2,Globe,_,15,50,,SW,_,NORMAL,V-536
+OCP,CD2,Globe,_,80,250,300#,RF,_,NORMAL,V-537
+OCP,CJ1,Globe,_,80,200,300#,BW,Inline throttling and control valve bypasses,Normal,V-527
+OCP,CJ1,Globe,_,250,300,300#,BW,Inline throttling and control valve bypasses,Normal,V-562
+OCP,CJ1,Globe,_,350,350,300#,BW,Inline throttling and control valve bypasses,Normal,V-568
+OCP,CJ1,Globe,_,400,400,300#,BW,Inline throttling and control valve bypasses,Normal,V-563
+OCP,CJ1,Globe,Y-Pattern,15,50,1690#,SW,_,NORMAL,V-518
+OCP,FB1,Globe,_,15,50,1500#,SW,Inline throttling and control valve bypasses,Normal,V-523
+OCP,FB1,Globe,_,15,50,1500#,SW   THD,Threaded joints are permitted only at outlets of vents and drains; hydrostatic testing connections; outlet of instrumentation isolation valves and to match equipment. Threaded hydrostatic testing connections shall be seal welded after testing.,Vent; Drain; Instru.,V-535
+OCP,FB1,Globe,_,80,250,900#,BW,_,Normal,V-522
+OCP,FJ1,Globe,Y-Pattern,15,50,1690#,SW,_,Normal,V-518
+OCP,FJ1,Globe,_,80,100,900#,BW,Inline throttling and control valve bypasses,Normal,V-517
+OCP,FJ1,Globe,_,150,150,900#,BW,Inline throttling and control valve bypasses,Normal,V-566
+OCP,FJ1,Globe,_,200,400,900#,BW,Inline throttling and control valve bypasses,Normal,V-567
+OCP,GC1,Globe,_,15,50,,SW,Inline throttling and control valve bypasses,Normal,V-570
+OCP,GD1,Globe,_,15,40,1500#,SW,_,NORMAL,V-526
+OCP,GD2,Globe,_,80,200,1500#,RTJ,_,Normal,V-530
+OCP,GD2,Globe,_,50,80,1500#,RTJ,_,Normal,V-561
+OCP,BB1,Needle,_,15,50,800#,THD,_,FIRE WATER,V-801
+OCP,BD1,Needle,_,15,25,300#,THD NPTF,_,Vent; Drain; Instru.,V-802
+OCP,BD2,Needle,_,15,25,3000#,THD NPTF,_,NORMAL,V-802
+OCP,BS2,Needle,_,15,25,10S,BW,_,Vent; Drain; Instru.,V-805
+OCP,BS3,Needle,_,20,25,10S,BW,_,NORMAL,V-804
+OCP,ES2,Needle,_,15,25,40S,BW,_,Vent; Drain; Instru.,V-803
+OCP,BB2,Plug,_,50,80,150#,RF,_,NORMAL,V-108
+OCP,BB3,Plug,_,25,80,150#,RF,Molten Sulfur lines with electrical tracing,NORMAL,V-138
+OCP,BB3,Plug,_,100,300,150#,RF,Molten Sulfur lines with electrical tracing,NORMAL,V-139
+OCP,BB6,Plug,_,350,600,150#,RF,_,NORMAL,V-132
+OCP,BB6,Plug,_,25,150,150#,RF,Use flat face when matching to flat face flanges.,NORMAL,V-136
+OCP,BB6,Plug,_,200,600,150#,RF,Use flat face when matching to flat face flanges.,NORMAL,V-105
+OCP,BD1,Plug,_,15,40,150#,RF,Sulfuric Acid service,NORMAL,V-103
+OCP,BD1,Plug,_,15,40,150#,RF,Sulfuric Acid service,NORMAL,V-145
+OCP,BD2,Plug,_,15,50,800#,SW,_,NORMAL,V-102
+OCP,BD2,Plug,_,15,80,150#,RF,Sulfuric Acid 97 99% service below 45 C,NORMAL,V-103
+OCP,BD2,Plug,_,100,300,150#,RF,Sulfuric Acid 97 99% service below 45 C,NORMAL,V-104
+OCP,BD2,Plug,_,25,80,150#,RF,Use flat face when matching to flat face flanges; Strong/Weak Phosphoric Acid only,NORMAL,V-106
+OCP,BD2,Plug,_,100,300,150#,RF,Use flat face when matching to flat face flanges; Strong/Weak Phosphoric Acid only,NORMAL,V-107
+OCP,BD2,Plug,_,350,600,150#,RF,Use flat face when matching to flat face flanges; Strong/Weak Phosphoric Acid only,NORMAL,V-132
+OCP,BD2,Plug,_,350,500,150#,RF,Sulfuric Acid 97 99% service below 45 C,NORMAL,V-131
+OCP,BD2,Plug,_,15,50,150#,SW,_,NORMAL,V-144
+OCP,BD2,Plug,_,15,80,150#,RF,Sulfuric Acid 97 99% service below 45 C,NORMAL,V-145
+OCP,BD2,Plug,_,100,300,150#,RF,Sulfuric Acid 97 99% service below 45 C,NORMAL,V-146
+OCP,BG1,Plug,_,15,80,150#,RF,_,NORMAL,V-106
+OCP,BG1,Plug,_,100,300,150#,RF,_,NORMAL,V-107
+OCP,BG1,Plug,_,350,600,150#,RF,_,NORMAL,V-132
+OCP,BG2,Plug,_,15,80,150#,RF,_,NORMAL,V-106
+OCP,BG2,Plug,_,100,300,150#,RF,_,NORMAL,V-107
+OCP,BG2,Plug,_,350,600,150#,RF,_,NORMAL,V-132
+OCP,BG2,Plug,_,750,900,150#,RF,_,NORMAL,V-140
+OCP,BH1,Plug,_,15,80,150#,RF,_,NORMAL,V-108
+OCP,BH1,Plug,_,100,300,150#,RF,_,NORMAL,V-109
+OCP,BK1,Plug,_,25,80,150#,FF,RF facing metallic; FF facing FRP,NORMAL,V-106
+OCP,BK1,Plug,_,100,300,150#,FF,_,NORMAL,V-107
+OCP,BK1,Plug,_,15,80,150#,RF,_,NORMAL,V-134
+OCP,BK1,Plug,_,25,80,150#,RF,FSA services only,NORMAL,V-108
+OCP,BK1,Plug,_,100,300,150#,RF,FSA services only,NORMAL,V-109
+OCP,BK1,Plug,_,350,450,150#,RF,Pressure limited to 150 psi,NORMAL,V-132
+OCP,BK2,Plug,_,15,80,150#,FF,RF facing metallic; FF facing FRP,NORMAL,V-106
+OCP,BK2,Plug,_,100,300,150#,FF,RF facing metallic; FF facing FRP,NORMAL,V-107
+OCP,BK2,Plug,_,25,80,150#,RF,Rated pressure/temperature; FSA services only,NORMAL,V-108
+OCP,BK2,Plug,_,350,450,150#,FF,RF facing metallic; FF facing FRP,NORMAL,V-132
+OCP,BK2,Plug,_,15,80,150#,RF,_,NORMAL,V-134
+OCP,BK3,Plug,_,25,80,150#,FF,"The facing of valve will be considered RF for Metallic specs (BG1/BG2) ;for FRP spec (BK3) FF Facing should be used and valve datasheets 
+should be released with FF flange facing.",NORMAL,V-106
+OCP,BK3,Plug,_,100,300,150#,FF,"The facing of valve will be considered RF for Metallic specs (BG1/BG2) ;for FRP spec (BK3) FF Facing should be used and valve datasheets 
+should be released with FF flange facing.",NORMAL,V-107
+OCP,BK3,Plug,_,350,450,150#,RF,"The facing of valve will be considered RF for Metallic specs (BG1/BG2) ;for FRP spec (BK3) FF Facing should be used and valve datasheets 
+should be released with FF flange facing.",NORMAL,V-132
+OCP,BL5,Plug,_,25,80,150#,RF,"For Sizes 1700 mm & 2000 mm; D/T < 100; as per ASME B31.3 not meeting. (where D - Nominal Pipe Size & T - 
+Nominal pipe wall thickness) Hence; the supporting span & branching requirements shall be decided accordingly.",NORMAL,V-108
+OCP,BL5,Plug,_,100,300,150#,RF,"For Sizes 1700 mm & 2000 mm; D/T < 100; as per ASME B31.3 not meeting. (where D - Nominal Pipe Size & T - 
+Nominal pipe wall thickness) Hence; the supporting span & branching requirements shall be decided accordingly.",NORMAL,V-109
+OCP,BN1,Plug,_,25,80,150#,RF,Rated at: 10.29 bar g @ 149 or 14.8 barg@ 90 C.,NORMAL,V-108
+OCP,BN1,Plug,_,100,300,150#,RF,Rated at: 10.29 bar g @ 149 or 14.8 barg@ 90 C.,NORMAL,V-109
+OCP,BP1,Plug,_,15,80,150#,RF,_,NORMAL,V-122
+OCP,BP1,Plug,_,100,300,150#,RF,_,NORMAL,V-123
+OCP,BQ1,Plug,_,15,40,150#,RF,Not for tapped connections,NORMAL,V-103
+OCP,BQ1,Plug,_,100,300,150#,RF,Not for tapped connections,NORMAL,V-104
+OCP,BQ1,Plug,_,350,500,150#,RF,Not for tapped connections,NORMAL,V-131
+OCP,BQ2,Plug,_,15,40,150#,RF,Not for tapped connections,NORMAL,V-103
+OCP,BQ2,Plug,_,100,300,150#,RF,Not for tapped connections,NORMAL,V-104
+OCP,BQ3,Plug,_,15,40,150#,RF,_,NORMAL,V-103
+OCP,CD2,Plug,_,15,50,,SW,_,NORMAL,V-128
+OCP,CD2,Plug,_,15,80,300#,RF,Use only noted valves with Sulfuric Acid 97-99% <45C (ASC) service. These valves may be used for other services within this class.,NORMAL,V-129
+OCP,CD2,Plug,_,100,300,300#,RF,Use only noted valves with Sulfuric Acid 97-99% <45C (ASC) service. These valves may be used for other services within this class.,NORMAL,V-130
+OCP,CD2,Plug,_,350,450,300#,RF,Use only noted valves with Sulfuric Acid 97-99% <45C (ASC) service. These valves may be used for other services within this class.,NORMAL,V-137
+OCP,CG1,Plug,_,25,80,300#,RF,_,Normal,V-116
+OCP,CG1,Plug,_,100,150,300#,RF,_,Normal,V-117
+OCP,CG1,Plug,_,200,400,300#,RF,_,Normal,V-119
+OCP,CG2,Plug,_,25,80,300#,RF,_,Normal,V-116
+OCP,CG2,Plug,_,100,150,300#,RF,_,Normal,V-117
+OCP,CG2,Plug,_,200,600,300#,RF,_,Normal,V-119
+OCP,CP1,Plug,_,25,80,300#,RF,_,Normal,V-120
+OCP,CP1,Plug,_,100,300,300#,RF,_,Normal,V-121
+OCP,ES2,Plug,_,200,450,40S,BW,_,Normal,V-124
+OCP,ES2,Plug,_,500,600,80S,BW,_,Normal,V-141
+OCP,ES2,Plug,_,650,650,14.27mm,BW,_,Normal,V-142
+OCP,ES2,Plug,_,700,700,15.88mm,BW,_,Normal,V-143
+OCP,KD1,Unclassified,_,_,_,_,_,_,_,_
+MAADEN,CB1/BA41,Globe,_,15,50,,SW,_,Normal,V-501/RGLZXO
+MAADEN,CB2/BA42,Ball,_,15,50,800#,SW,Use only where indicated on P&ID (Frequently operated valve).,Normal,V-715/RBAZFL
+MAADEN,CB2/BA42,Ball,_,80,100,300#,RF,Use only where indicated on P&ID (Frequently operated valve).,Normal,V-716A/BBARFC
+MAADEN,CB2/BA42,Ball,_,150,400,300#,RF,Use only where indicated on P&ID (Frequently operated valve).,Normal,V-716B/BBAREG
+MAADEN,CB2/BA42,Gate,_,80,200,300#,BW,_,Normal,V-430B/BGAWFQ
+MAADEN,CB2/BA42,Gate,_,250,400,300#,BW,_,Normal,V-430A/BGAWEV
+MAADEN,CB2/BA42,Globe,_,15,50,800#,SW,For inline throttling and control valve by-passes.,Normal,V-514/RGLZXM
+MAADEN,CB2/BA42,Globe,_,80,200,300#,RF,For inline throttling and control valve by-passes.,Normal,V-521/BGLRXV
+MAADEN,CB2/BA42,Check,_,80,400,300#,RF,_,Horiz/Vert Up,V-636/BCKRSH
+MAADEN,CB3/BA43,Plug,_,25,80,300#,RF,_,Normal,V-116/BPLRXG
+MAADEN,CB3/BA43,Plug,_,100,150,300#,RF,_,Normal,V-117/BPLRGE
+MAADEN,CB3/BA43,Gate,_,15,50,800#,SW,_,Normal,V-435/RGAZXAD
+MAADEN,CB3/BA43,Gate,_,15,50,800#,SW x SCR'D,_,Vent; Drain; Instr Co,V-406/RGAYXU
+MAADEN,CB3/BA43,Gate,_,15,25,,Integral male couplet   NPT (F),_,Normal,V-436/RGASXG
+MAADEN,CB3/BA43,Gate,_,80,200,300#,RF,_,Normal,V-437/BGARFB
+MAADEN,CB3/BA43,Gate,_,250,600,300#,RF,_,Normal,V-438/BGAREB
+MAADEN,CB3/BA43,Check,Piston,15,50,800#,SW,_,Horiz/Vert Up,V-634/RCKZXT
+MAADEN,CB3/BA43,Check,Swing,80,600,300#,RF,_,Horiz/Vert Up,V-635/BCKRSG
+MAADEN,CB3/BA43,Ball,_,15,50,800#,SW,_,Normal,V-701/RBAZFK
+MAADEN,CB3/BA43,Globe,_,15,50,800#,SW,_,Normal,V-519/RGLZXN
+MAADEN,CB3/BA43,Globe,_,15,50,800#,SW,_,Normal,V-501/RGLZXO
+MAADEN,CB3/BA43,Globe,_,80,200,300#,RF,Through pipe size 250 mm pressure limited by full flange rating; 300mm   600mm pressure may be lower than full flange rating.,Normal,V-520A/BGLRXA
+MAADEN,CB3/BA43,Globe,_,250,300,300#,RF,Through pipe size 250 mm pressure limited by full flange rating; 300mm   600mm pressure may be lower than full flange rating.,Normal,V-520B/BGLRGA
+MAADEN,CD1/BQ41,Check,Swing,15,50,,SW,_,Horiz/Vert Up,V-622/RCKZXS
+MAADEN,CD1/BQ41,Ball,_,15,50,300#,RF,_,Normal,V-710/BBARRF
+MAADEN,CD2/BQ42,Plug,_,15,80,300#,RF,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,Normal,V-135/BPLRXI
+MAADEN,CD2/BQ42,Plug,_,100,300,300#,RF,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,Normal,V-136/BPLRGG
+MAADEN,CD2/BQ42,Check,Wafer,80,300,300#,Wafer,Use only noted valves with Sulfuric Acid 97-99% <45 C (ASC) service. These valves may be used for other services within this class.,Horiz/ Verti Up,V-611/BCKRXE
+MAADEN,CD2/BQ42,Ball,_,80,100,300#,RF,Use only noted valves with Instrument / Equipment (up to 170 Deg. C) with BD2 Pipe class as per project requirement.,Normal / Instru.,V-785A/BBARFO
+MAADEN,CD2/BQ42,Ball,_,150,300,300#,RF,Use only noted valves with Instrument / Equipment (up to 170 Deg. C) with BD2 Pipe class as per project requirement.,Normal / Instru.,V-785B/BBAREH
+MAADEN,CD2/BQ42,Gate,_,50,150,300#,RF,_,Normal,V-431/BGARXK
+MAADEN,CG1/BS41,Plug,_,25,80,300#,RF,For the following Services; this Class is limited to use at Process Connections: Ammonia Liquid (<-29 C) (AL); Ammonia Gas (?-29 C) (AG).,Normal,V-116/BPLRXG
+MAADEN,CG1/BS41,Plug,_,100,150,300#,RF,For the following Services; this Class is limited to use at Process Connections: Ammonia Liquid (<-29 C) (AL); Ammonia Gas (?-29 C) (AG).,Normal,V-117/BPLRGE
+MAADEN,CG1/BS41,Plug,_,15,80,300#,RF,Limited for use of Steam 10 barg (S10).,Normal,V-118/BPLRXF
+MAADEN,CG1/BS41,Plug,_,100,300,300#,RF,Limited for use of Steam 10 barg (S10).,Normal,V-119/BPLRGD
+MAADEN,CG1/BS41,Check,_,20,50,300#,RF,_,Normal,V-623/BCKRXD
+MAADEN,CG1/BS41,Check,_,80,200,300#,RF,_,Normal,V-624/BCKRWJ
+MAADEN,CK2/BG41,Plug,_,15,80,300#,RF,_,Normal,V-133/BPLFXA
+MAADEN,CK2/BG41,Plug,_,100,300,300#,RF,_,Normal,V-134/BPLFGA
+MAADEN,CK2/BG41,Check,Dual Plate,50,150,300#,RF,_,Normal,V-610/BCKFXA
+MAADEN,FB2/DA41,Gate,_,80,100,900#,BW,_,Normal,V-442/DGAWXC
+MAADEN,FB2/DA41,Gate,_,150,150,900#,BW,_,Normal,V-443/DGAWGD
+MAADEN,FB2/DA41,Gate,_,200,350,900#,BW,_,Normal,V-444/DGAWEK
+MAADEN,FB2/DA41,Gate,_,15,50,1500#,SW,_,Normal,V-445/EGAZXJ
+MAADEN,FB2/DA41,Gate,_,15,50,1500#,RTJ,"1- Seal welding shall be done by qualified welders.
+2- For use only for instruments connection with CL1500 RTJ flanged end.",Normal,V-446/EGAJRE
+MAADEN,FB2/DA41,Globe,_,80,100,900#,BW,_,Normal,V-535/DGLWXH
+MAADEN,FB2/DA41,Globe,_,150,150,900#,BW,_,Normal,V-536/DGLWGF
+MAADEN,FB2/DA41,Globe,_,200,350,900#,BW,_,Normal,V-537/DGLWGE
+MAADEN,FB2/DA41,Globe,_,15,50,1500#,SW,_,Throttling,V-538/EGLZXE
+MAADEN,FB2/DA41,Check,Lift,15,50,1500#,SW,_,Horiz/Vert Up,V-679/ECKZXH
+MAADEN,FB2/DA41,Check,Lift,80,100,900#,BW,_,Horiz/Vert Up,V-680/DCKWXA
+MAADEN,FB2/DA41,Check,Lift,150,150,900#,BW,_,Horiz/Vert Up,V-681/DCKWXB
+MAADEN,FB2/DA41,Check,Lift,200,300,900#,BW,_,Horiz/Vert Up,V-682/DCKWXC
+MAADEN,FB2/DA41,Check,Piston,15,50,1500#,SW,_,Inclined,V-694/ECKZXI
+MAADEN,FJ1/DJ41,Gate,_,15,50,1500#,SW,_,Normal,V-464/EGAZXK
+MAADEN,FJ1/DJ41,Gate,_,80,100,900#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe; fittings; flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25; Figure 4; 5; or 6 as applicable; no backing rings shall be used.,Normal,V-433/DGAWXD
+MAADEN,FJ1/DJ41,Gate,_,150,150,900#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe; fittings; flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25; Figure 4; 5; or 6 as applicable; no backing rings shall be used.,Normal,V-434A/DGAWGE
+MAADEN,FJ1/DJ41,Gate,_,200,600,900#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe; fittings; flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25; Figure 4; 5; or 6 as applicable; no backing rings shall be used.,Normal,V-434B/DGAWGF
+MAADEN,FJ1/DJ41,Globe,_,15,50,1500#,SW,_,Normal,V-518/EGLZFA
+MAADEN,FJ1/DJ41,Globe,_,80,100,900#,BW,"1- End conn: All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe; fittings; flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25; Figure 4; 5; or 6 as applicable; no backing rings shall be used.
+2- Use: For In-line throttling and control valve by-passes.",Normal,V-517A/DGLWXG
+MAADEN,FJ1/DJ41,Globe,_,150,400,900#,BW,"1- End conn: All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe; fittings; flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25; Figure 4; 5; or 6 as applicable; no backing rings shall be used.
+2- Use: For In-line throttling and control valve by-passes.",Normal,V-517B/DGLWGH
+MAADEN,FJ1/DJ41,Check,Piston,15,50,1500#,SW,_,Horiz/Vert Up,V-632/ECKZXG
+MAADEN,FJ1/DJ41,Check,Tilting Disc,80,150,900#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe; fittings; flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25; Figure 4; 5; or 6 as applicable; no backing rings shall be used.,Horiz/Vert Up,V-633A/DCKWTF
+MAADEN,FJ1/DJ41,Check,Tilting Disc,200,600,900#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe; fittings; flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25; Figure 4; 5; or 6 as applicable; no backing rings shall be used.,Horiz/Vert Up,V-633B/DCKWTG
+MAADEN,GJ2/EJ41,Gate,_,15,80,1500#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe; fittings; flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25; Figure 4; 5; or 6 as applicable; no backing rings shall be used.,Normal,V-465/EGAWXE
+MAADEN,GJ2/EJ41,Gate,_,100,600,1500#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe; fittings; flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25; Figure 4; 5; or 6 as applicable; no backing rings shall be used.,Normal,V-466/EGAWGA
+MAADEN,GJ2/EJ41,Globe,_,15,80,1500#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe; fittings; flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25; Figure 4; 5; or 6 as applicable; no backing rings shall be used.,Normal,V-544/EGLWXH
+MAADEN,GJ2/EJ41,Globe,_,100,100,1500#,BW,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe; fittings; flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25; Figure 4; 5; or 6 as applicable; no backing rings shall be used.,Normal,V-545/EGLWXI
+MAADEN,GJ2/EJ41,Globe,_,150,400,1500#,BW,_,Normal,V-546/EGLWGD
+MAADEN,GJ2/EJ41,Globe,Y-Pattern,15,80,1500#,BW x SCR D,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe; fittings; flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25; Figure 4; 5; or 6 as applicable; no backing rings shall be used.,Normal,V-547/EGLYXP
+MAADEN,BV1/AG44,Check,Piston,80,150,150#,,_,Normal,V-628/ACKRXL

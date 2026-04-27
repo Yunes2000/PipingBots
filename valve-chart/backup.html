@@ -361,15 +361,6 @@
     margin-top: 3px;
   }
 
-  .card-subtype-pill {
-    font-family: var(--font-label);
-    font-size: 9.5px;
-    letter-spacing: 0.8px;
-    color: var(--accent);
-    margin-top: 3px;
-    opacity: 0.8;
-  }
-
   .card-specs {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -600,9 +591,6 @@
     <div class="side-panel-section-label">Notes</div>
     <div class="side-panel-notes" id="sidePanelNotes"></div>
     <hr class="side-panel-divider">
-    <div class="side-panel-section-label">Description</div>
-    <div class="side-panel-notes" id="sidePanelDescription" style="color:var(--text-muted);font-style:italic"></div>
-    <hr class="side-panel-divider">
     <div class="side-panel-section-label" style="margin-bottom:10px">Specifications</div>
     <div class="side-panel-specs" id="sidePanelSpecs"></div>
   </div>
@@ -738,15 +726,13 @@ function parseCSV(text) {
     if (!tag || !cls || !client) return;
 
     const specs = {
-      type:        row['type']              || '—',
-      subtype:     row['subtype']           || '',
-      sizeMin:     parseInt(row['size_min']) || 0,
-      sizeMax:     parseInt(row['size_max']) || 0,
-      rating:      row['rating']            || '—',
-      endConn:     row['end_conn']          || '—',
-      notes:       row['notes']             || '—',
-      use:         (row['use']              || '—').toUpperCase(),
-      description: row['valve_description'] || '',
+      type:    row['type']     || '—',
+      sizeMin: parseInt(row['size_min']) || 0,
+      sizeMax: parseInt(row['size_max']) || 0,
+      rating:  row['rating']   || '—',
+      endConn: row['end_conn'] || '—',
+      notes:   row['notes']    || '—',
+      use:     (row['use']     || '—').toUpperCase(),
     };
 
     // Each tag+class combo stored independently — no "first wins" override
@@ -932,14 +918,11 @@ function renderCard(v, i) {
   const badgeCls = {NORMAL:'use-normal', CRITICAL:'use-critical', UTILITY:'use-utility'}[v.use]||'use-normal';
   const allCls = Object.entries(CLASS_TAGS).filter(([,t])=>t.includes(v.tag)).map(([c])=>c).join(' · ');
   const notesHtml = truncateNotes(v.notes, v.tag, v.cls);
-  const subtypePill = v.subtype ? `<div class="card-subtype-pill">${escHtml(v.subtype)}</div>` : '';
+  const hasLongNotes = v.notes && v.notes !== '—' && v.notes.length > NOTES_LIMIT;
   return `
-  <div class="valve-card clickable" style="animation-delay:${i*50}ms" onclick="openSidePanel('${escAttr(v.tag)}','${escAttr(v.cls||'')}')" data-tag="${escAttr(v.tag)}">
+  <div class="valve-card${hasLongNotes ? ' clickable' : ''}" style="animation-delay:${i*50}ms" ${hasLongNotes ? `onclick="openSidePanel('${escAttr(v.tag)}','${escAttr(v.cls||'')}')"` : ''} data-tag="${escAttr(v.tag)}">
     <div class="card-head">
-      <div>
-        <div class="card-tag">${escHtml(v.tag)}</div>
-        ${subtypePill}
-      </div>
+      <div class="card-tag">${escHtml(v.tag)}</div>
       <div class="card-type-pill">${escHtml(v.type)}</div>
     </div>
     <div class="card-specs">
@@ -978,11 +961,8 @@ function openSidePanel(tag, cls) {
   if (card) card.classList.add('selected');
 
   document.getElementById('sidePanelTag').textContent = tag;
-  document.getElementById('sidePanelType').textContent = v.type + (v.subtype ? ` · ${v.subtype}` : '');
+  document.getElementById('sidePanelType').textContent = v.type;
   document.getElementById('sidePanelNotes').textContent = v.notes || '—';
-
-  // Description section — show if present, else show '—'
-  document.getElementById('sidePanelDescription').textContent = v.description || '—';
 
   const allCls = Object.entries(CLASS_TAGS).filter(([,t])=>t.includes(tag)).map(([c])=>c).join(', ');
   document.getElementById('sidePanelSpecs').innerHTML = `
@@ -1002,10 +982,6 @@ function openSidePanel(tag, cls) {
       <span class="spec-label">Usage</span>
       <span class="spec-value">${escHtml(v.use)}</span>
     </div>
-    ${v.subtype ? `<div class="spec-item">
-      <span class="spec-label">Subtype</span>
-      <span class="spec-value">${escHtml(v.subtype)}</span>
-    </div>` : ''}
     <div class="spec-item" style="grid-column:1/-1">
       <span class="spec-label">Pipe Classes</span>
       <span class="spec-value" style="font-size:12px">${escHtml(allCls)}</span>
