@@ -562,3 +562,134 @@ MAADEN,GJ2/EJ41,Globe,_,100,100,1500#,BW,All buttwelds shall have a root pass ma
 MAADEN,GJ2/EJ41,Globe,_,150,400,1500#,BW,_,Normal,V-546/EGLWGD
 MAADEN,GJ2/EJ41,Globe,Y-Pattern,15,80,1500#,BW x SCR D,All buttwelds shall have a root pass made with the Gas Tungsten Arc (GTAW) welding process with the back side purged and without the use of inserts. All pipe; fittings; flanges and valve ends for both shop and field welds shall be prepared in accordance with ASME B16.25; Figure 4; 5; or 6 as applicable; no backing rings shall be used.,Normal,V-547/EGLYXP
 MAADEN,BV1/AG44,Check,Piston,80,150,150#,,_,Normal,V-628/ACKRXL
+MAADEN,BA1/AZ41,Ball,,15,50,800#,NPTF,Limited use for: Fire Water (WFF); Storm Water (STS); Treated Water (WTW),NORMAL,V-703/RBASFD
+MAADEN,BA1/AZ41,Ball,,15,50,800#,NPTF,For Potable water service only.,NORMAL,V-765/RBASFE
+MAADEN,BA1/AZ41,Ball,,50,100,150#,RF,50 DN Valve for Instrument / Equipment’s/ Tie-In As applicable.,NORMAL,V-702A/ABARFAB
+MAADEN,BA1/AZ41,Ball,,150,200,150#,RF,_,NORMAL,V-702B/ABAREU
+MAADEN,BA1/AZ41,Gate,,50,250,150#,RF,Limited use for: Fire Water (WFF); Storm Water (STS); Treated Water (WTW),NORMAL,V-401/AGARXU
+MAADEN,BA1/AZ41,Gate,,15,250,150#,RF,For Potable water service only.,NORMAL,V-463/AGARXR
+MAADEN,BA1/AZ41,Gate,,300,400,150#,RF,_,NORMAL,V-402/AGARGM
+MAADEN,BA1/AZ41,Check,Ball,15,50,800#,NPTF,_,HORIZ / VERT UP,V-616/RCKSXC
+MAADEN,BA1/AZ41,Check,Wafer,80,400,150#,RF,_,HORIZ / VERT UP,V-617/ACKRWN
+MAADEN,BA1/AZ41,Globe,,15,50,800#,NPTF,_,THROTTLING,V-508/RGLSXB
+MAADEN,BA1/AZ41,Globe,,80,250,150#,RF,_,THROTTLING,V-527/AGLRXAH
+MAADEN,BA1/AZ41,Butterfly,Lug,80,150,150#,RF,_,NORMAL,V-301/ABFRWS
+MAADEN,BA1/AZ41,Butterfly,Lug,200,300,150#,RF,_,NORMAL,V-302/ABFRVAC
+MAADEN,BB1/AA41,Butterfly,Lug,80,150,150#,RF,Use Flat face connection when matching to Flat face Cast Iron; FRP or Plastic flange.,NORMAL,V-301/ABFRWS
+MAADEN,BB1/AA41,Butterfly,Lug,200,300,150#,RF,Use Flat face connection when matching to Flat face Cast Iron; FRP or Plastic flange.,NORMAL,V-302/ABFRVAC
+MAADEN,BB1/AA41,Butterfly,Lug,350,600,150#,RF,Use Flat face connection when matching to Flat face Cast Iron; FRP or Plastic flange.,NORMAL,V-303/ABFRVAD
+MAADEN,BB1/AA41,Butterfly,,650,1300,150#,RF,_,NORMAL,V-304/ABFRVAE
+MAADEN,BB1/AA41,Gate,,50,250,150#,RF,50DN VALVE FOR INSTRUMENT / EQPT / TIE-IN AS APPLICABLE,NORMAL,V-401/AGARXU
+MAADEN,BB1/AA41,Gate,,300,600,150#,RF,_,NORMAL,V-402/AGARGM
+MAADEN,BB1/AA41,Gate,,40,100,300#,RF,_,NORMAL; INSTR. CON,V-432/BGARXL
+MAADEN,BB1/AA41,Check,Ball,15,50,800#,THREADED,_,HORIZ / VERT UP,V-616/RCKSXC
+MAADEN,BB1/AA41,Check,Wafer,80,600,150#,RF,_,HORIZ / VERT UP,V-617/ACKRWN
+MAADEN,BB1/AA41,Ball,,15,50,800#,NPTF,_,NORMAL,V-703/RBASFD
+MAADEN,BB1/AA41,Ball,,50,100,150#,RF,50DN VALVE FOR INSTRUMENT / EQPT / TIE-IN AS APPLICABLE,NORMAL,V-702A/ABARFAB
+MAADEN,BB1/AA41,Ball,,150,200,150#,RF,_,NORMAL,V-702B/ABAREU
+MAADEN,BB1/AA41,Globe,,80,250,150#,RF,_,NORMAL,V-502A/AGLRXA
+MAADEN,BB1/AA41,Globe,,300,350,150#,RF,_,NORMAL,V-502B/AGLRGA
+MAADEN,BB1/AA41,Globe,,15,50,800#,THREADED,_,THROTTLING,V-508/RGLSXB
+MAADEN,BB1/AA41,Knife Gate,,50,100,150#,FF,Valve use limited to Lime Dry (LI); Lime Slurry (LY) and Rock Slurry (RS),NORMAL,V-439/AKGFWC
+MAADEN,BB1/AA41,Knife Gate,,150,600,150#,FF,Valve use limited to Lime Dry (LI); Lime Slurry (LY) and Rock Slurry (RS),NORMAL,V-440/AKGFVB
+MAADEN,BB1/AA41,Gate,,15,50,800#,THREADED,_,NORMAL,V-461/RGASXH
+MAADEN,BB1/AA41,Needle,,15,50,800#,THREADED,_,NORMAL,V-804/RNDSXA
+MAADEN,BB3/AA42,Gate,,300,600,150#,RF,_,NORMAL,V-402/AGARGM
+MAADEN,BB3/AA42,Gate,,650,800,150#,RF,_,NORMAL,V-403/AGAREB
+MAADEN,BB3/AA42,Gate,,50,250,150#,RF,50DN VALVE FOR INSTRUMENT / EQPT / TIE-IN AS APPLICABLE,NORMAL,V-401/AGARXU
+MAADEN,BB3/AA42,Gate,,15,50,800#,SW,_,NORMAL,V-405/RGAZFA
+MAADEN,BB3/AA42,Gate,,15,50,800#,SW x SCR'D,_,VENT; DRAIN; INST CO.,V-406/RGAYXU
+MAADEN,BB3/AA42,Gate,,15,40,150#,RF,VALVE FOR INSTRUMENT / EQPT / TIE-IN AS APPLICABLE,NORMAL,V-412/AGARXT
+MAADEN,BB3/AA42,Gate,,40,100,300#,RF,_,NORMAL; INSTR CON.,V-432/BGARXL
+MAADEN,BB3/AA42,Globe,,15,50,800#,SW,_,NORMAL,V-501/RGLZXO
+MAADEN,BB3/AA42,Globe,,80,250,150#,RF,_,NORMAL,V-502A/AGLRXA
+MAADEN,BB3/AA42,Globe,,300,350,150#,RF,_,NORMAL,V-502B/ALGRGA
+MAADEN,BB3/AA42,Ball,,15,50,600#,SW,_,NORMAL,V-701/RBAZFK
+MAADEN,BB3/AA42,Ball,,50,100,150#,RF,50DN VALVE FOR INSTRUMENT / EQPT / TIE-IN AS APPLICABLE,NORMAL,V-702A/ABARFAB
+MAADEN,BB3/AA42,Ball,Non Standard,20,50,800#,SW,This valve will be used only with metal seat for temperature exceed 260°C,METAL SEATED,V-770/RBAZFM
+MAADEN,BB3/AA42,Ball,,15,50,800#,SW x FNPT,_,V; DR; INSTR CONNS.,V-782/RBAYFT
+MAADEN,BB3/AA42,Ball,,250,300,150#,RF,_,NORMAL,V-783/ABAREW
+MAADEN,BB3/AA42,Ball,,15,100,150#,RF,This valve will be used for Caustic service (CSS) only,NORMAL,V-784/ABARFAF
+MAADEN,BB3/AA42,Check,Ball,15,50,800#,SW,_,HORIZ / VERT UP,V-601/RCKZXQ
+MAADEN,BB3/AA42,Check,Swing,80,400,150#,RF,_,HORIZ / VERT UP,V-603A/ACKRSAA
+MAADEN,BB3/AA42,Check,Wafer,450,600,150#,RF,_,HORIZ / VERT UP,V-637/ACKRTA
+MAADEN,BB3/AA42,Plug,,40,100,150#,RF,_,NORMAL,V-131A/APLRXW
+MAADEN,BB3/AA42,Plug,,150,150,150#,RF,_,NORMAL,V-131B/APLRGJ
+MAADEN,BB5/AF41,Ball,,15,50,800#,SW,_,NORMAL,V-715/RBAZFL
+MAADEN,BB5/AF41,Ball,,80,100,150#,RF,_,NORMAL,V-717A/ABARF
+MAADEN,BB5/AF41,Ball,,150,300,150#,RF,_,NORMAL,V-717B/ABARE
+MAADEN,BB5/AF41,Gate,,80,250,150#,BW,_,NORMAL,V-428/AGAWFN
+MAADEN,BB5/AF41,Gate,,300,400,150#,BW,_,NORMAL,V-427/AGAWEN
+MAADEN,BB5/AF41,Globe,,15,50,800#,SW,Pressure limited by A352 Gr. LCB valve material.,NORMAL,V-514/RGLZXM
+MAADEN,BB5/AF41,Globe,,300,400,150#,RF,Pressure limited by A352 Gr. LCB valve material.,NORMAL,V-516/AGLRGN
+MAADEN,BG1/AS41,Plug,,15,80,150#,RF,For Use in Ammonium Phosphate Slurry (APS); Phosphoric Acid Reactor Slurry (ARS); Scrubber Liquor Slurry (LWA); Diluted Sulfuric Acid (EFF); Concentrated Phosphoric Acid Sludge (PSC); Weak Phosphoric Acid Sludge (PSW);); Recycled Phosphoric Acid (RPA); Strong Phosphoric Acid (APC); Weak Phosphoric Acid (APW); Micronutrient Solution (MNS),NORMAL,V-106A/APLRXT
+MAADEN,BG1/AS41,Plug,,15,80,150#,RF,Maaden tags are assigned for valves as per PID / process requirements. Use only noted valves with Sulfuric Acid; 97-99% (ASC); Drainage Sulfuric Acid (ASC),NORMAL,V-103/APLRXS
+MAADEN,BG1/AS41,Plug,,100,500,150#,RF,For Use in Ammonium Phosphate Slurry (APS); Phosphoric Acid Reactor Slurry (ARS); Scrubber Liquor Slurry (LWA); Diluted Sulfuric Acid (EFF); Concentrated Phosphoric Acid Sludge (PSC); Weak Phosphoric Acid Sludge (PSW);); Recycled Phosphoric Acid (RPA); Strong Phosphoric Acid (APC); Weak Phosphoric Acid (APW); Micronutrient Solution (MNS),NORMAL,V-107/APLRGK
+MAADEN,BG1/AS41,Check,Piston,15,150,150#,RF,_,NORMAL,V-628A/ACKRXL
+MAADEN,BG1/AS41,Check,Wafer,200,700,150#,RF,_,NORMAL,V-630B/ACKRWQ
+MAADEN,BG1/AS41,Ball,,15,100,150#,RF,Valve may be used at tank nozzles; clean-outs; rod-outs and drains. v Check Valve V-628 Pressure/Temperature limited to 10.5 Kg/cm2g @ 177°C (150 Psig @ 350°F).,NORMAL,V-713C/ABARFL
+MAADEN,BG1/AS41,Ball,,150,200,150#,RF,Valve may be used at tank nozzles; clean-outs; rod-outs and drains. v Check Valve V-628 Pressure/Temperature limited to 10.5 Kg/cm2g @ 177°C (150 Psig @ 350°F).,NORMAL,V-713D/ABAREX
+MAADEN,BG1/AS41,Butterfly,Lug,15,150,150#,RF,For Use in Ammonium Phosphate Slurry (APS); Phosphoric Acid Reactor Slurry (ARS); Scrubber Liquor Slurry (LWA); Diluted Sulfuric Acid (EFF); Concentrated Phosphoric Acid Sludge (PSC); Weak Phosphoric Acid Sludge (PSW);); Recycled Phosphoric Acid (RPA); Strong Phosphoric Acid (APC); Weak Phosphoric Acid (APW); Micronutrient Solution (MNS),NORMAL,V-308B/ABFRWT
+MAADEN,BG1/AS41,Butterfly,Lug,15,150,150#,RF,Maaden tags are assigned for valves as per PID / process requirements. Use only noted valves with Sulfuric Acid; 97-99% (ASC); Drainage Sulfuric Acid (ASC),NORMAL,V-328/ABFRWV
+MAADEN,BG1/AS41,Butterfly,Lug,200,600,150#,RF,For Use in Ammonium Phosphate Slurry (APS); Phosphoric Acid Reactor Slurry (ARS); Scrubber Liquor Slurry (LWA); Diluted Sulfuric Acid (EFF); Concentrated Phosphoric Acid Sludge (PSC); Weak Phosphoric Acid Sludge (PSW);); Recycled Phosphoric Acid (RPA); Strong Phosphoric Acid (APC); Weak Phosphoric Acid (APW); Micronutrient Solution (MNS),NORMAL,V-309/ABFRVAI
+MAADEN,BG1/AS41,Butterfly,Lug,200,600,150#,RF,Maaden tags are assigned for valves as per PID / process requirements. Use only noted valves with Sulfuric Acid; 97-99% (ASC); Drainage Sulfuric Acid (ASC),NORMAL,V-329/ABFRVAJ
+MAADEN,BG2/AS42,Check,Piston,15,150,150#,RF,_,NORMAL,V-628A/ACKRXL
+MAADEN,BG2/AS42,Plug,,15,80,150#,RF,_,NORMAL,V-106A/APLRXT
+MAADEN,BG2/AS42,Plug,,100,500,150#,RF,_,NORMAL,V-107/APLRGK
+MAADEN,BG2/AS42,Ball,,15,100,150#,RF,Valve to be used at tank nozzles; clean-outs; rod-outs and drains.,NORMAL,V-713C/ABARFL
+MAADEN,BG2/AS42,Ball,,150,200,150#,RF,Valve to be used at tank nozzles; clean-outs; rod-outs and drains.,NORMAL,V-713D/ABAEEX
+MAADEN,BS4/AS43,Plug,,15,80,150#,RF,_,NORMAL,V-106A/APLRXT
+MAADEN,BS4/AS43,Plug,,100,300,150#,RF,_,NORMAL,V-107/APLRGK
+MAADEN,BS4/AS43,Butterfly,Lug,15,150,150#,RF,_,NORMAL,V-308B/ABFRWT
+MAADEN,BS4/AS43,Butterfly,Lug,200,300,150#,RF,_,NORMAL,V-309/ABFRVAI
+MAADEN,BS4/AS43,Check,DUAL PLATE WAFER,80,300,150#,RF,_,NORMAL,V-602/ACKRWR
+MAADEN,BH1/AT41,Ball,,50,50,150#,FF,_,NORMAL,V-713A/ABAFFE
+MAADEN,BH1/AT41,Butterfly,Lug,50,150,150#,FF,_,NORMAL,V-308A/ABFFWP
+MAADEN,BH1/AT41,KNIFE GATE,,50,150,150#,FF,_,NORMAL,V-439/AKGFWC
+MAADEN,BH1/AT41,KNIFE GATE,,200,600,150#,FF,_,NORMAL,V-440/AKGFVB
+MAADEN,BK1/AG41,BALL,,15,100,150#,FF,Limited for use of Strong Phosphoric Acid (APC); Weak Phosphoric Acid (APW); Concentrated Phosphoric Acid Sludge (PSC); Weak Phosphoric Acid Sludge (PSW); Recycled Phosphoric Acid (RPA); Water Vapor over phosphoric Acid (GPA); Soda Ash (NA2CO3) (NA); Phosphoric Acid Reactor Slurry (ARS),NORMAL/V;DR;INSTR.,V-713A/ABAFFE
+MAADEN,BK1/AG41,BALL,,15,100,150#,FF,Limited for use of Fluorinated Gas (GF);Other Gas (GZ); Wash water (PAW) / Limited for use of Water Vapor over phosphoric Acid (GPA),NORMAL/V;DR;INSTR.,V-730A/ABAFFD
+MAADEN,BK1/AG41,BALL,,150,250,150#,FF,Limited for use of Fluorinated Gas (GF);Other Gas (GZ); Wash water (PAW) / Limited for use of Water Vapor over phosphoric Acid (GPA),NORMAL/V;DR;INSTR.,V-730B/ABAFEC
+MAADEN,BK1/AG41,BALL,,80,80,300#,FF,_,INSTRU. / EQUIP.,V-786/BBAFFA
+MAADEN,BK1/AG41,Check,Wafer,80,650,150#,FF,Limited for use of Fluorinated Gas (GF);Other Gas (GZ); Wash water (PAW),HORIZONTAL/VERTICAL UP,V-614B/ACKFWH
+MAADEN,BK1/AG41,Check,Wafer,200,700,150#,FF,Limited for use of Strong Phosphoric Acid (APC); Weak Phosphoric Acid (APW); Concentrated Phosphoric Acid Sludge (PSC); Weak Phosphoric Acid Sludge (PSW); Recycled Phosphoric Acid (RPA); Water Vapor over phosphoric Acid (GPA); Soda Ash (NA2CO3) (NA); Phosphoric Acid Reactor Slurry (ARS),NORMAL,V-630A/ACKFWJ
+MAADEN,BK1/AG41,Check,Piston,15,150,150#,FF,Limited for use of Strong Phosphoric Acid (APC); Weak Phosphoric Acid (APW); Concentrated Phosphoric Acid Sludge (PSC); Weak Phosphoric Acid Sludge (PSW); Recycled Phosphoric Acid (RPA); Water Vapor over phosphoric Acid (GPA); Soda Ash (NA2CO3) (NA); Phosphoric Acid Reactor Slurry (ARS),NORMAL,V-628B/ACKFXJ
+MAADEN,BK1/AG41,Check,Swing,80,650,150#,FF,Limited for use of Water Vapor over phosphoric Acid (GPA),HORIZONTAL/VERTICAL UP,V-603B/ACKFSL
+MAADEN,BK1/AG41,Butterfly,Lug,50,150,150#,FF,_,NORMAL,V-308A/ABFFWP
+MAADEN,BK1/AG41,Butterfly,Lug,200,400,150#,FF,_,NORMAL,V-308C/ABFFVU
+MAADEN,BK1/AG41,PLUG,,15,80,150#,FF,Limited for use of Strong Phosphoric Acid (APC); Weak Phosphoric Acid (APW); Concentrated Phosphoric Acid Sludge (PSC); Weak Phosphoric Acid Sludge (PSW); Recycled Phosphoric Acid (RPA); Water Vapor over phosphoric Acid (GPA); Soda Ash (NA2CO3) (NA); Phosphoric Acid Reactor Slurry (ARS),NORMAL,V-106B/APLFXG
+MAADEN,BK1/AG41,PLUG,,15,80,150#,FF,Limited for use of Fluorinated Gas (GF);Other Gas (GZ); Wash water (PAW),NORMAL,V-108/APLFXD
+MAADEN,BK1/AG41,PLUG,,100,650,150#,FF,_,NORMAL,V-132/APLFGD
+MAADEN,BK1/AG41,PLUG,,15,80,300#,FF,To be used only for FSA services,NORMAL,V-137/BPLFRA
+MAADEN,BK2/AG42,BALL,,15,100,150#,FF,_,NORMAL,V-713A/ABAFFE
+MAADEN,BK2/AG42,BALL,,150,250,150#,FF,_,NORMAL,V-730B/ABAFEC
+MAADEN,BK2/AG42,Check,Wafer,200,700,150#,FF,_,HORIZONTAL/VERTICAL UP,V-630A/ACKFWJ
+MAADEN,BK2/AG42,Check,Piston,15,150,150#,FF,_,NORMAL,V-628B/ACKFXJ
+MAADEN,BK2/AG42,PLUG,,15,80,150#,FF,_,NORMAL,V-106B/APLFXG
+MAADEN,BK2/AG42,PLUG,,100,650,150#,FF,_,NORMAL,V-132/APLFGD
+MAADEN,BK2/AG42,Butterfly,Lug,50,150,150#,FF,_,NORMAL,V-308A/ABFFWP
+MAADEN,BK2/AG42,Butterfly,Lug,200,400,150#,FF,_,NORMAL,V-308C/ABFFVU
+MAADEN,BK3/AG43,BALL,,15,100,150#,FF,_,NORMAL,V-713A/ABAFFE
+MAADEN,BK3/AG43,BALL,,150,200,150#,FF,_,NORMAL,V-713B/ABAFED
+MAADEN,BK3/AG43,GATE,,15,40,150#,FF,_,NORMAL,V-468/AGAFXN
+MAADEN,BK3/AG43,Check,Piston,15,150,150#,FF,_,NORMAL,V-628B/ACKFXJ
+MAADEN,BK3/AG43,Check,Wafer,200,700,150#,FF,_,NORMAL,V-630A/ACKFWJ
+MAADEN,BK3/AG43,Butterfly,Lug,50,150,150#,FF,_,NORMAL,V-308A/ABFFWP
+MAADEN,BK3/AG43,Butterfly,Lug,200,400,150#,FF,Limited Use of Brine Solution (BSL) & Flocculant (FLT) services.,NORMAL,V-308C/ABFFVU
+MAADEN,BK3/AG43,Butterfly,Lug,200,600,150#,FF,Use for services: Cooling Water Return (WCR); Cooling Water Supply (WCS) ; Effluent /Waste Water (WW); Desalinated Water (WDS); Water Vapor over phosphoric Acid (GPA) ; Process Condensate (CPP) ; Raw Water (WRS); Process Water (WPR); Cooling Water Return Closed loop (CWCR); Cooling Water Supply Closed loop (CWCS) ;Blow Down (WBD); Wash Water (WWA); Scrubber Water (WSC); Treated Water (WTW),NORMAL,V-322/ABFFVQ
+MAADEN,BK3/AG43,Butterfly,Double Flanged,650,2000,150#,FF,_,NORMAL,V-323/ABFFGD
+MAADEN,BK3/AG43,PLUG,,15,80,150#,FF,_,NORMAL,V-106B/APLFXG
+MAADEN,BK3/AG43,PLUG,,100,650,150#,FF,_,NORMAL,V-132/APLFGD
+MAADEN,BO1/AR42,BALL,,15,20,150#,RF,_,NORMAL (FULLY LINED),V-763/ABARFAD
+MAADEN,BO1/AR42,BALL,,25,100,150#,RF,_,NORMAL (FULLY LINED),V-764A/ABARFAC
+MAADEN,BO1/AR42,BALL,,150,300,150#,RF,_,NORMAL (FULLY LINED),V-764B/ABAREAA
+MAADEN,BO1/AR42,Check,Lift,25,100,150#,RF,_,HORIZONTAL/VERTICAL UP,V-673/ACKRXAD
+MAADEN,BO1/AR42,PLUG,,15,80,150#,RF,V-125A/V-125B (15 – 200 mm) valves are not to be used on tapped connections.,NORMAL (FULLY LINED),V-125A/APLRXY
+MAADEN,BO1/AR42,PLUG,,100,200,150#,RF,V-125A/V-125B (15 – 200 mm) valves are not to be used on tapped connections.,NORMAL (FULLY LINED),V-125B/APLRGM
+MAADEN,BW3/AS44,Check,Swing,15,300,150#,RF,_,HORIZONTAL/VERTICAL USE,V-678/ACKRSAC
+MAADEN,BW3/AS44,GATE,,300,900,150#,RF,_,NORMAL,V-462/AGARGL
+MAADEN,BW3/AS44,GLOBE,,15,250,150#,RF,_,NORMAL,V-534/AGLRXAJ
+MAADEN,BW3/AS44,Butterfly,Wafer,200,600,150#,RF,_,NORMAL,V-327/ABFRVAF
+MAADEN,BW3/AS44,NEEDLE,,15,15,150#,CL3000; THRD,_,NORMAL,V-801/GNDSXA
+MAADEN,BW3/AS44,PLUG,,15,80,150#,RF,V-126 (100mm to 200mm) Valves are not to be used on tapped connections due to possibility of valve flange having tapped holes at Bonnet area.,NORMAL,V-126A/APLRXZ
+MAADEN,BW3/AS44,PLUG,,100,200,150#,RF,V-126 (100mm to 200mm) Valves are not to be used on tapped connections due to possibility of valve flange having tapped holes at Bonnet area.,NORMAL,V-126B/APLRGN
