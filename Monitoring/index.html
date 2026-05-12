@@ -7,200 +7,279 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 :root{
-  --bg:#f2f4f8;--white:#ffffff;--s2:#f8f9fb;--s3:#eef0f5;
-  --bd:#dde1ea;--bd2:#c5cad8;
-  --ink:#141820;--ink2:#3a4055;--muted:#6e7591;--dim:#a8aec4;
-  --green:#0b9065;--green-l:#e8f6f1;--green-b:#b8e4d4;
-  --amber:#c97008;--amber-l:#fef4e3;--amber-b:#fcd9a0;
-  --red:#c82020;--red-l:#fef2f2;--red-b:#fdc9c9;
-  --blue:#1d57d8;--blue-l:#eef3ff;--blue-b:#b8cefb;
-  --purple:#6d28d9;--purple-l:#f4f0ff;--purple-b:#d5c8fa;
-  --slate:#475569;--slate-l:#f1f5f9;--slate-b:#c8d5e1;
+  --bg:#f0f2f6;
+  --white:#ffffff;
+  --s2:#f7f8fb;
+  --s3:#eceef4;
+  --bd:#d8dce8;
+  --bd2:#b8bece;
+  --ink:#111827;
+  --ink2:#374151;
+  --muted:#6b7280;
+  --dim:#9ca3af;
+  --green:#0a8a5c;--green-l:#ecfdf5;--green-b:#a7f3d0;--green-d:#065f46;
+  --amber:#b45309;--amber-l:#fffbeb;--amber-b:#fde68a;--amber-d:#92400e;
+  --red:#b91c1c;--red-l:#fef2f2;--red-b:#fecaca;--red-d:#7f1d1d;
+  --blue:#1d4ed8;--blue-l:#eff6ff;--blue-b:#bfdbfe;--blue-d:#1e3a8a;
+  --purple:#6d28d9;--purple-l:#f5f3ff;--purple-b:#ddd6fe;
+  --slate:#475569;--slate-l:#f8fafc;--slate-b:#e2e8f0;
   --mono:'JetBrains Mono',monospace;
-  --display:'Inter',sans-serif;
-  --sans:'Inter',sans-serif;
-  --r:8px;--r2:12px;
-  --sh:0 1px 3px rgba(0,0,0,.07),0 4px 14px rgba(0,0,0,.05);
-  --sh2:0 2px 8px rgba(0,0,0,.09),0 8px 28px rgba(0,0,0,.07);
+  --sans:'Montserrat',sans-serif;
+  --r:8px;--r2:12px;--r3:16px;
+  --sh:0 1px 3px rgba(0,0,0,.06),0 4px 12px rgba(0,0,0,.04);
+  --sh2:0 4px 16px rgba(0,0,0,.1),0 1px 4px rgba(0,0,0,.06);
 }
-body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;min-height:100vh;overflow-x:hidden}
+
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;min-height:100vh;overflow-x:hidden;font-size:14px}
 body::before{content:'';position:fixed;inset:0;
   background-image:linear-gradient(var(--bd) 1px,transparent 1px),linear-gradient(90deg,var(--bd) 1px,transparent 1px);
-  background-size:44px 44px;opacity:.4;pointer-events:none;z-index:0}
-.page{position:relative;z-index:1;max-width:1140px;margin:0 auto;padding:40px 24px 80px}
+  background-size:40px 40px;opacity:.35;pointer-events:none;z-index:0}
+.page{position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:36px 24px 80px}
 
-/* ── UPLOAD ── */
-#upload-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:82vh;gap:28px;text-align:center}
-.up-eyebrow{font-family:var(--mono);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
-.up-title{font-family:var(--display);font-size:clamp(30px,5vw,52px);font-weight:800;color:var(--ink);letter-spacing:-.03em;line-height:1.05}
+/* ═══════════════════════════════
+   UPLOAD SCREEN
+═══════════════════════════════ */
+#upload-screen{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:84vh;gap:24px;text-align:center}
+.up-eyebrow{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.up-title{font-size:clamp(28px,5vw,50px);font-weight:800;color:var(--ink);letter-spacing:-.02em;line-height:1.08}
 .up-title em{color:var(--blue);font-style:normal}
-.up-sub{font-size:14px;color:var(--muted);max-width:400px;line-height:1.75}
-.drop-zone{width:100%;max-width:460px;border:2px dashed var(--bd2);border-radius:var(--r2);background:var(--white);padding:52px 32px;cursor:pointer;transition:all .2s;box-shadow:var(--sh)}
+.up-sub{font-size:13px;color:var(--muted);max-width:380px;line-height:1.8;font-weight:400}
+.drop-zone{width:100%;max-width:440px;border:2px dashed var(--bd2);border-radius:var(--r3);background:var(--white);padding:48px 28px;cursor:pointer;transition:all .2s;box-shadow:var(--sh)}
 .drop-zone:hover,.drop-zone.drag{border-color:var(--blue);background:var(--blue-l);transform:translateY(-3px);box-shadow:var(--sh2)}
-.drop-icon{font-size:38px;display:block;margin-bottom:12px}
-.drop-title{font-family:var(--display);font-size:16px;font-weight:700;color:var(--ink);margin-bottom:5px}
-.drop-hint{font-size:11px;color:var(--muted);font-family:var(--mono)}
+.drop-icon{font-size:36px;display:block;margin-bottom:10px}
+.drop-title{font-size:15px;font-weight:700;color:var(--ink);margin-bottom:4px}
+.drop-hint{font-size:10px;color:var(--muted);font-family:var(--mono)}
 #file-input{display:none}
-.up-chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;max-width:460px}
-.up-chip{background:var(--white);border:1px solid var(--bd);border-radius:20px;padding:4px 12px;font-size:10px;font-family:var(--mono);color:var(--muted);box-shadow:var(--sh)}
-.err-box{background:var(--red-l);border:1px solid var(--red-b);color:var(--red);border-radius:var(--r);padding:11px 15px;font-size:12.5px;display:none;max-width:460px;width:100%}
+.up-chips{display:flex;gap:7px;flex-wrap:wrap;justify-content:center;max-width:440px}
+.up-chip{background:var(--white);border:1px solid var(--bd);border-radius:20px;padding:4px 11px;font-size:10px;font-family:var(--mono);color:var(--muted);box-shadow:var(--sh)}
+.err-box{background:var(--red-l);border:1px solid var(--red-b);color:var(--red);border-radius:var(--r);padding:10px 14px;font-size:12px;display:none;max-width:440px;width:100%;font-weight:500}
 
-/* ── LOADING ── */
-#loading-screen{display:none;flex-direction:column;align-items:center;justify-content:center;min-height:82vh;gap:18px}
-.loader{width:38px;height:38px;border:3px solid var(--bd);border-top-color:var(--blue);border-radius:50%;animation:spin .75s linear infinite}
+/* ═══════════════════════════════
+   LOADING
+═══════════════════════════════ */
+#loading-screen{display:none;flex-direction:column;align-items:center;justify-content:center;min-height:84vh;gap:16px}
+.loader{width:36px;height:36px;border:3px solid var(--bd);border-top-color:var(--blue);border-radius:50%;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .loader-text{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.1em}
 
-/* ── DASHBOARD ── */
+/* ═══════════════════════════════
+   DASHBOARD SHELL
+═══════════════════════════════ */
 #dashboard{display:none}
 
-/* topbar */
-.topbar{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:28px;flex-wrap:wrap}
-.tb-eyebrow{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
-.tb-title{font-family:var(--display);font-size:clamp(24px,3.5vw,38px);font-weight:800;color:var(--ink);letter-spacing:-.025em;line-height:1}
-.tb-meta{font-size:12px;color:var(--muted);margin-top:5px;font-style:italic}
-.tb-right{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:4px}
-.file-chip{background:var(--blue-l);border:1px solid var(--blue-b);color:var(--blue);font-family:var(--mono);font-size:10px;padding:5px 11px;border-radius:6px;letter-spacing:.03em}
-.reset-btn{font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;background:var(--white);border:1px solid var(--bd2);color:var(--muted);padding:7px 13px;border-radius:var(--r);cursor:pointer;transition:all .15s;box-shadow:var(--sh)}
+.topbar{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+.tb-label{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.tb-title{font-size:clamp(22px,3.5vw,36px);font-weight:800;color:var(--ink);letter-spacing:-.02em;line-height:1}
+.tb-meta{font-size:11px;color:var(--muted);margin-top:4px;font-weight:400}
+.tb-right{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding-top:4px}
+.file-chip{background:var(--blue-l);border:1px solid var(--blue-b);color:var(--blue);font-family:var(--mono);font-size:10px;padding:5px 11px;border-radius:6px;letter-spacing:.03em;font-weight:500}
+.reset-btn{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--white);border:1px solid var(--bd2);color:var(--muted);padding:7px 13px;border-radius:var(--r);cursor:pointer;transition:all .15s;box-shadow:var(--sh);font-family:var(--sans)}
 .reset-btn:hover{color:var(--ink);border-color:var(--ink)}
 
 /* unit filter */
-.unit-filter{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin-bottom:22px}
-.uf-label{font-family:var(--mono);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-right:2px}
-.unit-pill{background:var(--white);border:1px solid var(--bd);border-radius:20px;padding:5px 13px;font-size:10px;font-family:var(--mono);color:var(--muted);cursor:pointer;transition:all .15s;box-shadow:var(--sh)}
+.unit-filter{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin-bottom:20px}
+.uf-label{font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-right:2px}
+.unit-pill{background:var(--white);border:1px solid var(--bd);border-radius:20px;padding:5px 13px;font-size:10px;font-weight:600;color:var(--muted);cursor:pointer;transition:all .15s;box-shadow:var(--sh);font-family:var(--sans);letter-spacing:.02em}
 .unit-pill:hover{border-color:var(--blue);color:var(--blue)}
-.unit-pill.active{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 2px 8px rgba(29,87,216,.25)}
-
-/* team summary */
-.team-summary{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:24px}
-.tsc{background:var(--white);border:1px solid var(--bd);border-radius:var(--r);padding:16px 18px;box-shadow:var(--sh)}
-.tsc-label{font-family:var(--mono);font-size:8px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
-.tsc-val{font-family:var(--display);font-size:28px;font-weight:800;line-height:1;color:var(--ink)}
-.tsc-sub{font-size:11px;color:var(--muted);margin-top:3px}
+.unit-pill.active{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 2px 8px rgba(29,78,216,.25)}
 
 /* section header */
 .sec-hdr{display:flex;align-items:center;gap:12px;margin-bottom:14px}
-.sec-title{font-family:var(--display);font-size:14px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+.sec-title{font-size:13px;font-weight:700;color:var(--ink);letter-spacing:.01em}
 .sec-line{flex:1;height:1px;background:var(--bd)}
 .sec-count{font-family:var(--mono);font-size:9px;color:var(--muted);background:var(--s3);border:1px solid var(--bd);border-radius:20px;padding:2px 10px}
 
-/* designer cards */
-.designers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-bottom:28px}
-.dcard{background:var(--white);border:1px solid var(--bd);border-radius:var(--r2);box-shadow:var(--sh);cursor:pointer;transition:all .2s;overflow:hidden;animation:fadeUp .35s ease both}
-.dcard:hover{box-shadow:var(--sh2);transform:translateY(-2px);border-color:var(--blue-b)}
-.dcard.active-card{border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-b)}
-@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+/* ═══════════════════════════════
+   HERO — LIGHT RING + STAT CARDS
+═══════════════════════════════ */
+.hero{background:var(--white);border:1px solid var(--bd);border-radius:var(--r3);box-shadow:var(--sh2);padding:28px 32px;margin-bottom:20px;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center}
+@media(max-width:700px){.hero{grid-template-columns:1fr}}
 
-.dc-head{padding:15px 17px 11px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;gap:10px}
-.dc-avatar{width:34px;height:34px;border-radius:7px;background:var(--blue-l);border:1px solid var(--blue-b);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:12px;font-weight:800;color:var(--blue);flex-shrink:0}
-.dc-name{font-family:var(--display);font-size:14px;font-weight:700;color:var(--ink)}
-.dc-units{font-size:10px;color:var(--muted);margin-top:1px}
-.dc-pct{font-family:var(--display);font-size:21px;font-weight:800}
+.ring-wrap{display:flex;flex-direction:column;align-items:center;gap:8px}
+.ring-label{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+svg.ring{width:120px;height:120px;filter:drop-shadow(0 2px 8px rgba(10,138,92,.15))}
+.ring-pct{font-family:var(--sans);font-size:22px;font-weight:800;fill:var(--ink)}
+.ring-sub{font-family:var(--mono);font-size:9px;fill:var(--muted)}
+
+.hero-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:900px){.hero-cards{grid-template-columns:repeat(2,1fr)}}
+
+.hc{background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);padding:16px 18px}
+.hc-label{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.hc-val{font-size:28px;font-weight:800;line-height:1;color:var(--ink)}
+.hc-sub{font-size:11px;color:var(--muted);margin-top:4px;font-weight:400}
+.hc-val.cg{color:var(--green)}
+.hc-val.ca{color:var(--amber)}
+.hc-val.cb{color:var(--blue)}
+.hc-val.cr{color:var(--red)}
+
+/* status row under hero */
+.status-strip{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.ss-item{background:var(--white);border:1px solid var(--bd);border-radius:var(--r);padding:10px 14px;display:flex;align-items:center;gap:8px;box-shadow:var(--sh);flex:1;min-width:140px}
+.ss-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.ss-text{font-size:11px;font-weight:500;color:var(--ink2);flex:1}
+.ss-num{font-family:var(--mono);font-size:13px;font-weight:700}
+
+/* ═══════════════════════════════
+   DESIGNER CARDS
+═══════════════════════════════ */
+.designers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px;margin-bottom:28px}
+.dcard{background:var(--white);border:1px solid var(--bd);border-radius:var(--r2);box-shadow:var(--sh);cursor:pointer;transition:all .2s;overflow:hidden}
+.dcard:hover{box-shadow:var(--sh2);transform:translateY(-2px);border-color:var(--blue-b)}
+.dcard.active-card{border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-b),var(--sh)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.dcard{animation:fadeUp .3s ease both}
+
+.dc-head{padding:14px 16px 10px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;gap:10px}
+.dc-avatar{width:34px;height:34px;border-radius:8px;background:var(--blue-l);border:1px solid var(--blue-b);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--blue);flex-shrink:0}
+.dc-name{font-size:14px;font-weight:700;color:var(--ink)}
+.dc-units{font-size:10px;color:var(--muted);margin-top:1px;font-weight:400}
+.dc-pct{font-size:22px;font-weight:800;line-height:1}
 .dc-pct-sub{font-size:8px;color:var(--muted);font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;text-align:right;margin-top:1px}
 
-.dc-body{padding:12px 17px}
-.dc-prog{height:4px;background:var(--s3);border-radius:2px;overflow:hidden;margin-bottom:11px}
+.dc-body{padding:12px 16px}
+.dc-prog{height:4px;background:var(--s3);border-radius:2px;overflow:hidden;margin-bottom:10px}
 .dc-prog-fill{height:100%;border-radius:2px;transition:width .5s ease}
-.dc-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
-.ds{text-align:center;padding:7px 4px;background:var(--s2);border-radius:5px}
+.dc-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.ds{text-align:center;padding:7px 4px;background:var(--s2);border-radius:6px}
 .ds-val{font-family:var(--mono);font-size:13px;font-weight:700;line-height:1}
-.ds-label{font-size:8px;color:var(--muted);margin-top:2px;letter-spacing:.05em;text-transform:uppercase;font-family:var(--mono)}
+.ds-label{font-size:8px;color:var(--muted);margin-top:2px;letter-spacing:.04em;text-transform:uppercase;font-family:var(--mono)}
 
-.dc-foot{padding:9px 17px;background:var(--s3);border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center}
-.dc-foot-text{font-size:10.5px;color:var(--muted)}
-.dc-cta{font-family:var(--mono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+.dc-foot{padding:8px 16px;background:var(--s2);border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center}
+.dc-foot-text{font-size:10px;color:var(--muted);font-weight:400}
+.dc-cta{font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
 
-/* ── DETAIL ── */
+/* ═══════════════════════════════
+   DETAIL PANEL
+═══════════════════════════════ */
 #detail-panel{display:none;margin-bottom:28px}
 .det-wrap{background:var(--white);border:1px solid var(--bd);border-radius:var(--r2);box-shadow:var(--sh2);overflow:hidden}
 
-.det-hdr{background:var(--ink);color:#fff;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.dh-name{font-family:var(--display);font-size:22px;font-weight:800;letter-spacing:-.02em}
-.dh-sub{font-size:11px;color:rgba(255,255,255,.45);margin-top:3px;font-style:italic}
-.dh-stats{display:flex;align-items:center;gap:18px}
+/* detail header */
+.det-hdr{background:var(--ink);color:#fff;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.dh-name{font-size:22px;font-weight:800;letter-spacing:-.02em}
+.dh-sub{font-size:11px;color:rgba(255,255,255,.45);margin-top:3px;font-weight:400}
+.dh-stats{display:flex;align-items:center;gap:20px}
 .dhs{text-align:center}
-.dhs-val{font-family:var(--display);font-size:26px;font-weight:800;color:#fff;line-height:1}
-.dhs-val.vg{color:#34d399}.dhs-val.va{color:#fbbf24}
-.dhs-label{font-family:var(--mono);font-size:7px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-top:2px}
-.close-btn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff;border-radius:6px;padding:7px 13px;font-family:var(--mono);font-size:9px;cursor:pointer;letter-spacing:.08em;transition:background .15s;text-transform:uppercase}
-.close-btn:hover{background:rgba(255,255,255,.2)}
+.dhs-val{font-size:26px;font-weight:800;color:#fff;line-height:1}
+.dhs-val.vg{color:#34d399}.dhs-val.va{color:#fbbf24}.dhs-val.vr{color:#f87171}
+.dhs-label{font-size:8px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-top:3px}
+.close-btn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:6px;padding:7px 14px;font-size:10px;font-weight:700;cursor:pointer;letter-spacing:.07em;transition:background .15s;text-transform:uppercase;font-family:var(--sans)}
+.close-btn:hover{background:rgba(255,255,255,.22)}
 
-.det-body{padding:22px 26px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.det-full{padding:0 26px 22px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+/* detail body grid */
+.det-body{padding:22px 28px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.det-full{padding:0 28px 22px;display:grid;grid-template-columns:1fr;gap:18px}
+@media(max-width:720px){.det-body,.det-full{grid-template-columns:1fr;padding:16px 18px}}
 
-.dc2{background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);padding:17px 19px}
-.dc2-title{font-family:var(--mono);font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:13px;display:flex;align-items:center;gap:6px}
-.dc2-title::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;display:block}
-.ctg{color:var(--green)}.cta2{color:var(--amber)}.ctb{color:var(--blue)}.ctr{color:var(--red)}.ctp{color:var(--purple)}.cts{color:var(--slate)}
+.dc2{background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);padding:18px 20px}
+.dc2-title{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;display:flex;align-items:center;gap:6px}
+.dc2-title::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;display:block;flex-shrink:0}
+.ctg{color:var(--green)}.cta{color:var(--amber)}.ctb{color:var(--blue)}.ctr{color:var(--red)}.ctp{color:var(--purple)}.cts{color:var(--slate)}
 
 /* status rows */
 .str{display:flex;align-items:center;gap:9px;margin-bottom:8px}
 .str-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
-.str-name{font-size:12px;color:var(--ink2);flex:1}
+.str-name{font-size:12px;color:var(--ink2);flex:1;font-weight:400}
 .str-bar{width:65px;height:4px;background:var(--bd);border-radius:2px;overflow:hidden;flex-shrink:0}
 .str-fill{height:100%;border-radius:2px}
-.str-num{font-family:var(--mono);font-size:11px;font-weight:500;min-width:26px;text-align:right}
+.str-num{font-family:var(--mono);font-size:11px;font-weight:700;min-width:26px;text-align:right}
 
 /* priority table */
 .pt{width:100%;border-collapse:collapse}
-.pt th{font-family:var(--mono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:0 0 9px;text-align:right;font-weight:400}
+.pt th{font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:0 0 9px;text-align:right}
 .pt th:first-child{text-align:left}
-.pt td{padding:7px 0;border-top:1px solid var(--bd);font-size:11.5px;text-align:right;color:var(--muted)}
-.pt td:first-child{text-align:left}
-.pbadge{display:inline-block;font-family:var(--mono);font-size:8.5px;font-weight:700;padding:2px 6px;border-radius:4px}
+.pt td{padding:7px 0;border-top:1px solid var(--bd);font-size:11px;text-align:right;color:var(--muted);font-family:var(--mono)}
+.pt td:first-child{text-align:left;font-family:var(--sans)}
+.pbadge{display:inline-block;font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;font-family:var(--sans)}
 .p1b{background:var(--red-l);color:var(--red);border:1px solid var(--red-b)}
 .p2b{background:var(--amber-l);color:var(--amber);border:1px solid var(--amber-b)}
 .p3b{background:var(--blue-l);color:var(--blue);border:1px solid var(--blue-b)}
-.tdg{color:var(--green);font-family:var(--mono);font-size:11px;font-weight:700}
-.tda{color:var(--amber);font-family:var(--mono);font-size:11px}
-.tdr{color:var(--red);font-family:var(--mono);font-size:11px}
-
-/* prod tiles */
-.prod-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px}
-.ptile{background:var(--white);border:1px solid var(--bd);border-radius:6px;padding:11px 13px;text-align:center}
-.ptile-val{font-family:var(--display);font-size:22px;font-weight:800;color:var(--ink);line-height:1}
-.ptile-label{font-family:var(--mono);font-size:7px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.tdg{color:var(--green);font-weight:700}
+.tda{color:var(--amber)}
+.tdr{color:var(--red)}
 
 /* bar chart */
-.bar-chart{display:flex;align-items:flex-end;gap:7px;height:80px}
+.bar-chart{display:flex;align-items:flex-end;gap:6px;height:80px}
 .bc-col{display:flex;flex-direction:column;align-items:center;gap:3px;flex:1;min-width:0}
-.bc-val{font-family:var(--mono);font-size:8.5px;font-weight:700;color:var(--ink2)}
+.bc-val{font-family:var(--mono);font-size:8px;font-weight:700;color:var(--ink2)}
 .bc-bar{width:100%;border-radius:3px 3px 0 0;min-height:3px}
 .bc-date{font-family:var(--mono);font-size:7px;color:var(--muted);text-align:center;line-height:1.3}
 
 /* unit bars */
 .unit-row{display:flex;align-items:center;gap:9px;margin-bottom:9px}
-.unit-name{font-family:var(--mono);font-size:10px;font-weight:500;color:var(--ink2);width:72px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.unit-name{font-size:10px;font-weight:600;color:var(--ink2);width:72px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .unit-bw{flex:1;height:5px;background:var(--bd);border-radius:2px;overflow:hidden}
 .unit-bf{height:100%;border-radius:2px}
-.unit-pct{font-family:var(--mono);font-size:10px;width:32px;text-align:right;flex-shrink:0}
-.unit-cnt{font-family:var(--mono);font-size:10px;color:var(--green);font-weight:700;width:46px;text-align:right;flex-shrink:0}
+.unit-pct{font-family:var(--mono);font-size:10px;width:32px;text-align:right;flex-shrink:0;font-weight:700}
+.unit-cnt{font-family:var(--mono);font-size:10px;color:var(--muted);width:46px;text-align:right;flex-shrink:0}
+
+/* ═══════════════════════════════
+   PRODUCTIVITY PANEL — NEW
+═══════════════════════════════ */
+.prod-panel{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:720px){.prod-panel{grid-template-columns:1fr}}
+
+.method-card{background:var(--white);border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh)}
+.mc-head{padding:12px 16px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between}
+.mc-title{font-size:11px;font-weight:700;color:var(--ink);letter-spacing:.01em}
+.mc-badge{font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px;font-family:var(--sans);letter-spacing:.03em}
+.mc-badge.cp{background:var(--blue-l);color:var(--blue);border:1px solid var(--blue-b)}
+.mc-badge.nd{background:var(--purple-l);color:var(--purple);border:1px solid var(--purple-b)}
+
+.mc-body{padding:16px}
+.mc-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.mk{background:var(--s2);border:1px solid var(--bd);border-radius:6px;padding:10px 12px;text-align:center}
+.mk-val{font-size:20px;font-weight:800;line-height:1;color:var(--ink)}
+.mk-label{font-size:8px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+
+/* performance vs benchmark */
+.bench-row{background:var(--s2);border:1px solid var(--bd);border-radius:var(--r);padding:12px 14px}
+.bench-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.bench-label{font-size:10px;font-weight:600;color:var(--ink2)}
+.bench-tag{font-size:9px;font-weight:700;padding:2px 8px;border-radius:20px}
+.bench-tag.above{background:var(--green-l);color:var(--green);border:1px solid var(--green-b)}
+.bench-tag.below{background:var(--red-l);color:var(--red);border:1px solid var(--red-b)}
+.bench-tag.met{background:var(--amber-l);color:var(--amber);border:1px solid var(--amber-b)}
+
+.bench-nums{display:flex;align-items:baseline;gap:6px;margin-bottom:8px}
+.bench-actual{font-size:26px;font-weight:800;line-height:1}
+.bench-slash{font-size:14px;color:var(--dim);font-weight:300}
+.bench-min{font-size:14px;color:var(--muted);font-weight:500}
+.bench-unit{font-size:10px;color:var(--muted);margin-left:2px;font-weight:400}
+
+.bench-bar-wrap{height:6px;background:var(--bd);border-radius:3px;overflow:visible;position:relative;margin-bottom:6px}
+.bench-bar-fill{height:100%;border-radius:3px;transition:width .6s ease;position:relative}
+.bench-marker{position:absolute;top:-4px;width:2px;height:14px;background:var(--ink2);border-radius:1px}
+
+.bench-delta{font-size:11px;font-weight:600}
+.bench-delta.pos{color:var(--green)}
+.bench-delta.neg{color:var(--red)}
+.bench-ratio{font-size:10px;color:var(--muted);font-weight:400}
 
 /* observations */
-.obs{display:flex;align-items:flex-start;gap:8px;padding:8px 10px;border-radius:6px;border:1px solid;font-size:11.5px;line-height:1.55;margin-bottom:7px;font-weight:300}
-.obs-badge{font-family:var(--mono);font-size:7px;font-weight:700;padding:2px 5px;border-radius:3px;flex-shrink:0;margin-top:1px;letter-spacing:.07em}
+.obs{display:flex;align-items:flex-start;gap:8px;padding:9px 11px;border-radius:6px;border:1px solid;font-size:11.5px;line-height:1.6;margin-bottom:7px;font-weight:400}
+.obs-badge{font-size:8px;font-weight:700;padding:2px 5px;border-radius:3px;flex-shrink:0;margin-top:2px;letter-spacing:.07em;font-family:var(--sans)}
 .good{background:var(--green-l);border-color:var(--green-b);color:var(--ink2)}.good .obs-badge{background:var(--green-b);color:var(--green)}
 .warn{background:var(--amber-l);border-color:var(--amber-b);color:var(--ink2)}.warn .obs-badge{background:var(--amber-b);color:var(--amber)}
 .flag{background:var(--red-l);border-color:var(--red-b);color:var(--ink2)}.flag .obs-badge{background:var(--red-b);color:var(--red)}
 .info{background:var(--blue-l);border-color:var(--blue-b);color:var(--ink2)}.info .obs-badge{background:var(--blue-b);color:var(--blue)}
 
-@media(max-width:700px){
-  .team-summary{grid-template-columns:repeat(2,1fr)}
-  .det-body,.det-full{grid-template-columns:1fr;padding:16px 18px}
-  .dh-stats{gap:10px}
-}
+@media(max-width:640px){.dh-stats{gap:10px}.hero-cards{grid-template-columns:repeat(2,1fr)}}
 @media print{body::before{display:none}.reset-btn,.close-btn,.unit-pill,.dc-cta{display:none!important}}
 </style>
 </head>
 <body>
 <div class="page">
 
-<!-- UPLOAD -->
+<!-- ════════════════════════════
+     UPLOAD
+════════════════════════════ -->
 <div id="upload-screen">
   <div class="up-eyebrow">Engineering · 3D Pipe Modeling</div>
   <div class="up-title">Team Progress<br><em>Monitor</em></div>
@@ -221,17 +300,21 @@ body::before{content:'';position:fixed;inset:0;
   <div class="err-box" id="err-box"></div>
 </div>
 
-<!-- LOADING -->
+<!-- ════════════════════════════
+     LOADING
+════════════════════════════ -->
 <div id="loading-screen">
   <div class="loader"></div>
   <div class="loader-text" id="loading-text">Reading workbook…</div>
 </div>
 
-<!-- DASHBOARD -->
+<!-- ════════════════════════════
+     DASHBOARD
+════════════════════════════ -->
 <div id="dashboard">
   <div class="topbar">
     <div>
-      <div class="tb-eyebrow">3D Modeling · Team Monitor</div>
+      <div class="tb-label">3D Modeling · Team Monitor</div>
       <div class="tb-title">Team Overview</div>
       <div class="tb-meta" id="dash-meta"></div>
     </div>
@@ -242,193 +325,367 @@ body::before{content:'';position:fixed;inset:0;
   </div>
   <div class="unit-filter" id="unit-filter"></div>
   <div class="err-box" id="dash-err" style="margin-bottom:14px"></div>
-  <div class="team-summary" id="team-summary"></div>
+
+  <!-- Hero -->
+  <div class="hero" id="hero-section">
+    <div class="ring-wrap">
+      <div class="ring-label">Completion</div>
+      <svg class="ring" viewBox="0 0 120 120">
+        <circle cx="60" cy="60" r="50" fill="none" stroke="#e5e7eb" stroke-width="11"/>
+        <circle id="ring-arc" cx="60" cy="60" r="50" fill="none" stroke="#0a8a5c" stroke-width="11"
+          stroke-dasharray="314" stroke-dashoffset="314" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+        <text id="ring-pct-text" x="60" y="55" text-anchor="middle" class="ring-pct" dominant-baseline="central" font-family="Montserrat,sans-serif" font-size="20" font-weight="800" fill="#111827">0%</text>
+        <text id="ring-sub-text" x="60" y="73" text-anchor="middle" class="ring-sub" dominant-baseline="central" font-family="JetBrains Mono,monospace" font-size="9" fill="#6b7280">– / –</text>
+      </svg>
+      <div class="ring-label" style="text-align:center;line-height:1.5">lines done<br>of started</div>
+    </div>
+    <div class="hero-cards" id="hero-cards"></div>
+  </div>
+
+  <!-- Status strip -->
+  <div class="status-strip" id="status-strip"></div>
+
+  <!-- Designers -->
   <div class="sec-hdr">
     <div class="sec-title">Designers</div>
     <div class="sec-line"></div>
     <div class="sec-count" id="designer-count"></div>
   </div>
   <div class="designers-grid" id="designers-grid"></div>
+
+  <!-- Detail panel -->
   <div id="detail-panel"><div class="det-wrap" id="det-wrap"></div></div>
 </div>
 
 </div><!-- .page -->
 <script>
-/* ── STATE ── */
-let allData=[], allUnits=[], activeUnit='ALL', activeDesigner=null, reportDate='', fileName='';
+/* ══════════════════════════════════════
+   MOROCCO PUBLIC HOLIDAYS 2026
+   (hardcoded — updated annually)
+══════════════════════════════════════ */
+const MOROCCO_HOLIDAYS_2026 = [
+  '2026-01-01', // New Year's Day
+  '2026-01-13', // Amazigh New Year (Yennayer)
+  '2026-03-20', // Eid al-Fitr day 1
+  '2026-03-21', // Eid al-Fitr day 2
+  '2026-05-01', // Labour Day
+  '2026-05-27', // Eid al-Adha day 1
+  '2026-05-28', // Eid al-Adha day 2
+  '2026-06-17', // Islamic New Year (Fatih Muharram)
+  '2026-07-30', // Enthronement Day
+  '2026-08-14', // Oued Ed-Dahab Day
+  '2026-08-20', // Revolution Day
+  '2026-08-21', // Youth Day
+  '2026-08-26', // Prophet's Birthday (Mawlid)
+  '2026-11-06', // Green March Day
+  '2026-11-18', // Independence Day
+];
 
-/* ── FILE HANDLING ── */
+const HOLIDAY_SET = new Set(MOROCCO_HOLIDAYS_2026);
+
+/* ══════════════════════════════════════
+   WORKING DAYS CALCULATOR
+   from startDate to today (inclusive)
+   excluding weekends + Morocco holidays
+══════════════════════════════════════ */
+function workingDaysBetween(startDate, endDate) {
+  let count = 0;
+  const cur = new Date(startDate);
+  cur.setHours(0,0,0,0);
+  const end = new Date(endDate);
+  end.setHours(0,0,0,0);
+  while (cur <= end) {
+    const dow = cur.getDay(); // 0=Sun, 6=Sat
+    const iso = cur.toISOString().slice(0,10);
+    if (dow !== 0 && dow !== 6 && !HOLIDAY_SET.has(iso)) count++;
+    cur.setDate(cur.getDate() + 1);
+  }
+  return count;
+}
+
+/* ══════════════════════════════════════
+   STATE
+══════════════════════════════════════ */
+let allData=[], allUnits=[], activeUnit='ALL', activeDesigner=null, reportDate='', fileName='', reportDateObj=null;
+
+/* ══════════════════════════════════════
+   FILE HANDLING
+══════════════════════════════════════ */
 const dz=document.getElementById('drop-zone'), fi=document.getElementById('file-input');
 dz.addEventListener('dragover',e=>{e.preventDefault();dz.classList.add('drag')});
 dz.addEventListener('dragleave',()=>dz.classList.remove('drag'));
 dz.addEventListener('drop',e=>{e.preventDefault();dz.classList.remove('drag');if(e.dataTransfer.files[0])processFile(e.dataTransfer.files[0])});
 fi.addEventListener('change',e=>{if(e.target.files[0])processFile(e.target.files[0])});
 
-function processFile(file){
-  fileName=file.name;
-  const m=file.name.match(/(\d{6})/);
-  if(m){
-    const dd=m[1].slice(0,2),mm2=m[1].slice(2,4),yy=m[1].slice(4,6);
+function processFile(file) {
+  fileName = file.name;
+  const m = file.name.match(/(\d{6})/);
+  if (m) {
+    const dd=parseInt(m[1].slice(0,2)), mm=parseInt(m[1].slice(2,4))-1, yy=2000+parseInt(m[1].slice(4,6));
+    reportDateObj = new Date(yy, mm, dd);
     const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    reportDate=`${dd} ${months[parseInt(mm2)-1]} 20${yy}`;
+    reportDate = `${String(dd).padStart(2,'0')} ${months[mm]} ${yy}`;
   } else {
-    reportDate=new Date().toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'});
+    reportDateObj = new Date();
+    reportDate = reportDateObj.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric'});
   }
-  show('loading');setLoading('Reading workbook…');
-  const reader=new FileReader();
-  reader.onload=e=>{
-    try{
-      const wb=XLSX.read(e.target.result,{type:'array',cellDates:true});
+  show('loading'); setLoading('Reading workbook…');
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const wb = XLSX.read(e.target.result,{type:'array',cellDates:true});
       setLoading('Parsing sheets…');
       setTimeout(()=>{
-        try{parseWB(wb);setLoading('Building dashboard…');setTimeout(()=>{buildDash();show('dashboard')},80)}
-        catch(err){showErr(err.message);show('upload')}
+        try { parseWB(wb); setLoading('Building dashboard…'); setTimeout(()=>{buildDash();show('dashboard')},80); }
+        catch(err){ showErr(err.message); show('upload'); }
       },60);
-    }catch(err){showErr('Cannot read file: '+err.message);show('upload')}
+    } catch(err){ showErr('Cannot read file: '+err.message); show('upload'); }
   };
   reader.readAsArrayBuffer(file);
 }
 
-/* ── PARSE ── */
-function parseWB(wb){
-  allData=[];allUnits=[];
-  const sheets=wb.SheetNames.filter(n=>n.trim().toLowerCase().startsWith('line list '));
-  if(!sheets.length) throw new Error('No sheets found starting with "Line List ". Please check your file.');
-  sheets.forEach(sn=>{
-    const unit=sn.replace(/^line list /i,'').trim();
-    const ws=wb.Sheets[sn];
-    const raw=XLSX.utils.sheet_to_json(ws,{header:1,defval:''});
-    // find header row
-    let hi=-1;
-    for(let i=0;i<Math.min(raw.length,25);i++){
-      const r=raw[i].map(c=>String(c).toLowerCase().trim());
-      if(r.some(c=>c.includes('designer'))||r.some(c=>c==='priority')){hi=i;break}
+/* ══════════════════════════════════════
+   PARSE WORKBOOK
+══════════════════════════════════════ */
+function parseWB(wb) {
+  allData=[]; allUnits=[];
+  const sheets = wb.SheetNames.filter(n=>n.trim().toLowerCase().startsWith('line list '));
+  if (!sheets.length) throw new Error('No sheets found starting with "Line List ". Please check your file.');
+
+  sheets.forEach(sn => {
+    const unit = sn.replace(/^line list /i,'').trim();
+    const ws = wb.Sheets[sn];
+    const raw = XLSX.utils.sheet_to_json(ws,{header:1,defval:''});
+
+    let hi = -1;
+    for (let i=0; i<Math.min(raw.length,25); i++) {
+      const r = raw[i].map(c=>String(c).toLowerCase().trim());
+      if (r.some(c=>c.includes('designer'))||r.some(c=>c==='priority')) { hi=i; break; }
     }
-    if(hi<0)return;
-    const hdrs=raw[hi].map(c=>String(c).toLowerCase().trim());
-    const ci={
-      priority:fc(hdrs,['priority']),
-      designer:fc(hdrs,['designer name','designer']),
-      mode:fc(hdrs,['routing mode','mode']),
-      start:fc(hdrs,['routing start date','start date','start']),
-      end:fc(hdrs,['routing end date','end date','end']),
-      pid:fc(hdrs,['checking vs p&id','pid check','p&id','checking']),
-      support:fc(hdrs,['support placement','support']),
-      remarks:fc(hdrs,['additional remarks','remarks']),
+    if (hi<0) return;
+
+    const hdrs = raw[hi].map(c=>String(c).toLowerCase().trim());
+    const ci = {
+      priority: fc(hdrs,['priority']),
+      designer: fc(hdrs,['designer name','designer']),
+      mode:     fc(hdrs,['routing mode','mode']),
+      start:    fc(hdrs,['routing start date','start date','start']),
+      end:      fc(hdrs,['routing end date','end date','end']),
+      pid:      fc(hdrs,['checking vs p&id','pid check','p&id','checking']),
+      support:  fc(hdrs,['support placement','support']),
+      remarks:  fc(hdrs,['additional remarks','remarks']),
     };
-    for(let i=hi+1;i<raw.length;i++){
-      const row=raw[i];
-      if(!row||row.every(c=>!String(c).trim()))continue;
-      const designer=ci.designer>=0?String(row[ci.designer]||'').trim():'';
-      if(!designer)continue;
+
+    for (let i=hi+1; i<raw.length; i++) {
+      const row = raw[i];
+      if (!row||row.every(c=>!String(c).trim())) continue;
+      const designer = ci.designer>=0 ? String(row[ci.designer]||'').trim() : '';
+      if (!designer) continue;
+      const startRaw = ci.start>=0 ? row[ci.start] : '';
+      const endRaw   = ci.end>=0   ? row[ci.end]   : '';
       allData.push({
         unit,
-        priority:ci.priority>=0?String(row[ci.priority]||'').trim():'',
+        priority: ci.priority>=0 ? String(row[ci.priority]||'').trim() : '',
         designer,
-        mode:ci.mode>=0?String(row[ci.mode]||'').trim():'',
-        start:ci.start>=0?fmtDate(row[ci.start]):'',
-        end:ci.end>=0?fmtDate(row[ci.end]):'',
-        pid:ci.pid>=0?String(row[ci.pid]||'').trim().toUpperCase():'',
-        support:ci.support>=0?String(row[ci.support]||'').trim().toUpperCase():'',
-        remarks:ci.remarks>=0?String(row[ci.remarks]||'').trim():'',
+        mode:    ci.mode>=0    ? String(row[ci.mode]||'').trim()    : '',
+        start:   fmtDate(startRaw),
+        startJs: toJsDate(startRaw),
+        end:     fmtDate(endRaw),
+        endJs:   toJsDate(endRaw),
+        pid:     ci.pid>=0     ? String(row[ci.pid]||'').trim().toUpperCase()     : '',
+        support: ci.support>=0 ? String(row[ci.support]||'').trim().toUpperCase() : '',
+        remarks: ci.remarks>=0 ? String(row[ci.remarks]||'').trim()               : '',
       });
     }
-    if(!allUnits.includes(unit))allUnits.push(unit);
+    if (!allUnits.includes(unit)) allUnits.push(unit);
   });
-  if(!allData.length) throw new Error('No data rows found. Check that sheets have a "Designer Name" column header.');
+
+  if (!allData.length) throw new Error('No data rows found. Check that sheets have a "Designer Name" column header.');
 }
 
-function fc(hdrs,candidates){
-  for(const c of candidates){const i=hdrs.findIndex(h=>h.includes(c.toLowerCase()));if(i>=0)return i}
-  return -1;
-}
-function fmtDate(v){
-  if(!v)return '';
-  if(v instanceof Date)return v.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'2-digit'}).replace(/ /g,'-');
-  return String(v).trim();
-}
+function fc(hdrs,candidates){ for(const c of candidates){ const i=hdrs.findIndex(h=>h.includes(c.toLowerCase())); if(i>=0)return i; } return -1; }
 
-/* ── CLASSIFY ── */
-function classify(r){
-  const rem=r.remarks.toUpperCase(),mode=r.mode,pid=r.pid,sup=r.support,start=r.start;
-  if(rem.includes('HOLD')&&!mode&&!start)return'hold';
-  if(rem.includes('HOLD')&&mode==='Copy/Paste'&&!r.end)return'hold';
-  if(mode==='Not Required')return'not_required';
-  if(rem.includes('MISSING'))return'missing';
-  if(mode==='Copy/Paste'||mode==='New Design'||start){
-    if(pid==='DONE'&&sup==='DONE')return'done';
-    if(pid==='DONE'&&sup!=='DONE')return'pid_only';
-    return'in_progress';
+function toJsDate(v) {
+  if (!v) return null;
+  if (v instanceof Date) return v;
+  const s = String(v).trim();
+  if (!s) return null;
+  // Try DD-Mon-YY or DD-Mon-YYYY
+  const m = s.match(/^(\d{1,2})[-\/\s]([A-Za-z]+)[-\/\s](\d{2,4})$/);
+  if (m) {
+    const months={jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11};
+    const mo = months[m[2].toLowerCase().slice(0,3)];
+    if (mo!==undefined) {
+      const y = parseInt(m[3])<100?2000+parseInt(m[3]):parseInt(m[3]);
+      return new Date(y, mo, parseInt(m[1]));
+    }
   }
-  return'blank';
+  // Try numeric serial (Excel date)
+  if (/^\d+$/.test(s)) {
+    const serial = parseInt(s);
+    if (serial > 40000 && serial < 60000) {
+      return new Date(Math.round((serial - 25569)*86400000));
+    }
+  }
+  const d = new Date(s);
+  return isNaN(d.getTime()) ? null : d;
 }
 
-function stats(rows){
-  const cats=rows.map(classify);
-  const done=cats.filter(c=>c==='done').length;
-  const pid_only=cats.filter(c=>c==='pid_only').length;
-  const wip=cats.filter(c=>c==='in_progress').length;
-  const hold=cats.filter(c=>c==='hold').length;
-  const nr=cats.filter(c=>c==='not_required').length;
-  const missing=cats.filter(c=>c==='missing').length;
-  const blank=cats.filter(c=>c==='blank').length;
-  const total=rows.length;
-  const completable=total-hold-blank-nr-missing;
-  const rate=completable>0?Math.round(done/completable*100):0;
+function fmtDate(v) {
+  const d = toJsDate(v);
+  if (!d) return '';
+  const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return `${String(d.getDate()).padStart(2,'0')}-${months[d.getMonth()]}-${String(d.getFullYear()).slice(2)}`;
+}
+
+/* ══════════════════════════════════════
+   CLASSIFY
+══════════════════════════════════════ */
+function classify(r) {
+  const rem=r.remarks.toUpperCase(), mode=r.mode, pid=r.pid, sup=r.support, start=r.start;
+  if (rem.includes('HOLD')&&!mode&&!start) return 'hold';
+  if (rem.includes('HOLD')&&!r.end) return 'hold';
+  if (mode==='Not Required') return 'not_required';
+  if (rem.includes('MISSING')) return 'missing';
+  if (mode==='Copy/Paste'||mode==='New Design'||start) {
+    if (pid==='DONE'&&sup==='DONE') return 'done';
+    if (pid==='DONE'&&sup!=='DONE') return 'pid_only';
+    return 'in_progress';
+  }
+  return 'blank';
+}
+
+/* ══════════════════════════════════════
+   STATS ENGINE
+══════════════════════════════════════ */
+function stats(rows) {
+  const cats = rows.map(classify);
+  const done     = cats.filter(c=>c==='done').length;
+  const pid_only = cats.filter(c=>c==='pid_only').length;
+  const wip      = cats.filter(c=>c==='in_progress').length;
+  const hold     = cats.filter(c=>c==='hold').length;
+  const nr       = cats.filter(c=>c==='not_required').length;
+  const missing  = cats.filter(c=>c==='missing').length;
+  const blank    = cats.filter(c=>c==='blank').length;
+  const total    = rows.length;
+
+  // NEW: started = rows with a start date (not blank, not hold with no mode)
+  const started = rows.filter((r,i)=>r.startJs!==null&&cats[i]!=='hold'||
+    (r.startJs!==null&&cats[i]==='hold'&&r.mode)).length;
+  // Simpler: just rows that have a start date
+  const startedRows = rows.filter(r=>r.startJs!==null);
+  const startedCount = startedRows.length;
+
+  // Completion rate: done / started (rows with start date)
+  const rate = startedCount>0 ? Math.round(done/startedCount*100) : 0;
+
+  // Find oldest start date across ALL rows with a start date
+  const startDates = rows.filter(r=>r.startJs).map(r=>r.startJs);
+  const oldestStart = startDates.length>0 ? new Date(Math.min(...startDates.map(d=>d.getTime()))) : null;
+  const today = reportDateObj || new Date();
+
+  // Working days from oldest start to today
+  const wdElapsed = oldestStart ? workingDaysBetween(oldestStart, today) : 0;
+  const avgOverall = wdElapsed>0 ? (done/wdElapsed).toFixed(1) : '–';
+
+  // Daily done (by end date)
   const daily={};
-  rows.forEach((r,i)=>{if(cats[i]==='done'&&r.end)daily[r.end]=(daily[r.end]||0)+1});
-  const wdSet=new Set(rows.filter(r=>r.start).map(r=>r.start));
-  const nDays=wdSet.size;
-  const avg=nDays>0?(done/nDays).toFixed(1):'–';
+  rows.forEach((r,i)=>{ if(cats[i]==='done'&&r.endJs) { const k=fmtDate(r.endJs); daily[k]=(daily[k]||0)+1; } });
+
+  // Priority breakdown
   const pri={};
   ['P1','P2','P3'].forEach(p=>{
-    const pr=rows.filter(r=>r.priority===p),pc=pr.map(classify);
-    pri[p]={total:pr.length,done:pc.filter(c=>c==='done').length,wip:pc.filter(c=>c==='in_progress').length,hold:pc.filter(c=>c==='hold').length,blank:pc.filter(c=>c==='blank').length};
+    const pr=rows.filter(r=>r.priority===p), pc=pr.map(classify);
+    const prStarted=pr.filter(r=>r.startJs!==null).length;
+    pri[p]={total:pr.length,done:pc.filter(c=>c==='done').length,wip:pc.filter(c=>c==='in_progress').length,hold:pc.filter(c=>c==='hold').length,blank:pc.filter(c=>c==='blank').length,started:prStarted};
   });
+
+  // Unit breakdown
   const units={};
   rows.forEach((r,i)=>{
-    if(!units[r.unit])units[r.unit]={done:0,total:0,completable:0};
+    if(!units[r.unit])units[r.unit]={done:0,total:0,started:0};
     units[r.unit].total++;
-    if(!['hold','blank','not_required','missing'].includes(cats[i]))units[r.unit].completable++;
+    if(r.startJs)units[r.unit].started++;
     if(cats[i]==='done')units[r.unit].done++;
   });
-  return{done,pid_only,wip,hold,nr,missing,blank,total,completable,rate,daily,nDays,avg,pri,units};
+
+  // ── METHOD SPLIT (Copy/Paste vs New Design) ──
+  const cpRows = rows.filter((r,i)=>r.mode==='Copy/Paste'&&cats[i]!=='hold');
+  const ndRows = rows.filter((r,i)=>r.mode==='New Design'&&cats[i]!=='hold');
+
+  const cpDone    = cpRows.filter(r=>r.pid==='DONE'&&r.support==='DONE').length;
+  const ndDone    = ndRows.filter(r=>r.pid==='DONE'&&r.support==='DONE').length;
+
+  // Oldest start per method
+  const cpStarts  = cpRows.filter(r=>r.startJs).map(r=>r.startJs);
+  const ndStarts  = ndRows.filter(r=>r.startJs).map(r=>r.startJs);
+  const cpOldest  = cpStarts.length>0 ? new Date(Math.min(...cpStarts.map(d=>d.getTime()))) : null;
+  const ndOldest  = ndStarts.length>0 ? new Date(Math.min(...ndStarts.map(d=>d.getTime()))) : null;
+
+  // Working days elapsed per method (from oldest start to today)
+  const cpWd = cpOldest ? workingDaysBetween(cpOldest, today) : 0;
+  const ndWd = ndOldest ? workingDaysBetween(ndOldest, today) : 0;
+
+  const cpAvg = cpWd>0 ? parseFloat((cpDone/cpWd).toFixed(1)) : null;
+  const ndAvg = ndWd>0 ? parseFloat((ndDone/ndWd).toFixed(1)) : null;
+
+  const CP_BENCH = 16; // lines/day
+  const ND_BENCH = 4;  // lines/day
+
+  const cpDelta  = cpAvg!==null ? parseFloat((cpAvg-CP_BENCH).toFixed(1)) : null;
+  const ndDelta  = ndAvg!==null ? parseFloat((ndAvg-ND_BENCH).toFixed(1)) : null;
+  const cpRatio  = cpAvg!==null ? Math.round(cpAvg/CP_BENCH*100) : null;
+  const ndRatio  = ndAvg!==null ? Math.round(ndAvg/ND_BENCH*100) : null;
+
+  return {
+    done, pid_only, wip, hold, nr, missing, blank, total,
+    startedCount, rate,
+    oldestStart, wdElapsed, avgOverall,
+    daily, pri, units,
+    cp:{rows:cpRows.length, done:cpDone, wd:cpWd, avg:cpAvg, bench:CP_BENCH, delta:cpDelta, ratio:cpRatio, oldest:cpOldest},
+    nd:{rows:ndRows.length, done:ndDone, wd:ndWd, avg:ndAvg, bench:ND_BENCH, delta:ndDelta, ratio:ndRatio, oldest:ndOldest},
+  };
 }
 
-/* ── BUILD DASH ── */
-function buildDash(){
+/* ══════════════════════════════════════
+   BUILD DASHBOARD
+══════════════════════════════════════ */
+function buildDash() {
   document.getElementById('dash-meta').textContent=`Report date: ${reportDate}  ·  ${allUnits.length} unit${allUnits.length!==1?'s':''} loaded`;
   document.getElementById('file-chip').textContent=fileName;
   buildUnitFilter();
   renderDash();
 }
 
-function buildUnitFilter(){
+function buildUnitFilter() {
   const c=document.getElementById('unit-filter');
   c.innerHTML='<span class="uf-label">Filter by unit</span>';
-  const all=mkPill('All units','ALL',true);
-  c.appendChild(all);
+  c.appendChild(mkPill('All units','ALL',true));
   allUnits.forEach(u=>c.appendChild(mkPill(u,u,false)));
 }
 function mkPill(label,unit,active){
   const p=document.createElement('span');
   p.className='unit-pill'+(active?' active':'');
-  p.textContent=label;p.dataset.unit=unit;
+  p.textContent=label; p.dataset.unit=unit;
   p.onclick=()=>setUnit(unit);
   return p;
 }
 function setUnit(unit){
-  activeUnit=unit;activeDesigner=null;
+  activeUnit=unit; activeDesigner=null;
   document.getElementById('detail-panel').style.display='none';
   document.querySelectorAll('.unit-pill').forEach(p=>p.classList.toggle('active',p.dataset.unit===unit));
   renderDash();
 }
 
-function renderDash(){
-  const filtered=activeUnit==='ALL'?allData:allData.filter(r=>r.unit===activeUnit);
+function renderDash() {
+  const filtered = activeUnit==='ALL' ? allData : allData.filter(r=>r.unit===activeUnit);
   const designers={};
-  filtered.forEach(r=>{if(!designers[r.designer])designers[r.designer]=[];designers[r.designer].push(r)});
-  renderTeamSummary(stats(filtered),Object.keys(designers).length);
+  filtered.forEach(r=>{ if(!designers[r.designer])designers[r.designer]=[]; designers[r.designer].push(r); });
+
+  const ts = stats(filtered);
+  renderHero(ts, Object.keys(designers).length);
+  renderStatusStrip(ts);
+
   document.getElementById('designer-count').textContent=Object.keys(designers).length+' designers';
   const grid=document.getElementById('designers-grid');
   grid.innerHTML='';
@@ -437,23 +694,47 @@ function renderDash(){
     .forEach(([name,rows],idx)=>grid.appendChild(buildCard(name,rows,idx)));
 }
 
-function renderTeamSummary(s,n){
-  const c=document.getElementById('team-summary');
-  c.innerHTML=`
-    <div class="tsc"><div class="tsc-label">Total lines</div><div class="tsc-val">${s.total}</div><div class="tsc-sub">${n} designers · ${allUnits.length} units</div></div>
-    <div class="tsc"><div class="tsc-label">Fully done</div><div class="tsc-val" style="color:var(--green)">${s.done}</div><div class="tsc-sub">${s.rate}% of completable</div></div>
-    <div class="tsc"><div class="tsc-label">In progress</div><div class="tsc-val" style="color:var(--blue)">${s.wip}</div><div class="tsc-sub">WIP lines</div></div>
-    <div class="tsc"><div class="tsc-label">On hold</div><div class="tsc-val" style="color:var(--amber)">${s.hold}</div><div class="tsc-sub">blocked externally</div></div>
-    <div class="tsc"><div class="tsc-label">Scope issues</div><div class="tsc-val" style="color:var(--red)">${s.missing}</div><div class="tsc-sub">missing from PIDs/3D</div></div>`;
+function renderHero(s, nDesigners) {
+  // Ring
+  const offset = 314 - (314 * s.rate/100);
+  const arc = document.getElementById('ring-arc');
+  const rColor = s.rate>=80?'#0a8a5c':s.rate>=50?'#b45309':'#b91c1c';
+  arc.setAttribute('stroke-dashoffset', offset);
+  arc.setAttribute('stroke', rColor);
+  document.getElementById('ring-pct-text').textContent = s.rate+'%';
+  document.getElementById('ring-sub-text').textContent = s.done+' / '+s.startedCount;
+
+  // Hero cards
+  document.getElementById('hero-cards').innerHTML=`
+    <div class="hc"><div class="hc-label">Total lines</div><div class="hc-val">${s.total}</div><div class="hc-sub">${nDesigners} designers · ${allUnits.length} units</div></div>
+    <div class="hc"><div class="hc-label">Fully done</div><div class="hc-val cg">${s.done}</div><div class="hc-sub">${s.rate}% of started lines</div></div>
+    <div class="hc"><div class="hc-label">In progress</div><div class="hc-val cb">${s.wip}</div><div class="hc-sub">routing started, not closed</div></div>
+    <div class="hc"><div class="hc-label">On hold</div><div class="hc-val ca">${s.hold}</div><div class="hc-sub">pending external clearance</div></div>`;
 }
 
-function buildCard(name,rows,idx){
+function renderStatusStrip(s) {
+  document.getElementById('status-strip').innerHTML=`
+    ${ss('#0a8a5c','Fully done',s.done,'var(--green)')}
+    ${ss('#b45309','On HOLD',s.hold,'var(--amber)')}
+    ${ss('#1d4ed8','In progress',s.wip,'var(--blue)')}
+    ${ss('#6b7280','Not yet started',s.blank,'var(--muted)')}
+    ${ss('#b91c1c','Missing PIDs/3D',s.missing,'var(--red)')}
+    ${ss('#9ca3af','Not Required',s.nr,'var(--dim)')}`;
+}
+function ss(dot,label,count,numColor){
+  return`<div class="ss-item"><div class="ss-dot" style="background:${dot}"></div><div class="ss-text">${label}</div><div class="ss-num" style="color:${numColor}">${count}</div></div>`;
+}
+
+/* ══════════════════════════════════════
+   DESIGNER CARD
+══════════════════════════════════════ */
+function buildCard(name,rows,idx) {
   const s=stats(rows);
   const units=Object.keys(s.units);
   const initials=name.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
-  const rc=rateColor(s.rate);
+  const rc=rateCol(s.rate);
   const card=document.createElement('div');
-  card.className='dcard';card.style.animationDelay=(idx*.04)+'s';card.id='dc-'+san(name);
+  card.className='dcard'; card.style.animationDelay=(idx*.04)+'s'; card.id='dc-'+san(name);
   card.innerHTML=`
     <div class="dc-head">
       <div style="display:flex;align-items:center;gap:9px;min-width:0">
@@ -475,16 +756,18 @@ function buildCard(name,rows,idx){
       </div>
     </div>
     <div class="dc-foot">
-      <div class="dc-foot-text">${s.total} total · <strong>${s.avg}</strong> lines/day avg · ${s.nDays} day${s.nDays!==1?'s':''} worked</div>
+      <div class="dc-foot-text">${s.total} total · <strong>${s.avgOverall}</strong> lines/day · ${s.wdElapsed} working days elapsed</div>
       <div class="dc-cta">Details →</div>
     </div>`;
   card.onclick=()=>openDetail(name,rows,card);
   return card;
 }
 
-/* ── DETAIL ── */
-function openDetail(name,rows,card){
-  if(activeDesigner===name){
+/* ══════════════════════════════════════
+   DETAIL PANEL
+══════════════════════════════════════ */
+function openDetail(name,rows,card) {
+  if (activeDesigner===name) {
     activeDesigner=null;
     document.querySelectorAll('.dcard').forEach(c=>c.classList.remove('active-card'));
     document.getElementById('detail-panel').style.display='none';
@@ -500,116 +783,223 @@ function openDetail(name,rows,card){
   setTimeout(()=>document.getElementById('detail-panel').scrollIntoView({behavior:'smooth',block:'start'}),80);
 }
 
-function buildDetailHTML(name,rows,s){
+function buildDetailHTML(name,rows,s) {
   const units=Object.keys(s.units);
-  const dailySorted=Object.entries(s.daily).sort((a,b)=>(pd(a[0])||0)-(pd(b[0])||0));
+  const dailySorted=Object.entries(s.daily).sort((a,b)=>(toJsDate(a[0])||0)-(toJsDate(b[0])||0));
   const bestDay=dailySorted.length?Math.max(...dailySorted.map(d=>d[1])):0;
+  const rc=rateCol(s.rate);
+
   return`
   <div class="det-hdr">
-    <div><div class="dh-name">${name}</div><div class="dh-sub">${units.join(' · ')} · ${s.total} total lines</div></div>
+    <div>
+      <div class="dh-name">${name}</div>
+      <div class="dh-sub">${units.join(' · ')} · ${s.total} total lines</div>
+    </div>
     <div class="dh-stats">
       <div class="dhs"><div class="dhs-val vg">${s.rate}%</div><div class="dhs-label">Completion</div></div>
       <div class="dhs"><div class="dhs-val">${s.done}</div><div class="dhs-label">Lines Done</div></div>
-      <div class="dhs"><div class="dhs-val va">${s.avg}</div><div class="dhs-label">Avg/Day</div></div>
+      <div class="dhs"><div class="dhs-val ${s.avgOverall>=16?'vg':s.avgOverall>=8?'va':'vr'}">${s.avgOverall}</div><div class="dhs-label">Avg/Day</div></div>
+      <div class="dhs"><div class="dhs-val">${s.wdElapsed}</div><div class="dhs-label">Working Days</div></div>
       <button class="close-btn" onclick="closeDetail()">✕ Close</button>
     </div>
   </div>
+
   <div class="det-body">
     <!-- Status breakdown -->
     <div class="dc2">
       <div class="dc2-title ctg">Status breakdown</div>
-      ${stRow(var_green,'Fully done',s.done,s.total,'var(--green)')}
-      ${stRow(var_amber,'On HOLD',s.hold,s.total,'var(--amber)')}
-      ${stRow(var_blue,'In progress / WIP',s.wip,s.total,'var(--blue)')}
-      ${stRow('#a0a8bf','Not yet started',s.blank,s.total,'var(--dim)')}
-      ${stRow(var_red,'Missing from PIDs/3D',s.missing,s.total,'var(--red)')}
-      ${stRow('#c8cdd9','Not Required',s.nr,s.total,'var(--bd2)')}
-      ${s.pid_only>0?stRow(var_purple,'P&ID done, support pending',s.pid_only,s.total,'var(--purple)'):''}
+      ${stRow('#0a8a5c','Fully done (P&ID + Support)',s.done,s.startedCount,'var(--green)')}
+      ${stRow('#1d4ed8','In progress / WIP',s.wip,s.startedCount,'var(--blue)')}
+      ${stRow('#b45309','On HOLD',s.hold,s.total,'var(--amber)')}
+      ${stRow('#6b7280','Not yet started',s.blank,s.total,'var(--muted)')}
+      ${stRow('#b91c1c','Missing from PIDs/3D',s.missing,s.total,'var(--red)')}
+      ${stRow('#9ca3af','Not Required',s.nr,s.total,'var(--dim)')}
+      ${s.pid_only>0?stRow('#6d28d9','P&ID done, support pending',s.pid_only,s.startedCount,'var(--purple)'):''}
+      <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--bd)">
+        <div style="font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Completion basis</div>
+        <div style="font-size:11px;color:var(--ink2)">Started lines: <strong>${s.startedCount}</strong> &nbsp;·&nbsp; Done: <strong>${s.done}</strong> &nbsp;·&nbsp; Rate: <strong style="color:${rc}">${s.rate}%</strong></div>
+        <div style="font-size:10px;color:var(--muted);margin-top:3px">Blank lines (${s.blank}) excluded from rate calculation</div>
+      </div>
     </div>
-    <!-- Priority -->
+
+    <!-- Priority breakdown -->
     <div class="dc2">
-      <div class="dc2-title cta2">Priority breakdown</div>
+      <div class="dc2-title cta">Priority breakdown</div>
       <table class="pt">
-        <thead><tr><th>Pri</th><th>Total</th><th>Done</th><th>WIP</th><th>Hold</th></tr></thead>
+        <thead><tr><th>Pri</th><th>Total</th><th>Started</th><th>Done</th><th>WIP</th><th>Hold</th></tr></thead>
         <tbody>
-          ${['P1','P2','P3'].filter(p=>s.pri[p]&&s.pri[p].total>0).map(p=>`
-          <tr>
-            <td><span class="pbadge ${p.toLowerCase()}b">${p}</span></td>
-            <td>${s.pri[p].total}</td>
-            <td class="tdg">${s.pri[p].done}</td>
-            <td class="tda">${s.pri[p].wip}</td>
-            <td class="tdr">${s.pri[p].hold}</td>
-          </tr>`).join('')}
+          ${['P1','P2','P3'].filter(p=>s.pri[p]&&s.pri[p].total>0).map(p=>{
+            const pr=s.pri[p];
+            const pRate=pr.started>0?Math.round(pr.done/pr.started*100):0;
+            return`<tr>
+              <td><span class="pbadge ${p.toLowerCase()}b">${p}</span></td>
+              <td>${pr.total}</td>
+              <td>${pr.started}</td>
+              <td class="tdg">${pr.done}</td>
+              <td class="tda">${pr.wip}</td>
+              <td class="tdr">${pr.hold}</td>
+            </tr>`;}).join('')}
         </tbody>
       </table>
       <div style="margin-top:14px">
-        <div style="font-family:var(--mono);font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Completion rate per priority</div>
+        <div style="font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px">Completion rate per priority (done/started)</div>
         ${['P1','P2','P3'].filter(p=>s.pri[p]&&s.pri[p].total>0).map(p=>{
-          const comp=s.pri[p].total-s.pri[p].hold-s.pri[p].blank;
-          const r=comp>0?Math.round(s.pri[p].done/comp*100):0;
-          const col=rateColor(r);
+          const pr=s.pri[p];
+          const r=pr.started>0?Math.round(pr.done/pr.started*100):0;
+          const col=rateCol(r);
           return`<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
-            <span style="font-family:var(--mono);font-size:9px;width:18px;color:var(--muted)">${p}</span>
+            <span style="font-size:9px;font-weight:700;width:18px;color:var(--muted)">${p}</span>
             <div style="flex:1;height:4px;background:var(--bd);border-radius:2px;overflow:hidden">
               <div style="height:100%;width:${r}%;background:${col};border-radius:2px"></div></div>
-            <span style="font-family:var(--mono);font-size:10px;color:${col};width:30px;text-align:right">${r}%</span>
+            <span style="font-family:var(--mono);font-size:10px;color:${col};width:30px;text-align:right;font-weight:700">${r}%</span>
           </div>`;}).join('')}
       </div>
     </div>
-    <!-- Productivity -->
+
+    <!-- Daily output -->
     <div class="dc2">
-      <div class="dc2-title ctb">Productivity</div>
-      <div class="prod-grid">
-        <div class="ptile"><div class="ptile-val">${s.avg}</div><div class="ptile-label">Lines / day</div></div>
-        <div class="ptile"><div class="ptile-val">${s.nDays}</div><div class="ptile-label">Days worked</div></div>
-        <div class="ptile"><div class="ptile-val">${s.done}</div><div class="ptile-label">Total done</div></div>
-        <div class="ptile"><div class="ptile-val">${bestDay}</div><div class="ptile-label">Best day</div></div>
+      <div class="dc2-title ctb">Daily output</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px">
+        <div style="background:var(--white);border:1px solid var(--bd);border-radius:6px;padding:10px 12px;text-align:center">
+          <div style="font-size:20px;font-weight:800;color:var(--ink);line-height:1">${s.avgOverall}</div>
+          <div style="font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:3px">Avg / day</div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--bd);border-radius:6px;padding:10px 12px;text-align:center">
+          <div style="font-size:20px;font-weight:800;color:var(--ink);line-height:1">${s.wdElapsed}</div>
+          <div style="font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:3px">Days elapsed</div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--bd);border-radius:6px;padding:10px 12px;text-align:center">
+          <div style="font-size:20px;font-weight:800;color:var(--ink);line-height:1">${bestDay}</div>
+          <div style="font-size:8px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:3px">Best day</div>
+        </div>
       </div>
-      <div class="dc2-title ctb" style="margin-bottom:7px">Daily output</div>
       <div class="bar-chart" id="det-bar-chart"></div>
+      ${s.oldestStart?`<div style="font-size:10px;color:var(--muted);margin-top:10px;font-family:var(--mono)">Period: ${fmtDate(s.oldestStart)} → ${reportDate} · excl. weekends & MA holidays</div>`:''}
     </div>
+
     <!-- Unit breakdown -->
     <div class="dc2">
       <div class="dc2-title cts">Unit breakdown</div>
       ${Object.entries(s.units).map(([u,us])=>{
-        const r=us.completable>0?Math.round(us.done/us.completable*100):0;
-        const col=rateColor(r);
+        const r=us.started>0?Math.round(us.done/us.started*100):0;
+        const col=rateCol(r);
         return`<div class="unit-row">
           <div class="unit-name" title="${u}">${u}</div>
           <div class="unit-bw"><div class="unit-bf" style="width:${r}%;background:${col}"></div></div>
-          <div class="unit-pct" style="color:${col}">${r}%</div>
-          <div class="unit-cnt">${us.done}/${us.total}</div>
+          <div class="unit-pct" style="color:${col};font-weight:700">${r}%</div>
+          <div class="unit-cnt">${us.done}/${us.started}</div>
         </div>`;}).join('')}
     </div>
   </div>
+
+  <!-- PRODUCTIVITY SPLIT -->
+  <div style="padding:0 28px 4px">
+    <div class="sec-hdr" style="margin-bottom:14px">
+      <div class="sec-title">Productivity vs Benchmark</div>
+      <div class="sec-line"></div>
+      <div class="sec-count">Morocco calendar · weekends excluded</div>
+    </div>
+  </div>
+  <div style="padding:0 28px 22px">
+    <div class="prod-panel">
+      ${buildMethodCard('Copy / Paste','cp',s.cp,'#1d4ed8')}
+      ${buildMethodCard('New Design','nd',s.nd,'#6d28d9')}
+    </div>
+  </div>
+
   <!-- Observations -->
-  <div class="det-full">
-    <div class="dc2" style="grid-column:1/-1">
+  <div style="padding:0 28px 22px">
+    <div class="dc2" style="background:var(--s2)">
       <div class="dc2-title ctp">Key observations</div>
       ${buildObs(s)}
     </div>
   </div>`;
 }
 
-/* helper: status row */
-const var_green='#0b9065',var_amber='#c97008',var_red='#c82020',var_blue='#1d57d8',var_purple='#6d28d9';
-function stRow(dotColor,label,count,total,numColor){
-  const w=total>0?Math.min(100,Math.round(count/total*100)):0;
-  return`<div class="str">
-    <div class="str-dot" style="background:${dotColor}"></div>
-    <div class="str-name">${label}</div>
-    <div class="str-bar"><div class="str-fill" style="width:${w}%;background:${dotColor}"></div></div>
-    <div class="str-num" style="color:${numColor}">${count}</div>
+function buildMethodCard(title, key, m, accentColor) {
+  if (!m.rows) {
+    return`<div class="method-card">
+      <div class="mc-head">
+        <div class="mc-title">${title}</div>
+        <div class="mc-badge ${key}">No lines</div>
+      </div>
+      <div class="mc-body" style="color:var(--muted);font-size:12px;padding:16px">No ${title} lines found for this designer.</div>
+    </div>`;
+  }
+
+  const avg = m.avg;
+  const hasAvg = avg !== null;
+  const delta = m.delta;
+  const ratio = m.ratio;
+  const isAbove = delta !== null && delta >= 0;
+  const isMet   = delta !== null && Math.abs(delta) < 0.5;
+  const tagClass = !hasAvg ? '' : isMet ? 'met' : isAbove ? 'above' : 'below';
+  const tagText  = !hasAvg ? 'No data' : isMet ? 'On target' : isAbove ? `+${delta} above` : `${delta} below`;
+
+  // bar width: cap at 200% visually, mark at 100%
+  const fillPct = hasAvg ? Math.min(200, ratio) / 2 : 0; // 0-100% of bar width where 50% = benchmark
+  const markerPct = 50; // benchmark always at 50%
+  const fillColor = !hasAvg ? '#d1d5db' : isAbove ? '#0a8a5c' : '#b91c1c';
+
+  const avgDisplay = hasAvg ? avg.toFixed(1) : '–';
+  const avgColor   = !hasAvg ? 'var(--muted)' : isAbove ? 'var(--green)' : 'var(--red)';
+
+  return`<div class="method-card">
+    <div class="mc-head">
+      <div class="mc-title">${title}</div>
+      <div class="mc-badge ${key}">${m.rows} lines</div>
+    </div>
+    <div class="mc-body">
+      <div class="mc-kpis">
+        <div class="mk">
+          <div class="mk-val">${m.done}</div>
+          <div class="mk-label">Done</div>
+        </div>
+        <div class="mk">
+          <div class="mk-val">${m.wd}</div>
+          <div class="mk-label">Days elapsed</div>
+        </div>
+        <div class="mk">
+          <div class="mk-val" style="color:${accentColor}">${m.bench}</div>
+          <div class="mk-label">Min/day</div>
+        </div>
+      </div>
+      <div class="bench-row">
+        <div class="bench-top">
+          <div class="bench-label">Actual avg vs minimum</div>
+          ${hasAvg?`<div class="bench-tag ${tagClass}">${tagText}</div>`:''}
+        </div>
+        <div class="bench-nums">
+          <div class="bench-actual" style="color:${avgColor}">${avgDisplay}</div>
+          <div class="bench-slash">/</div>
+          <div class="bench-min">${m.bench}</div>
+          <div class="bench-unit">lines/day</div>
+        </div>
+        <div class="bench-bar-wrap">
+          <div class="bench-bar-fill" style="width:${fillPct}%;background:${fillColor}"></div>
+          <div class="bench-marker" style="left:${markerPct}%"></div>
+        </div>
+        ${hasAvg?`
+        <div style="display:flex;align-items:baseline;gap:8px;margin-top:6px">
+          <div class="bench-delta ${isAbove?'pos':'neg'}">${isAbove?'+':''}${delta} lines/day vs benchmark</div>
+          <div class="bench-ratio">(${ratio}% of target)</div>
+        </div>`:''}
+        ${m.oldest?`<div style="font-size:10px;color:var(--muted);margin-top:5px;font-family:var(--mono)">From ${fmtDate(m.oldest)} · ${m.wd} working days</div>`:''}
+      </div>
+    </div>
   </div>`;
 }
 
-function buildBarChart(daily,containerId){
+function buildBarChart(daily, containerId) {
   const el=document.getElementById(containerId);
-  if(!el)return;
-  const entries=Object.entries(daily).sort((a,b)=>(pd(a[0])||0)-(pd(b[0])||0));
-  if(!entries.length){el.innerHTML='<div style="font-size:11px;color:var(--muted);font-family:var(--mono)">No completed lines recorded yet</div>';return}
+  if (!el) return;
+  const entries=Object.entries(daily).sort((a,b)=>{
+    const da=toJsDate(a[0]), db=toJsDate(b[0]);
+    return (da?da.getTime():0)-(db?db.getTime():0);
+  });
+  if (!entries.length) { el.innerHTML='<div style="font-size:11px;color:var(--muted);font-family:var(--mono)">No completed lines with end dates found</div>'; return; }
   const maxV=Math.max(...entries.map(e=>e[1]));
-  const cols=['#0b9065','#1d57d8','#c97008','#6d28d9','#c82020','#0891b2','#059669'];
+  const cols=['#0a8a5c','#1d4ed8','#b45309','#6d28d9','#b91c1c','#0891b2','#059669'];
   el.innerHTML='';
   entries.forEach(([d,cnt],i)=>{
     const hp=Math.max(4,(cnt/maxV)*100);
@@ -622,53 +1012,64 @@ function buildBarChart(daily,containerId){
   });
 }
 
-function buildObs(s){
+function buildObs(s) {
   const obs=[];
-  if(s.rate>=85)obs.push({t:'good',b:'GOOD',txt:`<strong>${s.rate}% completion rate</strong> on completable lines — excellent overall progress.`});
-  else if(s.rate>=60)obs.push({t:'warn',b:'NOTE',txt:`<strong>${s.rate}% completion rate</strong> — solid progress, some lines still pending.`});
-  else obs.push({t:'flag',b:'FLAG',txt:`<strong>${s.rate}% completion rate</strong> — below target. Review workload and identify blockers.`});
-  if(parseFloat(s.avg)>=40)obs.push({t:'good',b:'GOOD',txt:`High productivity: <strong>${s.avg} lines/day</strong> average over ${s.nDays} working day${s.nDays!==1?'s':''}.`});
-  else if(parseFloat(s.avg)>0)obs.push({t:'info',b:'INFO',txt:`Averaging <strong>${s.avg} lines/day</strong> over ${s.nDays} working day${s.nDays!==1?'s':''}.`});
-  if(s.hold>0){
+  if (s.rate>=85) obs.push({t:'good',b:'GOOD',txt:`<strong>${s.rate}% completion rate</strong> on started lines — excellent overall progress.`});
+  else if (s.rate>=60) obs.push({t:'warn',b:'NOTE',txt:`<strong>${s.rate}% completion rate</strong> on started lines — solid progress, some lines still pending closure.`});
+  else obs.push({t:'flag',b:'FLAG',txt:`<strong>${s.rate}% completion rate</strong> on started lines — below expectations. Review blockers and workload.`});
+
+  // CP productivity observation
+  if (s.cp.avg!==null) {
+    if (s.cp.delta>=0) obs.push({t:'good',b:'C/P',txt:`Copy/Paste averaging <strong>${s.cp.avg} lines/day</strong> — ${s.cp.delta >= 0 ? '+'+s.cp.delta : s.cp.delta} above the 16/day minimum (${s.cp.ratio}% of target).`});
+    else obs.push({t:'flag',b:'C/P',txt:`Copy/Paste averaging <strong>${s.cp.avg} lines/day</strong> — ${s.cp.delta} below the 16/day minimum (${s.cp.ratio}% of target). Needs attention.`});
+  }
+
+  // ND productivity observation
+  if (s.nd.avg!==null) {
+    if (s.nd.delta>=0) obs.push({t:'good',b:'N/D',txt:`New Design averaging <strong>${s.nd.avg} lines/day</strong> — +${s.nd.delta} above the 4/day minimum (${s.nd.ratio}% of target).`});
+    else obs.push({t:'flag',b:'N/D',txt:`New Design averaging <strong>${s.nd.avg} lines/day</strong> — ${s.nd.delta} below the 4/day minimum (${s.nd.ratio}% of target). Needs attention.`});
+  }
+
+  if (s.hold>0) {
     const p1h=s.pri['P1']?s.pri['P1'].hold:0;
     obs.push({t:'warn',b:'HOLD',txt:`<strong>${s.hold} lines on HOLD</strong>${p1h>0?` — including ${p1h} P1 critical lines. May impact schedule`:' — pending external clearance before work can resume'}.`});
   }
-  if(s.missing>0)obs.push({t:'flag',b:'FLAG',txt:`<strong>${s.missing} lines missing from PIDs/3D</strong> — scope gaps flagged by designer. Requires engineering review.`});
-  if(s.wip>0)obs.push({t:'info',b:'WIP',txt:`<strong>${s.wip} lines in progress</strong> — routing started, P&ID check and/or support placement still pending.`});
-  if(s.pri['P1']&&s.pri['P1'].total>0){
-    const p1=s.pri['P1'],comp=p1.total-p1.hold-p1.blank,r=comp>0?Math.round(p1.done/comp*100):0;
-    if(r<50&&p1.hold<p1.wip)obs.push({t:'warn',b:'P1',txt:`P1 completion is only <strong>${r}%</strong> — these are critical path lines. Prioritize accordingly.`});
-  }
-  if(s.blank>0)obs.push({t:'info',b:'NOTE',txt:`<strong>${s.blank} lines not yet started</strong> — no routing mode or dates recorded.`});
+  if (s.missing>0) obs.push({t:'flag',b:'FLAG',txt:`<strong>${s.missing} lines missing from PIDs/3D</strong> — scope gaps flagged by designer. Requires engineering review.`});
+  if (s.wip>0)     obs.push({t:'info',b:'WIP', txt:`<strong>${s.wip} lines in progress</strong> — routing started, P&ID check and/or support placement still pending.`});
+  if (s.blank>0)   obs.push({t:'info',b:'NOTE',txt:`<strong>${s.blank} lines not yet started</strong> — no routing mode or start date recorded.`});
+
   return obs.map(o=>`<div class="obs ${o.t}"><div class="obs-badge">${o.b}</div><div>${o.txt}</div></div>`).join('');
 }
 
-function closeDetail(){
+function closeDetail() {
   activeDesigner=null;
   document.querySelectorAll('.dcard').forEach(c=>c.classList.remove('active-card'));
   document.getElementById('detail-panel').style.display='none';
 }
 
-/* ── HELPERS ── */
-function rateColor(r){return r>=80?'var(--green)':r>=50?'var(--amber)':'var(--red)'}
-function san(s){return s.replace(/[^a-z0-9]/gi,'_')}
-function pd(s){
-  if(!s)return null;
-  const p=s.split('-');
-  if(p.length>=2){
-    const months={jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11};
-    const m=months[p[1].toLowerCase().slice(0,3)];
-    if(m!==undefined){const y=p[2]?(parseInt(p[2])<100?2000+parseInt(p[2]):parseInt(p[2])):2026;return new Date(y,m,parseInt(p[0])).getTime()}
-  }
-  return new Date(s).getTime()||null;
+/* ══════════════════════════════════════
+   HELPERS
+══════════════════════════════════════ */
+function rateCol(r){ return r>=80?'var(--green)':r>=50?'var(--amber)':'var(--red)'; }
+function san(s){ return s.replace(/[^a-z0-9]/gi,'_'); }
+
+function stRow(dotColor,label,count,total,numColor){
+  const w=total>0?Math.min(100,Math.round(count/total*100)):0;
+  return`<div class="str">
+    <div class="str-dot" style="background:${dotColor}"></div>
+    <div class="str-name">${label}</div>
+    <div class="str-bar"><div class="str-fill" style="width:${w}%;background:${dotColor}"></div></div>
+    <div class="str-num" style="color:${numColor}">${count}</div>
+  </div>`;
 }
+
 function show(screen){
-  document.getElementById('upload-screen').style.display=screen==='upload'?'flex':'none';
-  document.getElementById('loading-screen').style.display=screen==='loading'?'flex':'none';
-  document.getElementById('dashboard').style.display=screen==='dashboard'?'block':'none';
+  document.getElementById('upload-screen').style.display  = screen==='upload'   ? 'flex'  : 'none';
+  document.getElementById('loading-screen').style.display = screen==='loading'  ? 'flex'  : 'none';
+  document.getElementById('dashboard').style.display      = screen==='dashboard'? 'block' : 'none';
 }
-function setLoading(msg){document.getElementById('loading-text').textContent=msg}
-function showErr(msg){const b=document.getElementById('err-box');b.textContent='⚠ '+msg;b.style.display='block'}
+function setLoading(msg){ document.getElementById('loading-text').textContent=msg; }
+function showErr(msg){ const b=document.getElementById('err-box'); b.textContent='⚠ '+msg; b.style.display='block'; }
 function resetApp(){
   allData=[];allUnits=[];activeUnit='ALL';activeDesigner=null;
   document.getElementById('file-input').value='';
