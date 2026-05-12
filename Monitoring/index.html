@@ -810,6 +810,7 @@ function buildDetailHTML(name,rows,s) {
     <!-- Status breakdown -->
     <div class="dc2">
       <div class="dc2-title ctg">Status breakdown</div>
+      ${stRow('#6b7280','Total Assigned',s.total,s.total,'var(--muted)')}
       ${stRow('#0a8a5c','Fully done (P&ID + Support)',s.done,s.startedCount,'var(--green)')}
       ${stRow('#1d4ed8','In progress / WIP',s.wip,s.startedCount,'var(--blue)')}
       ${stRow('#b45309','On HOLD',s.hold,s.total,'var(--amber)')}
@@ -817,11 +818,6 @@ function buildDetailHTML(name,rows,s) {
       ${stRow('#b91c1c','Missing from PIDs/3D',s.missing,s.total,'var(--red)')}
       ${stRow('#9ca3af','Not Required',s.nr,s.total,'var(--dim)')}
       ${s.pid_only>0?stRow('#6d28d9','P&ID done, support pending',s.pid_only,s.startedCount,'var(--purple)'):''}
-      <div style="margin-top:12px;padding-top:12px;border-top:1px solid var(--bd)">
-        <div style="font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px">Completion basis</div>
-        <div style="font-size:11px;color:var(--ink2)">Started lines: <strong>${s.startedCount}</strong> &nbsp;·&nbsp; Done: <strong>${s.done}</strong> &nbsp;·&nbsp; Rate: <strong style="color:${rc}">${s.rate}%</strong></div>
-        <div style="font-size:10px;color:var(--muted);margin-top:3px">Blank lines (${s.blank}) excluded from rate calculation</div>
-      </div>
     </div>
 
     <!-- Priority breakdown -->
