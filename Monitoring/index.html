@@ -577,7 +577,8 @@ function stats(rows) {
   const startedCount = startedRows.length;
 
   // Completion rate: done / started (rows with start date)
-  const rate = startedCount>0 ? Math.round(done/startedCount*100) : 0;
+  // const rate = startedCount>0 ? Math.round(done/startedCount*100) : 0;
+  const rate = total>0 ? Math.round(done/total*100) : 0;
 
   // Find oldest start date across ALL rows with a start date
   const startDates = rows.filter(r=>r.startJs).map(r=>r.startJs);
@@ -702,12 +703,13 @@ function renderHero(s, nDesigners) {
   arc.setAttribute('stroke-dashoffset', offset);
   arc.setAttribute('stroke', rColor);
   document.getElementById('ring-pct-text').textContent = s.rate+'%';
-  document.getElementById('ring-sub-text').textContent = s.done+' / '+s.startedCount;
+  // document.getElementById('ring-sub-text').textContent = s.done+' / '+s.startedCount;
+  document.getElementById('ring-sub-text').textContent = s.done+' / '+s.total;
 
   // Hero cards
   document.getElementById('hero-cards').innerHTML=`
-    <div class="hc"><div class="hc-label">Total lines</div><div class="hc-val">${s.total}</div><div class="hc-sub">${nDesigners} designers · ${allUnits.length} units</div></div>
-    <div class="hc"><div class="hc-label">Fully done</div><div class="hc-val cg">${s.done}</div><div class="hc-sub">${s.rate}% of started lines</div></div>
+    <div class="hc" style="border-color:var(--blue-b);background:var(--blue-l)"><div class="hc-label" style="color:var(--blue)">Total assigned</div><div class="hc-val cb">${s.total}</div><div class="hc-sub">${nDesigners} designers · ${allUnits.length} units</div></div>
+    <div class="hc"><div class="hc-label">Fully done</div><div class="hc-val cg">${s.done}</div><div class="hc-sub">${s.rate}% of total assigned</div></div>
     <div class="hc"><div class="hc-label">In progress</div><div class="hc-val cb">${s.wip}</div><div class="hc-sub">routing started, not closed</div></div>
     <div class="hc"><div class="hc-label">On hold</div><div class="hc-val ca">${s.hold}</div><div class="hc-sub">pending external clearance</div></div>`;
 }
@@ -717,7 +719,7 @@ function renderStatusStrip(s) {
     ${ss('#0a8a5c','Fully done',s.done,'var(--green)')}
     ${ss('#b45309','On HOLD',s.hold,'var(--amber)')}
     ${ss('#1d4ed8','In progress',s.wip,'var(--blue)')}
-    ${ss('#6b7280','Not yet started',s.blank,'var(--muted)')}
+    ${ss('#6b7280',`Not yet started (${s.total>0?Math.round(s.blank/s.total*100):0}% of assigned)`,s.blank,'var(--muted)')}
     ${ss('#b91c1c','Missing PIDs/3D',s.missing,'var(--red)')}
     ${ss('#9ca3af','Not Required',s.nr,'var(--dim)')}`;
 }
@@ -1036,7 +1038,13 @@ function buildObs(s) {
   }
   if (s.missing>0) obs.push({t:'flag',b:'FLAG',txt:`<strong>${s.missing} lines missing from PIDs/3D</strong> — scope gaps flagged by designer. Requires engineering review.`});
   if (s.wip>0)     obs.push({t:'info',b:'WIP', txt:`<strong>${s.wip} lines in progress</strong> — routing started, P&ID check and/or support placement still pending.`});
-  if (s.blank>0)   obs.push({t:'info',b:'NOTE',txt:`<strong>${s.blank} lines not yet started</strong> — no routing mode or start date recorded.`});
+
+  // if (s.blank>0)   obs.push({t:'info',b:'NOTE',txt:`<strong>${s.blank} lines not yet started</strong> — no routing mode or start date recorded.`});
+  if (s.blank>0) {
+    const blankPct = Math.round(s.blank/s.total*100);
+    obs.push({t:'info',b:'NOTE',txt:`<strong>${s.blank} lines not yet started</strong> — ${blankPct}% of total assigned. No routing mode or start date recorded.`});
+  }
+
 
   return obs.map(o=>`<div class="obs ${o.t}"><div class="obs-badge">${o.b}</div><div>${o.txt}</div></div>`).join('');
 }
